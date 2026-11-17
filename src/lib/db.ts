@@ -42,14 +42,6 @@ export function getDb(): Database.Database {
       completed_at INTEGER
     );
 
-    -- Safe migration for existing databases
-    try {
-      _db.exec("ALTER TABLE scans ADD COLUMN user_id TEXT");
-    } catch (_) {}
-    try {
-      _db.exec("ALTER TABLE scans ADD COLUMN user_email TEXT");
-    } catch (_) {}
-
     CREATE TABLE IF NOT EXISTS scan_points (
       id          INTEGER PRIMARY KEY AUTOINCREMENT,
       scan_id     INTEGER NOT NULL REFERENCES scans(id),
@@ -148,6 +140,13 @@ export function getDb(): Database.Database {
       created_at      INTEGER NOT NULL DEFAULT (unixepoch())
     );
   `);
+
+  try {
+    _db.exec("ALTER TABLE scans ADD COLUMN user_id TEXT");
+  } catch (_) {}
+  try {
+    _db.exec("ALTER TABLE scans ADD COLUMN user_email TEXT");
+  } catch (_) {}
 
   return _db;
 }
