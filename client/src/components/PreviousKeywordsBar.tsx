@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import type { Business } from "../types";
+import { useAuth } from "../context/AuthContext";
 
 interface KeywordEntry {
   keyword: string;
@@ -16,6 +17,7 @@ interface Props {
 }
 
 export function PreviousKeywordsBar({ business, activeScanId, onSelect }: Props) {
+  const { authFetch } = useAuth();
   const [keywords, setKeywords] = useState<KeywordEntry[]>([]);
 
   useEffect(() => {
@@ -23,11 +25,11 @@ export function PreviousKeywordsBar({ business, activeScanId, onSelect }: Props)
     if (business.placeId) params.set("placeId", business.placeId);
     else params.set("name", business.name);
 
-    fetch(`/api/business-keywords?${params}`)
+    authFetch(`/api/business-keywords?${params}`)
       .then((r) => r.json())
-      .then((d: { keywords: KeywordEntry[] }) => setKeywords(d.keywords))
+      .then((d: { keywords: KeywordEntry[] }) => setKeywords(d.keywords ?? []))
       .catch(() => setKeywords([]));
-  }, [business.placeId, business.name]);
+  }, [business.placeId, business.name, authFetch]);
 
   if (keywords.length === 0) return null;
 

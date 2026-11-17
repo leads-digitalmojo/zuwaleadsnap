@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import type { Business } from "../types";
 import { IconStar, IconAlertTriangle, IconX } from "./Icons";
+import { useAuth } from "../context/AuthContext";
 
 interface Props {
   selected: Business | null;
@@ -22,6 +23,7 @@ function useDebounce<T>(value: T, delay: number): T {
 }
 
 export function BusinessSearchCard({ selected, onSelect }: Props) {
+  const { authFetch } = useAuth();
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<Business[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -38,21 +40,26 @@ export function BusinessSearchCard({ selected, onSelect }: Props) {
     }
     setIsLoading(true);
     try {
-      const res = await fetch(`/api/places/search?q=${encodeURIComponent(q)}`);
+      const res = await authFetch(`/api/places/search?q=${encodeURIComponent(q)}`);
+      if (!res.ok) {
+        setResults([]);
+        return;
+      }
       const data = (await res.json()) as PlacesResponse;
-      if (data.places.length === 0 && !data.error) {
+      const places = Array.isArray(data?.places) ? data.places : [];
+      if (places.length === 0 && !data?.error) {
         setNoKey(true);
       } else {
         setNoKey(false);
       }
-      setResults(data.places);
+      setResults(places);
       setShowDropdown(true);
     } catch {
       setResults([]);
     } finally {
       setIsLoading(false);
     }
-  }, []);
+  }, [authFetch]);
 
   useEffect(() => {
     if (!selected) void search(debouncedQuery);

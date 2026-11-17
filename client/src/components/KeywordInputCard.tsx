@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import type { KeywordMetrics, KeywordList } from "../types";
 import { IconSparkles, IconX, IconCheck, IconPlus } from "./Icons";
+import { useAuth } from "../context/AuthContext";
 
 interface Props {
   businessName: string;
@@ -50,6 +51,7 @@ function fmtCpc(c: number | null): string | null {
 }
 
 export function KeywordInputCard({ businessName, keywords, onChange }: Props) {
+  const { authFetch } = useAuth();
   const [input, setInput] = useState("");
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [isLoadingAI, setIsLoadingAI] = useState(false);
@@ -71,7 +73,7 @@ export function KeywordInputCard({ businessName, keywords, onChange }: Props) {
     if (missing.length === 0) return;
 
     setIsLoadingMetrics(true);
-    fetch("/api/keywords/volume", {
+    authFetch("/api/keywords/volume", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ keywords: missing }),
@@ -93,11 +95,11 @@ export function KeywordInputCard({ businessName, keywords, onChange }: Props) {
 
   // Load saved keyword lists on mount
   useEffect(() => {
-    fetch("/api/keyword-lists")
+    authFetch("/api/keyword-lists")
       .then((r) => r.json() as Promise<ListsResponse>)
       .then((d) => setSavedLists(d.lists ?? []))
       .catch(() => {/* ignore */});
-  }, []);
+  }, [authFetch]);
 
   function addKeyword(kw: string) {
     const trimmed = kw.trim().toLowerCase();
@@ -127,7 +129,7 @@ export function KeywordInputCard({ businessName, keywords, onChange }: Props) {
     setAiError(null);
     setAiTriggered(true);
     try {
-      const res = await fetch("/api/suggest-keywords", {
+      const res = await authFetch("/api/suggest-keywords", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ businessName }),
@@ -146,7 +148,7 @@ export function KeywordInputCard({ businessName, keywords, onChange }: Props) {
     if (!listName.trim() || keywords.length === 0) return;
     setIsSaving(true);
     try {
-      const res = await fetch("/api/keyword-lists", {
+      const res = await authFetch("/api/keyword-lists", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: listName.trim(), keywords }),
@@ -168,7 +170,7 @@ export function KeywordInputCard({ businessName, keywords, onChange }: Props) {
   }
 
   async function deleteList(id: number) {
-    await fetch(`/api/keyword-lists/${id}`, { method: "DELETE" });
+    await authFetch(`/api/keyword-lists/${id}`, { method: "DELETE" });
     setSavedLists((prev) => prev.filter((l) => l.id !== id));
   }
 
