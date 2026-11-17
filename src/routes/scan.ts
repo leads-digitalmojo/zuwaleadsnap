@@ -72,7 +72,9 @@ export async function postScanHandler(req: Request, res: Response): Promise<void
   try {
     scanRecord = await createScanRecord(
       businessName, keyword, centerLat, centerLng,
-      gridSize, shape, spacingKm, points
+      gridSize, shape, spacingKm, points,
+      req.user?.id ?? null,
+      req.user?.email ?? null
     );
   } catch (err) {
     res.status(500).json({ error: "Failed to create scan record", details: (err as Error).message });
@@ -128,6 +130,14 @@ export function getScanHandler(req: Request, res: Response): void {
     return;
   }
 
+  // RBAC check: Normal users can only view their own scans (or legacy unassigned scans)
+  if (req.user && req.user.role !== "admin") {
+    if (scan.user_id && scan.user_id !== req.user.id) {
+      res.status(403).json({ error: "Access denied: you only have permission to view your own scans." });
+      return;
+    }
+  }
+
   const rawPoints = db.prepare(`
     SELECT * FROM scan_points WHERE scan_id = ? ORDER BY point_index ASC
   `).all(id) as ScanPointRow[];
@@ -148,6 +158,7 @@ export function getScanHandler(req: Request, res: Response): void {
     id: scan.id,
     status: scan.status,
     error: scan.error ?? null,
+    userEmail: scan.user_email ?? null,
     business: {
       name: scan.business_name,
       placeId: scan.place_id ?? null,
@@ -193,6 +204,8 @@ interface ScanRow {
   total_points: number;
   status: string;
   error: string | null;
+  user_id?: string | null;
+  user_email?: string | null;
   created_at: number;
   completed_at: number | null;
   business_name: string;

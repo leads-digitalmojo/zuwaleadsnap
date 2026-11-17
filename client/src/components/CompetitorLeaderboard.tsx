@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Pagination } from "./Pagination";
+import { IconChevronUp, IconChevronDown, IconStar } from "./Icons";
 
 export interface CompetitorStat {
   placeId: string;
@@ -29,6 +31,8 @@ export function CompetitorLeaderboard({ scanId, trackedBusinessName }: Props) {
   const [isLoading, setIsLoading] = useState(true);
   const [sortBy, setSortBy] = useState<SortKey>("avgRank");
   const [sortDir, setSortDir] = useState<1 | -1>(1); // 1=asc, -1=desc
+  const [page, setPage] = useState(1);
+  const pageSize = 10;
 
   useEffect(() => {
     setIsLoading(true);
@@ -69,6 +73,9 @@ export function CompetitorLeaderboard({ scanId, trackedBusinessName }: Props) {
     return diff * sortDir;
   });
 
+  const totalPages = Math.ceil(sorted.length / pageSize) || 1;
+  const paginated = sorted.slice((page - 1) * pageSize, page * pageSize);
+
   function SortHeader({ label, key }: { label: string; key: SortKey }) {
     const active = sortBy === key;
     return (
@@ -76,7 +83,10 @@ export function CompetitorLeaderboard({ scanId, trackedBusinessName }: Props) {
         onClick={() => toggleSort(key)}
         style={{ padding: "8px 12px", textAlign: "left", borderBottom: "2px solid var(--color-border)", fontSize: 11, fontWeight: 600, color: active ? "var(--color-navy)" : "var(--color-text-muted)", textTransform: "uppercase", letterSpacing: "0.04em", cursor: "pointer", whiteSpace: "nowrap", userSelect: "none" }}
       >
-        {label} {active ? (sortDir === 1 ? "▲" : "▼") : ""}
+        <span style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>
+          <span>{label}</span>
+          {active && (sortDir === 1 ? <IconChevronUp size={12} /> : <IconChevronDown size={12} />)}
+        </span>
       </th>
     );
   }
@@ -106,7 +116,8 @@ export function CompetitorLeaderboard({ scanId, trackedBusinessName }: Props) {
             </tr>
           </thead>
           <tbody>
-            {sorted.map((c, i) => {
+            {paginated.map((c, i) => {
+              const globalIndex = (page - 1) * pageSize + i + 1;
               const isTracked = normalize(c.name).includes(trackedNorm) || trackedNorm.includes(normalize(c.name));
               const rankColor = c.avgRank <= 3 ? "var(--color-rank-good)" : c.avgRank <= 10 ? "var(--color-rank-mid)" : "var(--color-rank-poor)";
               return (
@@ -117,9 +128,14 @@ export function CompetitorLeaderboard({ scanId, trackedBusinessName }: Props) {
                     background: isTracked ? "rgba(245,184,0,0.06)" : undefined,
                   }}
                 >
-                  <td style={{ padding: "8px 12px", color: "var(--color-text-muted)", fontSize: 12 }}>{i + 1}</td>
+                  <td style={{ padding: "8px 12px", color: "var(--color-text-muted)", fontSize: 12 }}>{globalIndex}</td>
                   <td style={{ padding: "8px 12px", fontWeight: isTracked ? 700 : 400 }}>
-                    {isTracked && <span style={{ color: "var(--color-accent)", marginRight: 6, fontSize: 11 }}>★ YOU</span>}
+                    {isTracked && (
+                      <span style={{ display: "inline-flex", alignItems: "center", gap: 3, color: "var(--color-accent)", marginRight: 6, fontSize: 11 }}>
+                        <IconStar size={11} filled />
+                        <span>YOU</span>
+                      </span>
+                    )}
                     {c.name}
                   </td>
                   <td style={{ padding: "8px 12px", fontWeight: 600, color: rankColor }}>
@@ -142,6 +158,17 @@ export function CompetitorLeaderboard({ scanId, trackedBusinessName }: Props) {
           </tbody>
         </table>
       </div>
+
+      {sorted.length > pageSize && (
+        <Pagination
+          page={page}
+          totalPages={totalPages}
+          total={sorted.length}
+          limit={pageSize}
+          onPageChange={setPage}
+          itemName="competitors"
+        />
+      )}
     </div>
   );
 }

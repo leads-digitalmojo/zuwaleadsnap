@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.8",
+    "@supabase/supabase-js": "^2.119.0",
     "puppeteer": "^25.8.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

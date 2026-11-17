@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import type { KeywordMetrics, KeywordList } from "../types";
+import { IconSparkles, IconX, IconCheck, IconPlus } from "./Icons";
 
 interface Props {
   businessName: string;
@@ -210,8 +211,19 @@ export function KeywordInputCard({ businessName, keywords, onChange }: Props) {
             onClick={() => void fetchAISuggestions()}
             disabled={isLoadingAI || !businessName.trim()}
             title={!businessName.trim() ? "Select a business first" : "Get AI keyword suggestions"}
+            style={{ display: "inline-flex", alignItems: "center", gap: 6 }}
           >
-            {isLoadingAI ? <><span className="spinner" style={{ marginRight: 6 }} />Thinking…</> : "✦ AI Suggest"}
+            {isLoadingAI ? (
+              <>
+                <span className="spinner" style={{ width: 13, height: 13 }} />
+                <span>Thinking…</span>
+              </>
+            ) : (
+              <>
+                <IconSparkles size={13} style={{ color: "var(--gold)" }} />
+                <span>AI Suggest</span>
+              </>
+            )}
           </button>
         </div>
       </div>
@@ -241,7 +253,9 @@ export function KeywordInputCard({ businessName, keywords, onChange }: Props) {
             {savedLists.slice(0, 4).map((l) => (
               <span key={l.id} className="saved-list-chip">
                 <button onClick={() => loadList(l)} title="Load this list">{l.name}</button>
-                <button className="chip-remove" onClick={() => void deleteList(l.id)} title="Delete list">×</button>
+                <button className="chip-remove" onClick={() => void deleteList(l.id)} title="Delete list" style={{ display: "inline-flex", alignItems: "center" }}>
+                  <IconX size={12} />
+                </button>
               </span>
             ))}
           </div>
@@ -260,7 +274,9 @@ export function KeywordInputCard({ businessName, keywords, onChange }: Props) {
                     <MetricBadge label="Cost per click" value={fmtCpc(m.cpc)} />
                   </span>
                 )}
-                <button className="chip-remove" onClick={() => removeKeyword(kw)}>×</button>
+                <button className="chip-remove" onClick={() => removeKeyword(kw)} style={{ display: "inline-flex", alignItems: "center" }}>
+                  <IconX size={12} />
+                </button>
               </span>
             );
           })}
@@ -283,7 +299,10 @@ export function KeywordInputCard({ businessName, keywords, onChange }: Props) {
         {aiTriggered && (
           <div className="ai-panel">
             <div className="ai-panel-header">
-              <span className="ai-badge">✦ AI</span>
+              <span className="ai-badge" style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>
+                <IconSparkles size={11} />
+                <span>AI</span>
+              </span>
               <span>
                 {isLoadingAI ? "Generating suggestions…" : suggestions.length > 0 ? "Click to add" : aiError ? "Unavailable" : "No suggestions"}
               </span>
@@ -295,8 +314,9 @@ export function KeywordInputCard({ businessName, keywords, onChange }: Props) {
                 {suggestions.map((s) => {
                   const already = keywords.includes(s.toLowerCase());
                   return (
-                    <button key={s} className={`ai-suggestion-chip${already ? " added" : ""}`} onClick={() => !already && addKeyword(s)} disabled={already}>
-                      {already ? "✓ " : "+ "}{s}
+                    <button key={s} className={`ai-suggestion-chip${already ? " added" : ""}`} onClick={() => !already && addKeyword(s)} disabled={already} style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>
+                      {already ? <IconCheck size={12} /> : <IconPlus size={12} />}
+                      <span>{s}</span>
                     </button>
                   );
                 })}

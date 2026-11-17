@@ -63,27 +63,54 @@ interface ScanListRow {
   center_lng: number;
   total_points: number;
   status: string;
+  user_id?: string | null;
+  user_email?: string | null;
   created_at: number;
   completed_at: number | null;
   ranked_points: number;
 }
 
 export function scanHistoryHandler(req: Request, res: Response): void {
-  const limit = Math.min(parseInt(String(req.query["limit"] ?? "50"), 10), 200);
-  const offset = Math.max(parseInt(String(req.query["offset"] ?? "0"), 10), 0);
+  const limit = Math.min(Math.max(parseInt(String(req.query["limit"] ?? "10"), 10) || 10, 1), 100);
+  const page = Math.max(parseInt(String(req.query["page"] ?? "1"), 10) || 1, 1);
+  const offset = (page - 1) * limit;
   const businessFilter = typeof req.query["business"] === "string" ? req.query["business"].trim() : null;
+  const emailFilter = typeof req.query["email"] === "string" ? req.query["email"].trim() : null;
 
   const db = getDb();
 
-  const where = businessFilter ? "WHERE LOWER(b.name) LIKE ?" : "";
-  const params: (string | number)[] = businessFilter ? [`%${businessFilter.toLowerCase()}%`] : [];
+  const whereClauses: string[] = [];
+  const params: (string | number)[] = [];
+
+  // Business name search filter
+  if (businessFilter) {
+    whereClauses.push("LOWER(b.name) LIKE ?");
+    params.push(`%${businessFilter.toLowerCase()}%`);
+  }
+
+  // RBAC Access Control:
+  // - Admin users can view all scans (or filter by specific user email)
+  // - Normal users can only view their own scans (or unassigned historical scans)
+  if (req.user) {
+    if (req.user.role === "admin") {
+      if (emailFilter) {
+        whereClauses.push("LOWER(s.user_email) = ?");
+        params.push(emailFilter.toLowerCase());
+      }
+    } else {
+      whereClauses.push("(s.user_id = ? OR s.user_id IS NULL)");
+      params.push(req.user.id);
+    }
+  }
+
+  const where = whereClauses.length > 0 ? `WHERE ${whereClauses.join(" AND ")}` : "";
 
   const rows = db.prepare(`
     SELECT
       s.id, b.name AS business_name, b.place_id,
       s.keyword, s.grid_size, s.shape, s.spacing_km,
       s.center_lat, s.center_lng, s.total_points,
-      s.status, s.created_at, s.completed_at,
+      s.status, s.user_id, s.user_email, s.created_at, s.completed_at,
       (SELECT COUNT(*) FROM scan_points sp WHERE sp.scan_id = s.id AND sp.rank IS NOT NULL) AS ranked_points
     FROM scans s
     LEFT JOIN businesses b ON b.id = s.business_id
@@ -96,10 +123,15 @@ export function scanHistoryHandler(req: Request, res: Response): void {
     SELECT COUNT(*) AS cnt FROM scans s LEFT JOIN businesses b ON b.id = s.business_id ${where}
   `).get(...params) as { cnt: number }).cnt;
 
+  const totalPages = Math.ceil(total / limit) || 1;
+
   res.json({
     total,
+    page,
     limit,
-    offset,
+    totalPages,
+    hasPrev: page > 1,
+    hasNext: page < totalPages,
     scans: rows.map((r) => ({
       id: r.id,
       businessName: r.business_name,
@@ -115,6 +147,7 @@ export function scanHistoryHandler(req: Request, res: Response): void {
       totalPoints: r.total_points,
       rankedPoints: r.ranked_points,
       status: r.status,
+      userEmail: r.user_email ?? null,
       createdAt: new Date(r.created_at * 1000).toISOString(),
       completedAt: r.completed_at ? new Date(r.completed_at * 1000).toISOString() : null,
     })),

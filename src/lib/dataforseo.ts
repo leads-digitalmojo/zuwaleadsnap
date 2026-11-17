@@ -1,12 +1,9 @@
 /**
- * DataForSEO client — Google Local Pack Standard (async) queue.
+ * DataForSEO client — Google Maps Standard (async) queue.
  *
  * Queue:    Standard (task_post → tasks_ready → task_get/advanced)
- * Endpoint: /v3/serp/google/local_pack/task_post
+ * Endpoint: /v3/serp/google/maps/task_post
  * Cost:     $0.0006 / task  (0.6 credits × $0.001)
- *
- * Local Pack = results shown in Google Search (google.com), not Maps directly.
- * This matches what LeadSnap and other rank trackers use as "Ranking Source: Local Pack".
  */
 
 import axios, { AxiosError } from "axios";
@@ -122,7 +119,7 @@ export async function submitMapsTask(
   let response: DfsTaskPostResponse;
   try {
     const res = await client.post<DfsTaskPostResponse>(
-      "/v3/serp/google/local_pack/task_post",
+      "/v3/serp/google/maps/task_post",
       [
         {
           keyword,
@@ -185,7 +182,7 @@ export async function submitMapsTasks(
   let response: DfsTaskPostResponse;
   try {
     const res = await client.post<DfsTaskPostResponse>(
-      "/v3/serp/google/local_pack/task_post",
+      "/v3/serp/google/maps/task_post",
       payload
     );
     response = res.data;
@@ -211,6 +208,8 @@ export async function submitMapsTasks(
         cacheHit: false,
         meta: { taskId: task.id, keyword, batchSize: points.length },
       });
+    } else {
+      console.warn(`[DataForSEO] Task rejected: code ${task.status_code}, msg: ${task.status_message}`);
     }
   }
   return ids;
@@ -229,7 +228,7 @@ export async function pollUntilReady(
   while (Date.now() < deadline) {
     try {
       const res = await client.get<DfsTasksReadyResponse>(
-        "/v3/serp/google/local_pack/tasks_ready"
+        "/v3/serp/google/maps/tasks_ready"
       );
       const data = res.data;
 
@@ -264,7 +263,7 @@ export async function fetchTaskItems(taskId: string): Promise<DfsMapsItem[]> {
   let response: DfsTaskGetResponse;
   try {
     const res = await client.get<DfsTaskGetResponse>(
-      `/v3/serp/google/local_pack/task_get/advanced/${taskId}`
+      `/v3/serp/google/maps/task_get/advanced/${taskId}`
     );
     response = res.data;
   } catch (err) {
@@ -286,7 +285,7 @@ export async function fetchTaskItems(taskId: string): Promise<DfsMapsItem[]> {
   }
 
   const items = task.result?.[0]?.items ?? [];
-  return items.filter((i) => i.type === "local_pack");
+  return items.filter((i) => i.type === "maps_search" || i.type === "maps_paid_item" || i.type === "local_pack");
 }
 
 // ─── Business matching ────────────────────────────────────────────────────────

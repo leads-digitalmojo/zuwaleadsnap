@@ -89,6 +89,10 @@ export async function runScan(opts: ScanRunOptions): Promise<void> {
         `[scan ${scanId}] Submitted ${taskIdToPoint.size}/${misses.length} tasks. Polling...`
       );
 
+      if (misses.length > 0 && taskIdToPoint.size === 0) {
+        throw new Error(`DataForSEO rejected all ${misses.length} task submissions for this scan.`);
+      }
+
       // ── 3. Poll until all submitted tasks are ready ────────────────────────
       const readyIds = await pollUntilReady(new Set(taskIdToPoint.keys()));
 
@@ -188,7 +192,9 @@ export async function createScanRecord(
   gridSize: number,
   shape: string,
   spacingKm: number,
-  points: GridPoint[]
+  points: GridPoint[],
+  userId: string | null = null,
+  userEmail: string | null = null
 ): Promise<CreateScanResult> {
   const db = getDb();
 
@@ -236,8 +242,8 @@ export async function createScanRecord(
   // Create scan record
   const scanResult = db
     .prepare(`
-      INSERT INTO scans (business_id, keyword, center_lat, center_lng, grid_size, shape, spacing_km, total_points)
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO scans (business_id, keyword, center_lat, center_lng, grid_size, shape, spacing_km, total_points, user_id, user_email)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `)
     .run(
       businessId,
@@ -247,7 +253,9 @@ export async function createScanRecord(
       gridSize,
       shape,
       spacingKm,
-      points.length
+      points.length,
+      userId,
+      userEmail
     );
 
   return {

@@ -1,4 +1,5 @@
 import type { GridConfig, GridShape, GridSize } from "../types";
+import { IconAlertTriangle, IconArrowRight } from "./Icons";
 
 const COST_PER_POINT = 0.0006;
 
@@ -116,7 +117,10 @@ export function GridConfigCard({ config, onChange, onRun, isRunning, validationE
         {validationErrors.length > 0 && (
           <div className="validation-errors">
             {validationErrors.map((e) => (
-              <div key={e} className="validation-error">⚠ {e}</div>
+              <div key={e} className="validation-error" style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                <IconAlertTriangle size={14} style={{ flexShrink: 0 }} />
+                <span>{e}</span>
+              </div>
             ))}
           </div>
         )}
@@ -129,10 +133,14 @@ export function GridConfigCard({ config, onChange, onRun, isRunning, validationE
           {isRunning ? (
             <span style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
               <span className="spinner spinner-sm" />
-              Running scan…
+              <span>Running scan…</span>
             </span>
           ) : (
-            `Run the Scan  →  ${pointCount} grid points`
+            <span style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
+              <span>Run the Scan</span>
+              <IconArrowRight size={15} />
+              <span>{pointCount} grid points</span>
+            </span>
           )}
         </button>
       </div>

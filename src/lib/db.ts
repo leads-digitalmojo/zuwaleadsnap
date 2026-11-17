@@ -36,6 +36,8 @@ export function getDb(): Database.Database {
       status       TEXT    NOT NULL DEFAULT 'running'
                            CHECK(status IN ('running','complete','error')),
       error        TEXT,
+      user_id      TEXT,
+      user_email   TEXT,
       created_at   INTEGER NOT NULL DEFAULT (unixepoch()),
       completed_at INTEGER
     );
@@ -138,6 +140,14 @@ export function getDb(): Database.Database {
       created_at      INTEGER NOT NULL DEFAULT (unixepoch())
     );
   `);
+
+  // Safe migrations for existing databases
+  try {
+    _db.exec("ALTER TABLE scans ADD COLUMN user_id TEXT");
+  } catch (_) {}
+  try {
+    _db.exec("ALTER TABLE scans ADD COLUMN user_email TEXT");
+  } catch (_) {}
 
   return _db;
 }

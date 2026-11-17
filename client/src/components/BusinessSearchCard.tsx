@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import type { Business } from "../types";
+import { IconStar, IconAlertTriangle, IconX } from "./Icons";
 
 interface Props {
   selected: Business | null;
@@ -96,7 +97,14 @@ export function BusinessSearchCard({ selected, onSelect }: Props) {
   }
 
   function renderStars(rating: number) {
-    return "★".repeat(Math.round(rating)) + "☆".repeat(5 - Math.round(rating));
+    const rounded = Math.round(rating);
+    return (
+      <span style={{ display: "inline-flex", alignItems: "center", gap: 2, color: "var(--gold)" }}>
+        {[1, 2, 3, 4, 5].map((i) => (
+          <IconStar key={i} size={12} filled={i <= rounded} />
+        ))}
+      </span>
+    );
   }
 
   return (
@@ -131,8 +139,9 @@ export function BusinessSearchCard({ selected, onSelect }: Props) {
             </div>
 
             {noKey && query.length >= 2 && (
-              <div className="no-key-notice">
-                ⚠ Google Places API key not configured — type the business name and press Enter to continue manually.
+              <div className="no-key-notice" style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <IconAlertTriangle size={15} style={{ flexShrink: 0 }} />
+                <span>Google Places API key not configured — type the business name and press Enter to continue manually.</span>
               </div>
             )}
 
@@ -143,9 +152,9 @@ export function BusinessSearchCard({ selected, onSelect }: Props) {
                     <div className="result-name">{b.name}</div>
                     <div className="result-addr">{b.address}</div>
                     {b.rating != null && (
-                      <div className="result-rating">
-                        <span className="stars">{renderStars(b.rating)}</span>{" "}
-                        {b.rating} ({b.reviewCount?.toLocaleString()} reviews)
+                      <div className="result-rating" style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                        {renderStars(b.rating)}
+                        <span>{b.rating} ({b.reviewCount?.toLocaleString()} reviews)</span>
                       </div>
                     )}
                   </div>
@@ -163,7 +172,10 @@ export function BusinessSearchCard({ selected, onSelect }: Props) {
               {selected.address && <div className="biz-addr">{selected.address}</div>}
               <div className="biz-meta">
                 {selected.rating != null && (
-                  <span><span className="stars">★</span> {selected.rating}</span>
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: 4 }}>
+                    <IconStar size={12} style={{ color: "var(--gold)" }} />
+                    <span>{selected.rating}</span>
+                  </span>
                 )}
                 {selected.reviewCount != null && (
                   <span>{selected.reviewCount.toLocaleString()} reviews</span>
@@ -173,7 +185,9 @@ export function BusinessSearchCard({ selected, onSelect }: Props) {
                 )}
               </div>
             </div>
-            <button className="btn-clear" onClick={() => onSelect(null)} title="Clear">×</button>
+            <button className="btn-clear" onClick={() => onSelect(null)} title="Clear">
+              <IconX size={15} />
+            </button>
           </div>
         )}
       </div>

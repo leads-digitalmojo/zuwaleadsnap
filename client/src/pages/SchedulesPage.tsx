@@ -1,4 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
+import { useAuth } from "../context/AuthContext";
+import { IconAlertTriangle, IconPlus, IconClock, IconCalendar } from "../components/Icons";
 import type { Schedule, GridSize, GridShape } from "../types";
 
 interface SchedulesResponse {
@@ -49,6 +51,7 @@ const EMPTY_FORM: CreateForm = {
 };
 
 export function SchedulesPage() {
+  const { authFetch } = useAuth();
   const [schedules, setSchedules] = useState<Schedule[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
@@ -59,13 +62,13 @@ export function SchedulesPage() {
   const load = useCallback(async () => {
     setIsLoading(true);
     try {
-      const res = await fetch("/api/schedules");
+      const res = await authFetch("/api/schedules");
       const data = (await res.json()) as SchedulesResponse;
       setSchedules(data.schedules ?? []);
     } finally {
       setIsLoading(false);
     }
-  }, []);
+  }, [authFetch]);
 
   useEffect(() => { void load(); }, [load]);
 
@@ -89,7 +92,7 @@ export function SchedulesPage() {
 
     setIsSaving(true);
     try {
-      const res = await fetch("/api/schedules", {
+      const res = await authFetch("/api/schedules", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -118,13 +121,13 @@ export function SchedulesPage() {
   }
 
   async function toggle(id: number) {
-    await fetch(`/api/schedules/${id}/toggle`, { method: "PATCH" });
+    await authFetch(`/api/schedules/${id}/toggle`, { method: "PATCH" });
     await load();
   }
 
   async function deleteSchedule(id: number) {
     if (!confirm("Delete this schedule?")) return;
-    await fetch(`/api/schedules/${id}`, { method: "DELETE" });
+    await authFetch(`/api/schedules/${id}`, { method: "DELETE" });
     setSchedules((s) => s.filter((x) => x.id !== id));
   }
 
@@ -184,7 +187,12 @@ export function SchedulesPage() {
                   </select>
                 </div>
               </div>
-              {formError && <div className="validation-error" style={{ marginBottom: 10 }}>⚠ {formError}</div>}
+              {formError && (
+                <div className="validation-error" style={{ marginBottom: 10, display: "flex", alignItems: "center", gap: 6 }}>
+                  <IconAlertTriangle size={14} style={{ flexShrink: 0 }} />
+                  <span>{formError}</span>
+                </div>
+              )}
               <button className="btn-secondary" type="submit" disabled={isSaving}>
                 {isSaving ? "Creating…" : "Create Schedule"}
               </button>
@@ -199,7 +207,8 @@ export function SchedulesPage() {
             No scheduled scans yet. Create one to run automatically on a cadence.
           </div>
         ) : (
-          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
+          <div style={{ overflowX: "auto" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
             <thead>
               <tr>
                 {["Name", "Business", "Keyword", "Cadence", "Next run", "Last run", "Status", "Actions"].map((h) => (
@@ -239,6 +248,7 @@ export function SchedulesPage() {
               ))}
             </tbody>
           </table>
+        </div>
         )}
       </div>
     </div>

@@ -10,6 +10,16 @@ import { SchedulesPage } from "./pages/SchedulesPage";
 import { ReportPage } from "./pages/ReportPage";
 import { CompetitorLeaderboard } from "./components/CompetitorLeaderboard";
 import { ExportBar } from "./components/ExportBar";
+import { LoginScreen } from "./components/LoginScreen";
+import { TwoFactorScreen } from "./components/TwoFactorScreen";
+import { useAuth } from "./context/AuthContext";
+import {
+  IconMenu,
+  IconCheck,
+  IconX,
+  IconShield,
+  IconChevronRight,
+} from "./components/Icons";
 import type { AppPage, Business, GridConfig, ScanCreateResponse, ScanResponse } from "./types";
 
 const DEFAULT_GRID: GridConfig = {
@@ -33,7 +43,9 @@ const PAGE_TITLES: Record<AppPage, string> = {
 };
 
 export default function App() {
+  const { user, role, isLoading: isAuthLoading, is2faVerified, authFetch } = useAuth();
   const [page, setPage] = useState<AppPage>("new-scan");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // New-scan state
   const [business, setBusiness] = useState<Business | null>(null);
@@ -61,17 +73,17 @@ export default function App() {
     stopPolling();
     setScanStatus({ phase: "idle", scanId: null, message: "", progressFraction: 0 });
     try {
-      const res = await fetch(`/scan/${scanId}`);
+      const res = await authFetch(`/scan/${scanId}`);
       if (!res.ok) return;
       const data = (await res.json()) as ScanResponse;
       setScanResult(data);
       setHistoryScanId(scanId);
     } catch { /* ignore */ }
-  }, [stopPolling]);
+  }, [stopPolling, authFetch]);
 
   const pollScan = useCallback(async (scanId: number) => {
     try {
-      const res = await fetch(`/scan/${scanId}`);
+      const res = await authFetch(`/scan/${scanId}`);
       if (!res.ok) return;
       const data = (await res.json()) as ScanResponse;
       const total = data.stats.totalPoints;
@@ -97,7 +109,7 @@ export default function App() {
         }));
       }
     } catch { /* transient network error */ }
-  }, [stopPolling]);
+  }, [stopPolling, authFetch]);
 
   useEffect(() => () => stopPolling(), [stopPolling]);
 
@@ -113,7 +125,7 @@ export default function App() {
     stopPolling();
 
     try {
-      const res = await fetch("/scan", {
+      const res = await authFetch("/scan", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -155,19 +167,148 @@ export default function App() {
     return <ReportPage token={reportToken} />;
   }
 
+  // Auth Loading Splash Screen
+  if (isAuthLoading) {
+    return (
+      <div
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "var(--canvas)",
+          gap: 16,
+        }}
+      >
+        <div
+          style={{
+            width: 48,
+            height: 48,
+            borderRadius: 14,
+            background: "#19181c",
+            border: "1px solid #2e2d35",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 4px 16px rgba(0,0,0,0.3)",
+          }}
+        >
+          <svg viewBox="0 0 620 404" fill="none" style={{ width: 28, height: 28 }}>
+            <ellipse cx="97" cy="300" rx="97" ry="92" fill="#FFE95C" />
+            <path d="M190 100 L330 300" stroke="#FFE95C" strokeWidth="110" strokeLinecap="round" />
+            <path d="M425 100 L520 300" stroke="#FFE95C" strokeWidth="110" strokeLinecap="round" />
+          </svg>
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 13, color: "var(--ink-muted)", fontWeight: 500 }}>
+          <span className="spinner spinner-sm" style={{ borderColor: "rgba(17,16,19,0.2)", borderTopColor: "var(--ink)" }} />
+          <span>Initializing MojoMap…</span>
+        </div>
+      </div>
+    );
+  }
+
+  // STRICT LOGIN WALL — No dashboard access before login
+  if (!user) {
+    return <LoginScreen />;
+  }
+
+  // TWO-FACTOR AUTH CHALLENGE — Required after Google SSO or Password login
+  // (Users who logged in directly with OTP already have is2faVerified = true)
+  if (!is2faVerified) {
+    return <TwoFactorScreen />;
+  }
+
   const breadcrumb = (
     <nav className="breadcrumb">
       <span>Rank Tracking</span>
-      <span className="sep">›</span>
+      <span className="sep"><IconChevronRight size={12} /></span>
       <span className="current">{PAGE_TITLES[page]}</span>
     </nav>
   );
 
   return (
     <div className="app-shell">
-      <Sidebar page={page} onNav={setPage} />
+      {/* Desktop Sidebar */}
+      <div className="sidebar-desktop-wrap">
+        <Sidebar page={page} onNav={setPage} />
+      </div>
+
+      {/* Mobile Drawer Backdrop & Sidebar */}
+      {mobileMenuOpen && (
+        <div
+          className="mobile-drawer-backdrop"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          <div
+            className="mobile-drawer-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Sidebar page={page} onNav={setPage} onCloseMobile={() => setMobileMenuOpen(false)} />
+          </div>
+        </div>
+      )}
+
       <div className="main-content">
-        <header className="page-header">{breadcrumb}</header>
+        <header className="page-header">
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            {/* Hamburger button on mobile */}
+            <button
+              className="mobile-hamburger-btn"
+              onClick={() => setMobileMenuOpen(true)}
+              aria-label="Toggle navigation menu"
+            >
+              <IconMenu size={20} />
+            </button>
+            {breadcrumb}
+          </div>
+
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <div
+              className="user-header-pill"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                padding: "4px 10px",
+                background: "var(--surface-hover)",
+                border: "1px solid var(--hairline)",
+                borderRadius: "100px",
+                fontSize: 12,
+              }}
+            >
+              <span
+                style={{
+                  width: 7,
+                  height: 7,
+                  borderRadius: "50%",
+                  background: role === "admin" ? "var(--gold)" : "var(--rank-good)",
+                }}
+              />
+              <span style={{ fontWeight: 600 }}>{user.email}</span>
+              <span
+                style={{
+                  fontSize: 10,
+                  fontWeight: 700,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.06em",
+                  padding: "1px 5px",
+                  borderRadius: 4,
+                  background: role === "admin" ? "var(--gold-tint)" : "var(--surface)",
+                  color: role === "admin" ? "var(--gold-deep)" : "var(--ink-muted)",
+                  border: role === "admin" ? "1px solid #ebd48f" : "1px solid var(--hairline)",
+                }}
+              >
+                {role === "admin" ? "Admin" : "Member"}
+              </span>
+            </div>
+
+            <div className="header-badge">
+              <span className="dot" />
+              <span>Engine Active</span>
+            </div>
+          </div>
+        </header>
 
         {page === "new-scan" && (
           <div className="card-stack">
@@ -218,14 +359,20 @@ export default function App() {
 }
 
 function ScanStatusBar({ status }: { status: ScanStatus }) {
-  const icon = status.phase === "running" ? <span className="spinner" />
-    : status.phase === "complete" ? "✓" : "✕";
+  const icon = status.phase === "running" ? (
+    <span className="spinner" />
+  ) : status.phase === "complete" ? (
+    <IconCheck size={18} />
+  ) : (
+    <IconX size={18} />
+  );
+
   const color = status.phase === "complete" ? "var(--color-rank-good)"
     : status.phase === "error" ? "var(--color-rank-poor)" : "var(--color-navy)";
 
   return (
     <div className="scan-status-bar">
-      <span className="status-icon" style={{ color }}>{icon}</span>
+      <span className="status-icon" style={{ color, display: "inline-flex", alignItems: "center" }}>{icon}</span>
       <div className="status-info">
         <div className="status-title" style={{ color }}>
           {status.phase === "running" ? "Scan in progress"

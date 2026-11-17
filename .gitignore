@@ -1,6 +1,18 @@
 node_modules/
 dist/
 .env
+.env.*
+*.local
 *.db
 *.db-shm
 *.db-wal
+
+# Graphify local-only
+graphify-out/
+graphify-output/
+
+
+mojo_map_gcp_secret.json
+*secret*.json
+*.secret
+

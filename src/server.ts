@@ -13,6 +13,7 @@ import { createShareHandler, getReportHandler, csvExportHandler, pdfExportHandle
 import { costsSummaryHandler } from "./routes/costs.js";
 import { getDb } from "./lib/db.js";
 import { startScheduler } from "./lib/scheduler.js";
+import { optionalAuth, requireAuth } from "./lib/auth.js";
 
 const app = express();
 app.use(express.json());
@@ -21,7 +22,24 @@ app.use(express.json());
 getDb();
 startScheduler();
 
-// ── Routes ────────────────────────────────────────────────────────────────────
+// ── Public Routes (No Auth Required) ──────────────────────────────────────────
+
+app.get("/health", (_req, res) => {
+  res.json({ status: "ok", timestamp: new Date().toISOString() });
+});
+
+// Public share token report viewing
+app.get("/api/report/:token", getReportHandler);
+app.get("/api/report-html/:token", reportHtmlHandler);
+
+// Check current user session status
+app.get("/api/me", optionalAuth, (req, res) => {
+  res.json({ user: req.user ?? null });
+});
+
+// ── Protected Routes (Require Valid @digitalmojo.in Supabase Auth) ────────────
+
+app.use(requireAuth);
 
 app.post("/rank-check", rankCheckHandler);
 app.post("/scan", postScanHandler);
@@ -46,8 +64,6 @@ app.get("/scan/:id/competitors", competitorsHandler);
 app.post("/scan/:id/share", createShareHandler);
 app.get("/scan/:id/export/csv", csvExportHandler);
 app.get("/scan/:id/export/pdf", (req, res) => { void pdfExportHandler(req, res); });
-app.get("/api/report/:token", getReportHandler);
-app.get("/api/report-html/:token", reportHtmlHandler);
 app.get("/api/costs/summary", costsSummaryHandler);
 
 app.get("/health", (_req, res) => {

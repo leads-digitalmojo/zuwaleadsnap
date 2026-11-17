@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Loader } from "@googlemaps/js-api-loader";
+import { Pagination } from "./Pagination";
+import { IconAlertTriangle, IconX, IconStar } from "./Icons";
 import type { ScanResponse, ScanPoint } from "../types";
 
 interface Props {
@@ -10,10 +12,10 @@ interface Props {
 type ViewMode = "pins" | "heat";
 
 function rankColor(rank: number | null): string {
-  if (rank === null || rank > 20) return "#b91c1c";  // dark red — not in top 20
-  if (rank > 10) return "#ef4444";                   // red — 11-20
-  if (rank > 3) return "#f97316";                    // orange — 4-10 (matches LeadSnap)
-  return "#22c55e";                                  // green — 1-3
+  if (rank === null || rank > 20) return "#d93d3d";  // Crimson / Danger
+  if (rank > 10) return "#e05638";                   // Muted Terracotta / Drop-off
+  if (rank > 3) return "#f0bc00";                    // Signature Mojo Gold — 4-10
+  return "#1f9d55";                                  // Mojo Success Green — 1-3
 }
 
 function rankLabel(rank: number | null): string {
@@ -28,22 +30,23 @@ function makePinEl(point: ScanPoint, mode: ViewMode): HTMLElement {
   if (mode === "pins") {
     const label = rankLabel(point.rank);
     const fontSize = label === "20+" ? "9px" : "11px";
+    const textColor = point.rank != null && point.rank > 3 && point.rank <= 10 ? "#111013" : "#ffffff";
     el.style.cssText = [
       `width:28px;height:28px;border-radius:50%`,
-      `background:${color};border:3px solid #fff`,
+      `background:${color};border:2.5px solid #ffffff`,
       `display:flex;align-items:center;justify-content:center`,
-      `color:#fff;font-weight:900;font-size:${fontSize};letter-spacing:-0.5px`,
-      `box-shadow:0 1px 4px rgba(0,0,0,0.35);cursor:pointer`,
-      `font-family:-apple-system,BlinkMacSystemFont,sans-serif`,
+      `color:${textColor};font-weight:800;font-size:${fontSize};letter-spacing:-0.5px`,
+      `box-shadow:0 2px 6px rgba(17,16,19,0.3);cursor:pointer`,
+      `font-family:"Plus Jakarta Sans", system-ui, sans-serif`,
       `box-sizing:border-box;line-height:1`,
     ].join(";");
     el.textContent = label;
   } else {
     el.style.cssText = [
-      `width:22px;height:22px;border-radius:3px`,
-      `background:${color};border:2px solid rgba(255,255,255,0.7)`,
+      `width:22px;height:22px;border-radius:4px`,
+      `background:${color};border:2px solid rgba(255,255,255,0.85)`,
       `cursor:pointer;box-sizing:border-box`,
-      `box-shadow:0 1px 3px rgba(0,0,0,0.2)`,
+      `box-shadow:0 2px 4px rgba(17,16,19,0.25)`,
     ].join(";");
   }
   return el;
@@ -155,7 +158,10 @@ export function ScanResultsMap({ result, isLive = false }: Props) {
       <div className="map-container">
         {mapsError ? (
           <div className="map-no-key">
-            <span>⚠ Map failed to load: {mapsError}</span>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginBottom: 12 }}>
+              <IconAlertTriangle size={16} />
+              <span>Map failed to load: {mapsError}</span>
+            </div>
             <FallbackGrid result={result} />
           </div>
         ) : (
@@ -177,7 +183,9 @@ function PointPanel({ point, onClose }: { point: ScanPoint; onClose: () => void 
     <div className="point-panel">
       <div className="point-panel-header">
         <h3>Grid Point {point.index + 1}</h3>
-        <button className="btn-close-panel" onClick={onClose}>×</button>
+        <button className="btn-close-panel" onClick={onClose} style={{ display: "inline-flex", alignItems: "center" }}>
+          <IconX size={15} />
+        </button>
       </div>
       <div className="point-panel-body">
         <div className="rank-display">
@@ -209,7 +217,10 @@ function PointPanel({ point, onClose }: { point: ScanPoint; onClose: () => void 
                 <div className="comp-info">
                   <div className="comp-name">{r.name}</div>
                   {r.rating != null && (
-                    <div className="comp-rating">★ {r.rating}{r.reviews != null ? ` · ${r.reviews} reviews` : ""}</div>
+                    <div className="comp-rating" style={{ display: "flex", alignItems: "center", gap: 4 }}>
+                      <IconStar size={11} style={{ color: "var(--gold)" }} />
+                      <span>{r.rating}{r.reviews != null ? ` · ${r.reviews} reviews` : ""}</span>
+                    </div>
                   )}
                 </div>
               </li>
@@ -222,10 +233,16 @@ function PointPanel({ point, onClose }: { point: ScanPoint; onClose: () => void 
 }
 
 function FallbackGrid({ result }: { result: ScanResponse }) {
+  const [page, setPage] = useState(1);
+  const pageSize = 25;
+  const total = result.points.length;
+  const totalPages = Math.ceil(total / pageSize) || 1;
+  const paginated = result.points.slice((page - 1) * pageSize, page * pageSize);
+
   return (
     <div className="results-section">
       <div className="results-header">
-        <h2>Rank Grid — {result.keyword}</h2>
+        <h2>Rank Grid Table — {result.keyword}</h2>
         <div className="results-meta">
           <span style={{ fontSize: 11, color: "var(--color-text-muted)" }}>
             Set VITE_GOOGLE_MAPS_JS_API_KEY for map view
@@ -244,7 +261,7 @@ function FallbackGrid({ result }: { result: ScanResponse }) {
             </tr>
           </thead>
           <tbody>
-            {result.points.map((p) => {
+            {paginated.map((p) => {
               const rankClass =
                 p.rank === null ? "rank-poor"
                 : p.rank <= 3 ? "rank-good"
@@ -271,6 +288,17 @@ function FallbackGrid({ result }: { result: ScanResponse }) {
           </tbody>
         </table>
       </div>
+
+      {total > pageSize && (
+        <Pagination
+          page={page}
+          totalPages={totalPages}
+          total={total}
+          limit={pageSize}
+          onPageChange={setPage}
+          itemName="points"
+        />
+      )}
     </div>
   );
 }
