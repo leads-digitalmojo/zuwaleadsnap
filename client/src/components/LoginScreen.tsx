@@ -48,6 +48,7 @@ export const LoginScreen: FC = () => {
 
   async function handleSendDirectOtp(e?: FormEvent) {
     if (e) e.preventDefault();
+    if (isLoading) return;
     setFormError(null);
     setSuccessMsg(null);
 

@@ -1,4 +1,4 @@
-import { useState, useEffect, type FC, type FormEvent } from "react";
+import { useState, useEffect, useRef, type FC, type FormEvent } from "react";
 import { useAuth } from "../context/AuthContext";
 import {
   IconShield,
@@ -18,8 +18,13 @@ export const TwoFactorScreen: FC = () => {
   const [successMsg, setSuccessMsg] = useState<string | null>(null);
   const [resendCooldown, setResendCooldown] = useState(30);
 
-  // Send initial 2FA OTP on mount
+  const hasDispatchedInitialOtp = useRef(false);
+
+  // Send initial 2FA OTP on mount (guarded against React StrictMode double-mounting)
   useEffect(() => {
+    if (hasDispatchedInitialOtp.current) return;
+    hasDispatchedInitialOtp.current = true;
+
     let isMounted = true;
     send2faOtp()
       .then(() => {
