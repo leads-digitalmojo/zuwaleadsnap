@@ -7,6 +7,7 @@ import { ScanResultsMap } from "./components/ScanResultsMap";
 import { PreviousKeywordsBar } from "./components/PreviousKeywordsBar";
 import { HistoryPage } from "./pages/HistoryPage";
 import { SchedulesPage } from "./pages/SchedulesPage";
+import { ScanDetailPage } from "./pages/ScanDetailPage";
 import { ReportPage } from "./pages/ReportPage";
 import { CompetitorLeaderboard } from "./components/CompetitorLeaderboard";
 import { ExportBar } from "./components/ExportBar";
@@ -41,11 +42,13 @@ const PAGE_TITLES: Record<AppPage, string> = {
   "new-scan": "New Scan",
   "history": "Scan History",
   "schedules": "Scheduled Scans",
+  "scan-detail": "Scan Details",
 };
 
 export default function App() {
   const { user, role, isLoading: isAuthLoading, is2faVerified, authFetch } = useAuth();
   const [page, setPage] = useState<AppPage>("new-scan");
+  const [selectedScanId, setSelectedScanId] = useState<number | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // New-scan state
@@ -230,7 +233,29 @@ export default function App() {
     <nav className="breadcrumb">
       <span>Rank Tracking</span>
       <span className="sep"><IconChevronRight size={12} /></span>
-      <span className="current">{PAGE_TITLES[page]}</span>
+      {page === "scan-detail" ? (
+        <>
+          <button
+            onClick={() => setPage("history")}
+            style={{
+              background: "none",
+              border: "none",
+              padding: 0,
+              font: "inherit",
+              color: "inherit",
+              cursor: "pointer",
+              textDecoration: "underline",
+              textUnderlineOffset: 2,
+            }}
+          >
+            Scan History
+          </button>
+          <span className="sep"><IconChevronRight size={12} /></span>
+          <span className="current">Scan #{selectedScanId}</span>
+        </>
+      ) : (
+        <span className="current">{PAGE_TITLES[page]}</span>
+      )}
     </nav>
   );
 
@@ -358,7 +383,22 @@ export default function App() {
           </div>
         )}
 
-        {page === "history" && <HistoryPage />}
+        {page === "history" && (
+          <HistoryPage
+            onViewScan={(scanId) => {
+              setSelectedScanId(scanId);
+              setPage("scan-detail");
+            }}
+          />
+        )}
+
+        {page === "scan-detail" && selectedScanId && (
+          <ScanDetailPage
+            scanId={selectedScanId}
+            onBack={() => setPage("history")}
+          />
+        )}
+
         {page === "schedules" && <SchedulesPage />}
       </div>
     </div>

@@ -136,4 +136,4 @@ export interface ScanListItem {
   completedAt: string | null;
 }
 
-export type AppPage = "new-scan" | "history" | "schedules";
+export type AppPage = "new-scan" | "history" | "schedules" | "scan-detail";

@@ -122,7 +122,7 @@ export function ScanResultsMap({ result, isLive = false }: Props) {
     }
   }, [mapReady, viewMode, result.points]);
 
-  const points = result.points;
+  const points = result?.points || [];
   const ranked = points.filter((p) => p.rank !== null);
   const avgRank = ranked.length > 0
     ? (ranked.reduce((s, p) => s + (p.rank ?? 0), 0) / ranked.length).toFixed(1)

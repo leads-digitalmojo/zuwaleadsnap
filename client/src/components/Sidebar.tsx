@@ -25,9 +25,10 @@ export function Sidebar({ page, onNav, onCloseMobile }: Props) {
   }
 
   function Item({ id, label, icon }: { id: AppPage; label: string; icon: React.ReactNode }) {
+    const isActive = page === id || (id === "history" && page === "scan-detail");
     return (
       <button
-        className={`sidebar-item${page === id ? " active" : ""}`}
+        className={`sidebar-item${isActive ? " active" : ""}`}
         onClick={() => handleNavigate(id)}
         style={{ width: "100%", background: "none", border: "none", cursor: "pointer", textAlign: "left" }}
       >

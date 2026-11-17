@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Pagination } from "./Pagination";
 import { IconChevronUp, IconChevronDown, IconStar } from "./Icons";
+import { useAuth } from "../context/AuthContext";
 
 export interface CompetitorStat {
   placeId: string;
@@ -27,6 +28,7 @@ interface Props {
 }
 
 export function CompetitorLeaderboard({ scanId, trackedBusinessName }: Props) {
+  const { authFetch } = useAuth();
   const [data, setData] = useState<LeaderboardResponse | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [sortBy, setSortBy] = useState<SortKey>("avgRank");
@@ -35,13 +37,25 @@ export function CompetitorLeaderboard({ scanId, trackedBusinessName }: Props) {
   const pageSize = 10;
 
   useEffect(() => {
+    let cancelled = false;
     setIsLoading(true);
-    fetch(`/scan/${scanId}/competitors`)
-      .then((r) => r.json() as Promise<LeaderboardResponse>)
-      .then(setData)
-      .catch(() => setData(null))
-      .finally(() => setIsLoading(false));
-  }, [scanId]);
+    authFetch(`/scan/${scanId}/competitors`)
+      .then(async (r) => {
+        if (!r.ok) return null;
+        return (await r.json()) as LeaderboardResponse;
+      })
+      .then((d) => {
+        if (!cancelled) setData(d);
+      })
+      .catch(() => {
+        if (!cancelled) setData(null);
+      })
+      .finally(() => {
+        if (!cancelled) setIsLoading(false);
+      });
+
+    return () => { cancelled = true; };
+  }, [scanId, authFetch]);
 
   if (isLoading) {
     return (
@@ -52,7 +66,9 @@ export function CompetitorLeaderboard({ scanId, trackedBusinessName }: Props) {
     );
   }
 
-  if (!data || data.competitors.length === 0) return null;
+  if (!data || !data.competitors || !Array.isArray(data.competitors) || data.competitors.length === 0) {
+    return null;
+  }
 
   // Normalize tracked business name for matching
   const normalize = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");

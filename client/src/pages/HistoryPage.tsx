@@ -47,7 +47,11 @@ function ago(iso: string) {
   return `${Math.floor(h / 24)}d ago`;
 }
 
-export function HistoryPage() {
+interface HistoryPageProps {
+  onViewScan?: (scanId: number) => void;
+}
+
+export function HistoryPage({ onViewScan }: HistoryPageProps = {}) {
   const { user, role, authFetch } = useAuth();
   const [scans, setScans] = useState<Array<ScanListItem & { userEmail?: string | null }>>([]);
   const [total, setTotal] = useState(0);
@@ -94,11 +98,15 @@ export function HistoryPage() {
   }, [loadHistory, limit, user]);
 
   async function openScan(id: number, slot: "main" | "compare") {
+    if (slot === "main" && onViewScan) {
+      onViewScan(id);
+      return;
+    }
     setLoadingId(id);
     try {
       const res = await authFetch(`/scan/${id}`);
       if (!res.ok) {
-        const err = (await res.json()) as { error?: string };
+        const err = (await res.json().catch(() => ({}))) as { error?: string };
         alert(err.error ?? "Failed to open scan");
         return;
       }
@@ -361,7 +369,7 @@ export function HistoryPage() {
             </button>
           </div>
           <ScanResultsMap result={viewScan} />
-          {!compareMode && <CompetitorLeaderboard scanId={viewScan.id} trackedBusinessName={viewScan.business.name} />}
+          {!compareMode && <CompetitorLeaderboard scanId={viewScan.id} trackedBusinessName={viewScan.business?.name || ""} />}
           {!compareMode && (
             <div className="card" style={{ overflow: "hidden" }}>
               <ExportBar scanId={viewScan.id} />
