@@ -12,6 +12,7 @@ import { CompetitorLeaderboard } from "./components/CompetitorLeaderboard";
 import { ExportBar } from "./components/ExportBar";
 import { LoginScreen } from "./components/LoginScreen";
 import { TwoFactorScreen } from "./components/TwoFactorScreen";
+import { OnboardingScreen } from "./components/OnboardingScreen";
 import { useAuth } from "./context/AuthContext";
 import {
   IconMenu,
@@ -219,6 +220,12 @@ export default function App() {
     return <TwoFactorScreen />;
   }
 
+  // FIRST-TIME USER ONBOARDING — Get Name and Team before entering dashboard
+  const displayName = (user.user_metadata?.["full_name"] || user.user_metadata?.["name"] || "").trim();
+  if (!displayName) {
+    return <OnboardingScreen />;
+  }
+
   const breadcrumb = (
     <nav className="breadcrumb">
       <span>Rank Tracking</span>
@@ -285,7 +292,7 @@ export default function App() {
                   background: role === "admin" ? "var(--gold)" : "var(--rank-good)",
                 }}
               />
-              <span style={{ fontWeight: 600 }}>{user.email}</span>
+              <span style={{ fontWeight: 600 }}>{displayName}</span>
               <span
                 style={{
                   fontSize: 10,

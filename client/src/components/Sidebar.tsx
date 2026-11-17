@@ -37,7 +37,8 @@ export function Sidebar({ page, onNav, onCloseMobile }: Props) {
     );
   }
 
-  const initial = user?.email ? user.email[0].toUpperCase() : "M";
+  const displayName = (user?.user_metadata?.["full_name"] || user?.user_metadata?.["name"] || user?.email?.split("@")[0] || "Member").trim();
+  const initial = displayName ? displayName[0].toUpperCase() : "M";
 
   return (
     <aside className="sidebar">
@@ -113,9 +114,21 @@ export function Sidebar({ page, onNav, onCloseMobile }: Props) {
             <div style={{ minWidth: 0, flex: 1 }}>
               <div
                 style={{
-                  fontSize: 12.5,
-                  fontWeight: 600,
+                  fontSize: 13,
+                  fontWeight: 700,
                   color: "#fff",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+                title={displayName}
+              >
+                {displayName}
+              </div>
+              <div
+                style={{
+                  fontSize: 11,
+                  color: "#a4a2aa",
                   whiteSpace: "nowrap",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
@@ -124,7 +137,7 @@ export function Sidebar({ page, onNav, onCloseMobile }: Props) {
               >
                 {user.email}
               </div>
-              <div style={{ display: "flex", alignItems: "center", gap: 4, marginTop: 2 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 4, marginTop: 3 }}>
                 <IconShield size={11} style={{ color: role === "admin" ? "var(--gold)" : "#a4a2aa" }} />
                 <span
                   style={{

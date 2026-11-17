@@ -16,6 +16,7 @@ export interface AuthContextType {
   verifyDirectOtp: (email: string, token: string) => Promise<void>;
   send2faOtp: () => Promise<void>;
   verify2faOtp: (token: string) => Promise<void>;
+  updateProfile: (data: { fullName: string; team?: string }) => Promise<void>;
   signOut: () => Promise<void>;
   authFetch: (input: RequestInfo | URL, init?: RequestInit) => Promise<Response>;
 }
@@ -73,9 +74,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
 
     // Realtime auth listener
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      // If user came from a magic link / OTP link, Supabase emits SIGNED_IN or TOKEN_REFRESHED
-      // If they had already completed OTP or signed in directly, preserve verification
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       applyUser(session?.user ?? null, session);
       setIsLoading(false);
     });
@@ -129,6 +128,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   // Direct OTP Flow (People who log in directly with OTP)
+  // shouldCreateUser is true so any new @digitalmojo.in user is automatically registered!
   const sendDirectOtp = async (email: string) => {
     setError(null);
     if (!isDigitalMojoEmail(email)) {
@@ -136,7 +136,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
     const { error } = await supabase.auth.signInWithOtp({
       email,
-      options: { shouldCreateUser: false },
+      options: { shouldCreateUser: true },
     });
     if (error) throw error;
   };
@@ -181,6 +181,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   };
 
+  // Update profile for first-time users (Full Name, Team/Department)
+  const updateProfile = async (data: { fullName: string; team?: string }) => {
+    setError(null);
+    const { data: updated, error } = await supabase.auth.updateUser({
+      data: {
+        full_name: data.fullName,
+        name: data.fullName,
+        team: data.team,
+      },
+    });
+    if (error) throw error;
+    if (updated.user) {
+      setUser(updated.user);
+    }
+  };
+
   const signOut = async () => {
     if (user) {
       sessionStorage.removeItem(get2faStorageKey(user.id));
@@ -214,6 +230,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         verifyDirectOtp,
         send2faOtp,
         verify2faOtp,
+        updateProfile,
         signOut,
         authFetch,
       }}
