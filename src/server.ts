@@ -74,7 +74,7 @@ app.get("/health", (_req, res) => {
 
 const port = parseInt(process.env["PORT"] ?? "4000", 10);
 const server = app.listen(port, () => {
-  console.log(`Zuwa rank API listening on http://localhost:${port}`);
+  console.log(`MojoMap rank API listening on http://localhost:${port}`);
   console.log(`  POST /rank-check            — single-point rank check`);
   console.log(`  POST /scan                  — grid scan (async, returns scanId)`);
   console.log(`  GET  /scan/:id              — poll scan status + results`);

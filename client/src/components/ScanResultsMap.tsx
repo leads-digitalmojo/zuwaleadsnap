@@ -85,7 +85,7 @@ export function ScanResultsMap({ result, isLive = false }: Props) {
         const map = new Map(mapDivRef.current, {
           center,
           zoom: 12,
-          mapId: "zuwa-rank-map",
+          mapId: "mojomap-rank-map",
         });
         mapRef.current = map;
         AMERef.current = AdvancedMarkerElement;

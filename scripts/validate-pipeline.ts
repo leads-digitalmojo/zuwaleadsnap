@@ -329,7 +329,7 @@ async function main() {
     TEST_CONFIG;
 
   console.log("═══════════════════════════════════════════════════════");
-  console.log(" Zuwa Grid Rank Tracker — Phase 0 Pipeline Validation");
+  console.log(" MojoMap Grid Rank Tracker — Phase 0 Pipeline Validation");
   console.log("═══════════════════════════════════════════════════════");
   console.log(`Business : ${businessName}`);
   console.log(`Keyword  : ${keyword}`);
