@@ -66,7 +66,7 @@ export function ExportBar({ scanId }: Props) {
   }
 
   return (
-    <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10, padding: "12px 20px", background: "var(--color-surface)", borderTop: "1px solid var(--color-border)" }}>
+    <div className="export-bar-wrap" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10, padding: "12px 20px", background: "var(--color-surface)", borderTop: "1px solid var(--color-border)" }}>
       <span style={{ fontSize: 12, color: "var(--color-text-muted)", fontWeight: 600 }}>Export:</span>
 
       <button

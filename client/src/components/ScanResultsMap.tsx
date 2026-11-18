@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Loader } from "@googlemaps/js-api-loader";
+import { loadGoogleMapsLibraries } from "../lib/googleMaps";
 import { Pagination } from "./Pagination";
 import { IconAlertTriangle, IconX, IconStar } from "./Icons";
 import type { ScanResponse, ScanPoint } from "../types";
@@ -64,21 +64,14 @@ export function ScanResultsMap({ result, isLive = false }: Props) {
   const [mapReady, setMapReady] = useState(false);
   const [mapsError, setMapsError] = useState<string | null>(null);
 
-  const mapsKey = (import.meta.env["VITE_GOOGLE_MAPS_JS_API_KEY"] as string | undefined) ?? "";
-
-  // Init Google Maps (once per component mount)
+  // Init Google Maps safely (singleton loader, reuses loaded DOM script)
   useEffect(() => {
-    if (!mapsKey || !mapDivRef.current) return;
+    if (!mapDivRef.current) return;
     let cancelled = false;
-
-    const loader = new Loader({ apiKey: mapsKey, version: "weekly" });
 
     void (async () => {
       try {
-        const [{ Map }, { AdvancedMarkerElement }] = await Promise.all([
-          loader.importLibrary("maps"),
-          loader.importLibrary("marker"),
-        ]);
+        const { Map, AdvancedMarkerElement } = await loadGoogleMapsLibraries();
         if (cancelled || !mapDivRef.current) return;
 
         const center = { lat: result.gridConfig.centerLat, lng: result.gridConfig.centerLng };
@@ -90,14 +83,14 @@ export function ScanResultsMap({ result, isLive = false }: Props) {
         mapRef.current = map;
         AMERef.current = AdvancedMarkerElement;
         setMapReady(true);
+        setMapsError(null);
       } catch (err) {
-        if (!cancelled) setMapsError((err as Error).message);
+        if (!cancelled) setMapsError((err as Error).message || "Failed to load Google Maps");
       }
     })();
 
     return () => { cancelled = true; };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mapsKey]);
+  }, [result.gridConfig.centerLat, result.gridConfig.centerLng]);
 
   // Re-render markers when map is ready, viewMode changes, or new points arrive
   useEffect(() => {
@@ -128,7 +121,7 @@ export function ScanResultsMap({ result, isLive = false }: Props) {
     ? (ranked.reduce((s, p) => s + (p.rank ?? 0), 0) / ranked.length).toFixed(1)
     : "–";
 
-  if (!mapsKey) {
+  if (mapsError) {
     return <FallbackGrid result={result} />;
   }
 

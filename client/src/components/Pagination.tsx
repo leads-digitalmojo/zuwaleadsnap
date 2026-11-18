@@ -40,6 +40,7 @@ export function Pagination({
 
   return (
     <div
+      className="pagination-container"
       style={{
         display: "flex",
         alignItems: "center",
@@ -84,7 +85,7 @@ export function Pagination({
         )}
       </div>
 
-      <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+      <div className="pagination-controls" style={{ display: "flex", alignItems: "center", gap: 6 }}>
         <button
           className="btn-secondary"
           onClick={() => onPageChange(page - 1)}

@@ -32,6 +32,12 @@ app.get("/health", (_req, res) => {
 app.get("/api/report/:token", getReportHandler);
 app.get("/api/report-html/:token", reportHtmlHandler);
 
+// Public maps configuration (provides Google Maps JS API key safely at runtime)
+app.get("/api/config/maps-key", (_req, res) => {
+  const key = process.env["GOOGLE_MAPS_JS_API_KEY"] ?? process.env["VITE_GOOGLE_MAPS_JS_API_KEY"] ?? "";
+  res.json({ key });
+});
+
 // Check current user session status
 app.get("/api/me", optionalAuth, (req, res) => {
   res.json({ user: req.user ?? null });
