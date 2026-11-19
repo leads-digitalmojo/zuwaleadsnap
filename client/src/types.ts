@@ -14,6 +14,38 @@ export interface TopResult {
   rating: number | null;
   reviews: number | null;
   placeId: string | null;
+  cid?: string | null;
+  address?: string | null;
+  phone?: string | null;
+  url?: string | null;
+  category?: string | null;
+  mainImage?: string | null;
+}
+
+export interface CompetitorStat {
+  placeId: string;
+  name: string;
+  totalPoints: number;
+  foundIn: string;
+  foundInPct: number;
+  avgRank: number;
+  atgr: number;
+  top3Points: number;
+  top3Pct: number;
+  top10Points: number;
+  top10Pct: number;
+  marketShare: number;
+  rating: number | null;
+  reviews: number | null;
+  category: string | null;
+  address: string | null;
+  phone: string | null;
+  url: string | null;
+  northWest: number | null;
+  northEast: number | null;
+  southWest: number | null;
+  southEast: number | null;
+  pointRanks: Record<number, number>;
 }
 
 export interface ScanPoint {
@@ -52,6 +84,22 @@ export interface ScanResponse {
     cacheHits: number;
     cacheMisses: number;
     cacheHitRate: number;
+    // LeadSnap Parity Metrics
+    agr?: number | null;
+    atgr?: number;
+    top3Points?: number;
+    top3Pct?: number;
+    top10Points?: number;
+    top10Pct?: number;
+    marketShare?: number;
+    areaKm2?: number;
+    betweenPointsMeters?: number;
+    quadrants?: {
+      northWest: number | null;
+      northEast: number | null;
+      southWest: number | null;
+      southEast: number | null;
+    };
   };
 }
 
@@ -66,7 +114,7 @@ export interface ScanCreateResponse {
   pollUrl: string;
 }
 
-export type GridSize = 5 | 7 | 13;
+export type GridSize = 3 | 5 | 7 | 9 | 11 | 13 | 15;
 export type GridShape = "square" | "circle";
 
 export interface GridConfig {

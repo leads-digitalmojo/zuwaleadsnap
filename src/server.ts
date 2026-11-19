@@ -11,8 +11,10 @@ import { scanHistoryHandler, businessKeywordsHandler } from "./routes/scanHistor
 import { competitorsHandler } from "./routes/competitors.js";
 import { createShareHandler, getReportHandler, csvExportHandler, pdfExportHandler, reportHtmlHandler } from "./routes/export.js";
 import { costsSummaryHandler } from "./routes/costs.js";
+import { balanceRouter } from "./routes/balance.js";
 import { getDb } from "./lib/db.js";
 import { startScheduler } from "./lib/scheduler.js";
+import { initBalanceWatchdogScheduler } from "./lib/balanceWatchdog.js";
 import { optionalAuth, requireAuth } from "./lib/auth.js";
 
 const app = express();
@@ -21,12 +23,17 @@ app.use(express.json());
 // Initialise DB on startup (creates tables if needed)
 getDb();
 startScheduler();
+initBalanceWatchdogScheduler();
 
 // ── Public Routes (No Auth Required) ──────────────────────────────────────────
 
 app.get("/health", (_req, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });
 });
+
+// Balance Watchdog status
+app.use("/api/balance", balanceRouter);
+
 
 // Public share token report viewing
 app.get("/api/report/:token", getReportHandler);

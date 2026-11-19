@@ -1,0 +1,957 @@
+[
+  {
+    "url": "https://app.leadsnap.com/",
+    "method": "GET",
+    "resourceType": "document"
+  },
+  {
+    "url": "https://www.googletagmanager.com/gtag/js?id=UA-198193688-1",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/libs/bootstrap/dist/css/bootstrap.min.css",
+    "method": "GET",
+    "resourceType": "stylesheet"
+  },
+  {
+    "url": "https://app.leadsnap.com/libs/font-awesome/css/font-awesome.min.css",
+    "method": "GET",
+    "resourceType": "stylesheet"
+  },
+  {
+    "url": "https://app.leadsnap.com/libs/nprogress/nprogress.css",
+    "method": "GET",
+    "resourceType": "stylesheet"
+  },
+  {
+    "url": "https://app.leadsnap.com/libs/animate.css/animate.min.css",
+    "method": "GET",
+    "resourceType": "stylesheet"
+  },
+  {
+    "url": "https://app.leadsnap.com/css/custom.min.css",
+    "method": "GET",
+    "resourceType": "stylesheet"
+  },
+  {
+    "url": "https://app.leadsnap.com/css/header-footer.css",
+    "method": "GET",
+    "resourceType": "stylesheet"
+  },
+  {
+    "url": "https://app.leadsnap.com/new-ui/logo/leadsnap-logo.png",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/new-ui/logo/leadsnap-logo-black.png",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://code.jquery.com/jquery-3.3.1.min.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/images/header-bg.jpg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/images/top-bg.png",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/images/title-sep.png",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/images/footer-envelop.png",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/css/fonts/Poppins/Poppins-Light.woff2",
+    "method": "GET",
+    "resourceType": "font"
+  },
+  {
+    "url": "https://app.leadsnap.com/libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3",
+    "method": "GET",
+    "resourceType": "font"
+  },
+  {
+    "url": "https://app.leadsnap.com/css/fonts/Poppins/Poppins-Medium.woff2",
+    "method": "GET",
+    "resourceType": "font"
+  },
+  {
+    "url": "https://app.leadsnap.com/css/fonts/Poppins/Poppins-Regular.woff2",
+    "method": "GET",
+    "resourceType": "font"
+  },
+  {
+    "url": "https://app.leadsnap.com/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5ce2192dcd0b0aa",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/cdn-cgi/challenge-platform/h/b/scripts/jsd/f8df4d4a0cd6/main.js?ray=a5ce2192dcd0b0aa",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/cdn-cgi/challenge-platform/h/b/jsd/oneshot/f8df4d4a0cd6/0.2446783871784105:1795076433:MM7YjMk_oDaV0emABVDlG1f_3jz0mEv4q6RKGaFUR5o/a5ce2192dcd0b0aa",
+    "method": "POST",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://www.google-analytics.com/analytics.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/favicon/favicon-leadsnap.png",
+    "method": "GET",
+    "resourceType": "other"
+  },
+  {
+    "url": "https://app.leadsnap.com/signin",
+    "method": "POST",
+    "resourceType": "document"
+  },
+  {
+    "url": "https://app.leadsnap.com/rank-tracking/new-heatmap",
+    "method": "GET",
+    "resourceType": "document"
+  },
+  {
+    "url": "https://link.msgsndr.com/js/form_embed.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://challenges.cloudflare.com/turnstile/v0/api.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://js.stripe.com/v3/",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/main-C5AZw8dc.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/css/main-6YguEP8r.css",
+    "method": "GET",
+    "resourceType": "stylesheet"
+  },
+  {
+    "url": "https://challenges.cloudflare.com/turnstile/v0/b/f8df4d4a0cd6/api.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://www.googletagmanager.com/gtm.js?id=GTM-MP769ZMT",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap",
+    "method": "GET",
+    "resourceType": "stylesheet"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/jsPDF-C50LT3EH.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/vue-BAWV3qzZ.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/sweetalert2-i0D1jcg2.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/sentry-pz5kdcDh.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/axios-BOeqtr82.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/elementPlus-CwDKhKyC.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/lodash-D2vntL1J.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/momentTimezone-DgH_4_X8.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/moment-BAtM24Ew.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/vue-datepicker-D9PE5xiT.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/libphonenumberJs-2sOZ5POC.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/vuedraggable-B-dNLvDU.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/icons-DqvSViCQ.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/pusher-oMvsCdtd.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://connect.facebook.net/en_US/fbevents.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://o420000.ingest.us.sentry.io/api/5696651/envelope/?sentry_version=7&sentry_key=e4e5ebc756a8448ba7c00e0c23c78e70&sentry_client=sentry.javascript.vue%2F10.48.0",
+    "method": "POST",
+    "resourceType": "fetch"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/api/js?libraries=drawing%2Cplaces%2Cmarker%2Cgeometry&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&v=3.64&callback=google.maps.__ib__",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/logged-in-user",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://connect.facebook.net/signals/config/1048872769378282?v=2.9.441&r=stable&domain=app.leadsnap.com&hme=abf59d235177e3601acac6035d7c2a28fadbda4b0c64009bc203ceed9fa8bb90&ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C335%2C336%2C337%2C334%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C351%2C353%2C374%2C257%2C239%2C70%2C240%2C238%2C377%2C368%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps-api-v3/api/js/64/14a/geometry.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps-api-v3/api/js/64/14a/marker.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps-api-v3/api/js/64/14a/drawing.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps-api-v3/api/js/64/14a/places.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps-api-v3/api/js/64/14a/util.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps-api-v3/api/js/64/14a/common.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps-api-v3/api/js/64/14a/main.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://www.googletagmanager.com/gtag/js?id=G-RDHJTXY6BM&cx=c&gtm=4e6bh1",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/users/14103",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://analytics.google.com/g/collect?v=2&tid=G-RDHJTXY6BM&gtm=45je6bh1v9133278120za20ozb9186895657zd9186895657xf1&_p=1795079950377&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGA&cid=240374538.1795079945&frm=0&pscdl=noapi&rcb=8&sr=800x600&uaa=x86&uab=64&uafvl=Not%253FA_Brand%3B24.0.0.0%7CChromium%3B152.0.7977.54&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&gaf=2&_s=1&tag_exp=115938466~115938468~118012009~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&uid=14103&sid=1795079951&sct=1&seg=0&dl=https%3A%2F%2Fapp.leadsnap.com%2Frank-tracking%2Fnew-heatmap&dr=https%3A%2F%2Fapp.leadsnap.com%2F&dt=&en=page_view&_fv=1&_ss=1&up.account_id=11602&up.customer_status=prospect&up.plan=none&tfd=3595",
+    "method": "POST",
+    "resourceType": "fetch"
+  },
+  {
+    "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-RDHJTXY6BM&cid=240374538.1795079945&gtm=45je6bh1v9133278120za20ozb9186895657zd9186895657xf1&rcb=8&aip=1&uid=14103&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938466~115938468~118012009~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034",
+    "method": "POST",
+    "resourceType": "ping"
+  },
+  {
+    "url": "https://www.google.co.in/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-RDHJTXY6BM&cid=240374538.1795079945&gtm=45je6bh1v9133278120za20ozb9186895657zd9186895657xf1&rcb=8&aip=1&uid=14103&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=115938466~115938468~118012009~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&z=1708941047",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://o420000.ingest.us.sentry.io/api/5696651/envelope/?sentry_version=7&sentry_key=e4e5ebc756a8448ba7c00e0c23c78e70&sentry_client=sentry.javascript.vue%2F10.48.0",
+    "method": "POST",
+    "resourceType": "fetch"
+  },
+  {
+    "url": "https://api.ipify.org/?format=json",
+    "method": "GET",
+    "resourceType": "fetch"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/NewHeatMap-B7YQ6UcD.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/AppPage-DXMNGCmk.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/Tabs.vue_vue_type_script_setup_true_lang-gpt_imAu.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/SuggestKeywords-Dgg6W4B0.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/css/NewHeatMap-DLPY2r-w.css",
+    "method": "GET",
+    "resourceType": "stylesheet"
+  },
+  {
+    "url": "https://js.stripe.com/v3/m-outer-0edadf75b42c6ef7240c043f3272f3f9.html#url=https%3A%2F%2Fapp.leadsnap.com%2Frank-tracking%2Fnew-heatmap&title=&referrer=https%3A%2F%2Fapp.leadsnap.com%2F&muid=NA&sid=NA&version=6&preview=false&__shared_params__[version]=v3",
+    "method": "GET",
+    "resourceType": "document"
+  },
+  {
+    "url": "https://o420000.ingest.us.sentry.io/api/5696651/envelope/?sentry_version=7&sentry_key=e4e5ebc756a8448ba7c00e0c23c78e70&sentry_client=sentry.javascript.vue%2F10.48.0",
+    "method": "POST",
+    "resourceType": "fetch"
+  },
+  {
+    "url": "https://o420000.ingest.us.sentry.io/api/5696651/envelope/?sentry_version=7&sentry_key=e4e5ebc756a8448ba7c00e0c23c78e70&sentry_client=sentry.javascript.vue%2F10.48.0",
+    "method": "POST",
+    "resourceType": "fetch"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/logo-BO5GcvDR.png",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/white-label-settings",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://js.stripe.com/v3/fingerprinted/js/m-outer-df5ee3b49f88025f22168cdfc5823764.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://m.stripe.network/inner.html#url=https%3A%2F%2Fapp.leadsnap.com%2Frank-tracking%2Fnew-heatmap&title=&referrer=https%3A%2F%2Fapp.leadsnap.com%2F&muid=NA&sid=NA&version=6&preview=false&__shared_params__[version]=v3",
+    "method": "GET",
+    "resourceType": "document"
+  },
+  {
+    "url": "https://m.stripe.network/out-4.5.45.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://ipinfo.io/183.82.96.133/json?token=6f59c9364bf932",
+    "method": "GET",
+    "resourceType": "fetch"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/logged-in-user",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://m.stripe.com/6",
+    "method": "POST",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/users/14103",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/left-navigation",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/accounts/settings?filter[name]=ga_locations_sync",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/users/settings?filter[name]=is_new_navigation",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/feature-flag/new_navigation",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/feature-flag/company_top_entity",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/users/settings?filter[name]=active_module",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/left-navigation-gbp-menu",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://widget.intercom.io/widget/qa696ndv",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/leadsnap-small-logo-CIqlR1D_.svg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/leadsnap-mobile-logo-Dl2w445s.svg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://leadsnap.s3.amazonaws.com/uploads/funnel/68eb2fc276c64.png",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/notifications",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/users/settings",
+    "method": "POST",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/feature-flag/heatmap_v2_create",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/subscriptions/available-credits?feature=heat-map-tool",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/users/settings",
+    "method": "POST",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5%2021C16.7467%2021%2021%2016.7467%2021%2011.5C21%206.25329%2016.7467%202%2011.5%202C6.25329%202%202%206.25329%202%2011.5C2%2016.7467%206.25329%2021%2011.5%2021Z'%20stroke='url(%23paint0_linear_302_219)'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M22%2022L20%2020'%20stroke='url(%23paint1_linear_302_219)'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_302_219'%20x1='3.8179'%20y1='2'%20x2='20.723'%20y2='3.12451'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%238FC31F'/%3e%3cstop%20offset='1'%20stop-color='%2314A0D5'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint1_linear_302_219'%20x1='20.1914'%20y1='20'%20x2='21.9708'%20y2='20.1184'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%238FC31F'/%3e%3cstop%20offset='1'%20stop-color='%2314A0D5'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M7.99998%2014.6666C11.6666%2014.6666%2014.6666%2011.6666%2014.6666%207.99998C14.6666%204.33331%2011.6666%201.33331%207.99998%201.33331C4.33331%201.33331%201.33331%204.33331%201.33331%207.99998C1.33331%2011.6666%204.33331%2014.6666%207.99998%2014.6666Z'%20stroke='%232A3F54'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M8%205.33331V8.66665'%20stroke='%232A3F54'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M7.99634%2010.6667H8.00233'%20stroke='%231F2732'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/logged-in-user",
+    "method": "GET",
+    "resourceType": "fetch"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/logged-in-user",
+    "method": "GET",
+    "resourceType": "fetch"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/css/fonts/montserrat-v25-latin-regular-BTyQisEy.woff2",
+    "method": "GET",
+    "resourceType": "font"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/css/fonts/montserrat-v25-latin-600-Q_BPs6ba.woff2",
+    "method": "GET",
+    "resourceType": "font"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/css/fonts/poppins-v20-latin-regular-cpxAROuN.woff2",
+    "method": "GET",
+    "resourceType": "font"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps-api-v3/api/js/64/14a/map.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/locations?include=heatmap_place,heatmap_place.latestSchedule&fields[google_locations]=id,location_name,place_id,location_image,address,primary_phone,ave_review_rating,review_count&sort=location_name&page=1",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/heatmaps/places?include=google_location&sort=name&page=1",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/heatmaps?sort=-created_at&page=1",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/locations?filter[activated]=true&filter[location_state]=verified&sort=location_name&page=1",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/users/settings?filter[name]=create_new_heatmap",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/locations?include=heatmap_place,heatmap_place.latestSchedule&fields[google_locations]=id,location_name,place_id,location_image,address,primary_phone,ave_review_rating,review_count&sort=location_name&page=1",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Vector'%3e%3cpath%20d='M0%200H20V2.85714H0V0Z'%20fill='%23B8B8B8'/%3e%3cpath%20d='M0%208.57143H20V11.4286H0V8.57143Z'%20fill='%23B8B8B8'/%3e%3cpath%20d='M0%2017.1429H20V20H0V17.1429Z'%20fill='%23B8B8B8'/%3e%3c/g%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Show%20hide%20side%20Nav'%3e%3crect%20id='Rectangle%2097'%20x='0.75'%20y='0.75'%20width='16.5'%20height='16.5'%20rx='2.25'%20stroke='%23B8B8B8'%20stroke-width='1.5'/%3e%3crect%20id='Rectangle%2098'%20x='6'%20y='0.857422'%20width='1.28571'%20height='16.2857'%20fill='%23B8B8B8'/%3e%3cpath%20id='Vector'%20d='M10.7507%2011.8929L13.8413%209.33339C13.891%209.29213%2013.931%209.24095%2013.9584%209.18336C13.9858%209.12578%2014%209.06314%2014%208.99976C14%208.93637%2013.9858%208.87374%2013.9584%208.81615C13.931%208.75856%2013.891%208.70739%2013.8413%208.66613L10.7507%206.10661C10.4557%205.86234%2010%206.06486%2010%206.44023L10%2011.56C10%2011.9354%2010.4557%2012.1379%2010.7507%2011.8929Z'%20fill='%23B8B8B8'/%3e%3c/g%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='16'%20height='17'%20viewBox='0%200%2016%2017'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Notification'%3e%3cpath%20id='Notification_2'%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M1.63231%206.43541C1.63231%204.87186%202.25343%203.37235%203.35903%202.26675C4.46463%201.16116%205.96414%200.540039%207.52769%200.540039C9.09124%200.540039%2010.5908%201.16116%2011.6963%202.26675C12.8019%203.37235%2013.4231%204.87186%2013.4231%206.43541V9.60544L14.9575%2012.6744C15.0282%2012.8157%2015.0615%2012.9726%2015.0544%2013.1304C15.0473%2013.2882%2015%2013.4415%2014.917%2013.5758C14.834%2013.7102%2014.718%2013.8211%2014.58%2013.898C14.4421%2013.9749%2014.2868%2014.0152%2014.1288%2014.0152H10.7904C10.603%2014.738%2010.181%2015.3781%209.59045%2015.8351C8.99993%2016.2921%208.27438%2016.54%207.52769%2016.54C6.781%2016.54%206.05545%2016.2921%205.46493%2015.8351C4.87441%2015.3781%204.45236%2014.738%204.26502%2014.0152H0.926553C0.768623%2014.0152%200.613308%2013.9749%200.475361%2013.898C0.337413%2013.8211%200.221414%2013.7102%200.138379%2013.5758C0.055345%2013.4415%200.00803263%2013.2882%200.000935923%2013.1304C-0.00616078%2012.9726%200.0271939%2012.8157%200.0978319%2012.6744L1.63231%209.60544V6.43541ZM6.069%2014.0152C6.21685%2014.2712%206.42948%2014.4838%206.68553%2014.6317C6.94158%2014.7795%207.23203%2014.8573%207.52769%2014.8573C7.82335%2014.8573%208.1138%2014.7795%208.36985%2014.6317C8.6259%2014.4838%208.83853%2014.2712%208.98637%2014.0152H6.069ZM7.52769%202.22443C6.41087%202.22443%205.33979%202.66809%204.55007%203.4578C3.76036%204.24751%203.31671%205.31859%203.31671%206.43541V9.60544C3.31669%209.8668%203.25585%2010.1246%203.139%2010.3584L2.15363%2012.3308H12.9026L11.9172%2010.3584C11.8001%2010.1246%2011.739%209.86687%2011.7387%209.60544V6.43541C11.7387%205.31859%2011.295%204.24751%2010.5053%203.4578C9.71559%202.66809%208.64451%202.22443%207.52769%202.22443Z'%20fill='%23B8B8B8'/%3e%3c/g%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='16'%20height='17'%20viewBox='0%200%2016%2017'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Question'%3e%3cpath%20id='Vector'%20d='M7.2%2013.34H8.8V11.74H7.2V13.34ZM8%200.540039C3.584%200.540039%200%204.12404%200%208.54004C0%2012.956%203.584%2016.54%208%2016.54C12.416%2016.54%2016%2012.956%2016%208.54004C16%204.12404%2012.416%200.540039%208%200.540039ZM8%2014.94C4.472%2014.94%201.6%2012.068%201.6%208.54004C1.6%205.01204%204.472%202.14004%208%202.14004C11.528%202.14004%2014.4%205.01204%2014.4%208.54004C14.4%2012.068%2011.528%2014.94%208%2014.94ZM8%203.74004C6.232%203.74004%204.8%205.17204%204.8%206.94004H6.4C6.4%206.06004%207.12%205.34004%208%205.34004C8.88%205.34004%209.6%206.06004%209.6%206.94004C9.6%208.54004%207.2%208.34004%207.2%2010.94H8.8C8.8%209.14004%2011.2%208.94004%2011.2%206.94004C11.2%205.17204%209.768%203.74004%208%203.74004Z'%20fill='%23B8B8B8'/%3e%3c/g%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/settings-BtW9WhYg.svg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='34'%20height='34'%20viewBox='0%200%2034%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='17'%20cy='17'%20r='16.5'%20fill='white'%20stroke='%23D9D9D9'/%3e%3cpath%20d='M23.5838%2012.8134L18.7896%208.61042C18.3501%208.21732%2017.7811%208%2017.1915%208C16.6018%208%2016.0329%208.21732%2015.5934%208.61042L10.7991%2012.8134C10.5453%2013.0404%2010.3428%2013.3188%2010.205%2013.6302C10.0672%2013.9416%209.99737%2014.2787%2010.0001%2014.6192V21.6029C10.0001%2022.2386%2010.2526%2022.8483%2010.7022%2023.2979C11.1517%2023.7474%2011.7614%2024%2012.3972%2024H21.9857C22.6215%2024%2023.2312%2023.7474%2023.6808%2023.2979C24.1303%2022.8483%2024.3829%2022.2386%2024.3829%2021.6029V14.6112C24.3844%2014.2721%2024.314%2013.9365%2024.1763%2013.6266C24.0385%2013.3166%2023.8366%2013.0395%2023.5838%2012.8134ZM18.7896%2022.4019H15.5934V18.4067C15.5934%2018.1948%2015.6776%2017.9915%2015.8274%2017.8417C15.9773%2017.6918%2016.1805%2017.6076%2016.3924%2017.6076H17.9905C18.2024%2017.6076%2018.4057%2017.6918%2018.5555%2017.8417C18.7054%2017.9915%2018.7896%2018.1948%2018.7896%2018.4067V22.4019ZM22.7848%2021.6029C22.7848%2021.8148%2022.7006%2022.018%2022.5507%2022.1679C22.4009%2022.3177%2022.1977%2022.4019%2021.9857%2022.4019H20.3876V18.4067C20.3876%2017.7709%2020.1351%2017.1612%2019.6855%2016.7117C19.236%2016.2621%2018.6263%2016.0096%2017.9905%2016.0096H16.3924C15.7567%2016.0096%2015.1469%2016.2621%2014.6974%2016.7117C14.2478%2017.1612%2013.9953%2017.7709%2013.9953%2018.4067V22.4019H12.3972C12.1853%2022.4019%2011.982%2022.3177%2011.8322%2022.1679C11.6823%2022.018%2011.5982%2021.8148%2011.5982%2021.6029V14.6112C11.5983%2014.4978%2011.6226%2014.3857%2011.6695%2014.2823C11.7163%2014.179%2011.7846%2014.0868%2011.8698%2014.012L16.6641%209.81697C16.8099%209.68887%2016.9974%209.61822%2017.1915%209.61822C17.3856%209.61822%2017.573%209.68887%2017.7188%209.81697L22.5131%2014.012C22.5983%2014.0868%2022.6666%2014.179%2022.7135%2014.2823C22.7603%2014.3857%2022.7846%2014.4978%2022.7848%2014.6112V21.6029Z'%20fill='%23B9B9B9'/%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='34'%20height='34'%20viewBox='0%200%2034%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='17'%20cy='17'%20r='16.5'%20fill='white'%20stroke='%23D9D9D9'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M10.6323%2014.8954C10.6323%2013.3318%2011.2534%2011.8323%2012.359%2010.7267C13.4646%209.62112%2014.9641%209%2016.5277%209C18.0912%209%2019.5908%209.62112%2020.6963%2010.7267C21.8019%2011.8323%2022.4231%2013.3318%2022.4231%2014.8954V18.0654L23.9575%2021.1344C24.0282%2021.2756%2024.0615%2021.4326%2024.0544%2021.5904C24.0473%2021.7481%2024%2021.9015%2023.917%2022.0358C23.834%2022.1701%2023.718%2022.281%2023.58%2022.3579C23.4421%2022.4348%2023.2868%2022.4752%2023.1288%2022.4751H19.7904C19.603%2023.1979%2019.181%2023.8381%2018.5904%2024.2951C17.9999%2024.752%2017.2744%2025%2016.5277%2025C15.781%2025%2015.0554%2024.752%2014.4649%2024.2951C13.8744%2023.8381%2013.4524%2023.1979%2013.265%2022.4751H9.92655C9.76862%2022.4752%209.61331%2022.4348%209.47536%2022.3579C9.33741%2022.281%209.22141%2022.1701%209.13838%2022.0358C9.05534%2021.9015%209.00803%2021.7481%209.00094%2021.5904C8.99384%2021.4326%209.02719%2021.2756%209.09783%2021.1344L10.6323%2018.0654V14.8954ZM15.069%2022.4751C15.2168%2022.7312%2015.4295%2022.9438%2015.6855%2023.0916C15.9416%2023.2394%2016.232%2023.3173%2016.5277%2023.3173C16.8233%2023.3173%2017.1138%2023.2394%2017.3698%2023.0916C17.6259%2022.9438%2017.8385%2022.7312%2017.9864%2022.4751H15.069ZM16.5277%2010.6844C15.4109%2010.6844%2014.3398%2011.128%2013.5501%2011.9178C12.7604%2012.7075%2012.3167%2013.7786%2012.3167%2014.8954V18.0654C12.3167%2018.3268%2012.2558%2018.5845%2012.139%2018.8183L11.1536%2020.7907H21.9026L20.9172%2018.8183C20.8001%2018.5846%2020.739%2018.3268%2020.7387%2018.0654V14.8954C20.7387%2013.7786%2020.295%2012.7075%2019.5053%2011.9178C18.7156%2011.128%2017.6445%2010.6844%2016.5277%2010.6844Z'%20fill='%23B9B9B9'/%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/setting-circle-BUgC1PVc.svg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='34'%20height='34'%20viewBox='0%200%2034%2034'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Group%20630'%3e%3ccircle%20id='Ellipse%204'%20cx='17'%20cy='17'%20r='16.5'%20fill='white'%20stroke='%23D9D9D9'/%3e%3cpath%20id='Vector'%20d='M16.2%2021.8H17.8V20.2H16.2V21.8ZM17%209C12.584%209%209%2012.584%209%2017C9%2021.416%2012.584%2025%2017%2025C21.416%2025%2025%2021.416%2025%2017C25%2012.584%2021.416%209%2017%209ZM17%2023.4C13.472%2023.4%2010.6%2020.528%2010.6%2017C10.6%2013.472%2013.472%2010.6%2017%2010.6C20.528%2010.6%2023.4%2013.472%2023.4%2017C23.4%2020.528%2020.528%2023.4%2017%2023.4ZM17%2012.2C15.232%2012.2%2013.8%2013.632%2013.8%2015.4H15.4C15.4%2014.52%2016.12%2013.8%2017%2013.8C17.88%2013.8%2018.6%2014.52%2018.6%2015.4C18.6%2017%2016.2%2016.8%2016.2%2019.4H17.8C17.8%2017.6%2020.2%2017.4%2020.2%2015.4C20.2%2013.632%2018.768%2012.2%2017%2012.2Z'%20fill='%23B8B8B8'/%3e%3c/g%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY1NDMzQzEwQTZCOTExRUE4NkJBRTE3RDg3MjZCMDIxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY1NDMzQzExQTZCOTExRUE4NkJBRTE3RDg3MjZCMDIxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjU0MzNDMEVBNkI5MTFFQTg2QkFFMTdEODcyNkIwMjEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjU0MzNDMEZBNkI5MTFFQTg2QkFFMTdEODcyNkIwMjEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6zgzDZAAABu0lEQVR42pRTsU4CQRA9LhQidJY2JlppUCAxVEaIEUvurCw03EULCwsoLdCohSUUFhYajmhhJVhKNGCsiBGJRitN+AErRCvB93CP3BkgcZOXmZ15b252b9bRarUk6zp9HtVgYkBIsq8SkF2eeDOsQYdZ4PhpfAQmB/iAKnAhRJIoFrXk1FXvS61T4OAxQPGDIOsbk5W81GWBp8BkxNYPXk2m12i6cgBtuJeYizlyBDfX7iB5P6+JqupuoJDfqkTYrg9+2ipGPM72ES/BV8Rxdbn+7Y4BTLS/DN8HpBJ3qtmqRJ8x5rgnlxpqnfWmh1/cMcmp6Vx6rbwyBVeDFVEPuzSOgiedrqDjJW/LcLgpWdsFUUfMADQBinUrhxpqnY2mu+uF9Yr/zcviRm1DE75NZhDTAENAY8xewBWiVv5sDpaAqJkI3uzHsdcAozizpxP0GWPO5FFDLQq4soDPW0wrvwlXFUiUZzc7Z6bPGHPck0sNte1JHLs+5BRyGsOvc+vVfmcHl7+yCNTA9bcn8as1oAK0xeErQ+klZo4cwVVtj2mocPavx/QeWarZCpjLc3ne9zl/LCzanvOPAAMAdvkOUwO5rPIAAAAASUVORK5CYII=",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Vector'%20d='M5.4%207.8L9%2011.4L12.6%207.8M0.999999%209C0.999999%2013.4184%204.5816%2017%209%2017C13.4184%2017%2017%2013.4184%2017%209C17%204.5816%2013.4184%201%209%201C4.5816%200.999999%201%204.5816%200.999999%209Z'%20stroke='%23B9B9B9'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='12'%20height='12'%20viewBox='0%200%2012%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M3%205H8.98003V7H3V5Z'%20fill='%23C5C5C5'/%3e%3cpath%20d='M10.56%2012H1.44C0.64608%2012%200%2011.3539%200%2010.56V1.44C0%200.64608%200.64608%200%201.44%200H10.56C11.3539%200%2012%200.64608%2012%201.44V10.56C12%2011.3539%2011.3544%2012%2010.56%2012ZM2.44%201.96C2.3127%201.96%202.19061%202.01057%202.10059%202.10059C2.01057%202.19061%201.96%202.3127%201.96%202.44V9.56C1.96%209.6873%202.01057%209.80939%202.10059%209.89941C2.19061%209.98943%202.3127%2010.04%202.44%2010.04H9.56C9.6873%2010.04%209.80939%209.98943%209.89941%209.89941C9.98943%209.80939%2010.04%209.6873%2010.04%209.56V2.44C10.04%202.3127%209.98943%202.19061%209.89941%202.10059C9.80939%202.01057%209.6873%201.96%209.56%201.96H2.44Z'%20fill='%23C5C5C5'/%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/automation-R_Z3I8EY.svg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='480'%20height='480'%20viewBox='0%200%20480%20480'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M423.035%200H95.327C63.8067%200.0146286%2038.2559%2025.589%2038.2449%2057.1429V81.8286H11.4164C5.10907%2081.8286%200%2086.9467%200%2093.2571C0%2099.5675%205.10907%20104.686%2011.4164%20104.686H38.1271V179.657H11.4164C5.10907%20179.657%200%20184.772%200%20191.086C0%20197.396%205.10907%20202.514%2011.4164%20202.514H38.1271V277.486H11.4164C5.10907%20277.486%200%20282.604%200%20288.914C0%20295.228%205.10907%20300.343%2011.4164%20300.343H38.1271V375.314H11.4164C5.10907%20375.314%200%20380.432%200%20386.743C0%20393.053%205.10907%20398.171%2011.4164%20398.171H38.1271V422.857C38.1417%20454.411%2063.6889%20479.985%2095.2091%20480H422.918C454.438%20479.985%20479.993%20454.411%20480%20422.857V57.1429C480.046%2025.611%20454.533%200.0210286%20423.035%200ZM457.284%20422.857C457.226%20441.768%20441.926%20457.089%20423.035%20457.143H95.327C76.436%20457.089%2061.1316%20441.768%2061.0778%20422.857V398.171H87.7885C94.0958%20398.171%2099.2049%20393.053%2099.2049%20386.743C99.2049%20380.432%2094.0958%20375.314%2087.7885%20375.314H61.0778V300.343H87.7885C94.0958%20300.343%2099.2049%20295.228%2099.2049%20288.914C99.2049%20282.604%2094.0958%20277.486%2087.7885%20277.486H61.0778V202.514H87.7885C94.0958%20202.514%2099.2049%20197.396%2099.2049%20191.086C99.2049%20184.772%2094.0958%20179.657%2087.7885%20179.657H61.0778V104.686H87.7885C94.0958%20104.686%2099.2049%2099.5675%2099.2049%2093.2571C99.2049%2086.9467%2094.0958%2081.8286%2087.7885%2081.8286H61.0778V57.1429C61.1316%2038.2318%2076.436%2022.9111%2095.327%2022.8571H423.035C441.926%2022.9111%20457.226%2038.2318%20457.284%2057.1429V422.857Z'%20fill='url(%23paint0_linear_5001_3307)'/%3e%3cpath%20d='M268.155%20236.686C298.732%20236.686%20323.524%20211.872%20323.524%20181.257C323.524%20150.642%20298.732%20125.829%20268.155%20125.829C237.573%20125.829%20212.785%20150.642%20212.785%20181.257C212.813%20211.857%20237.583%20236.657%20268.155%20236.686ZM268.155%20148.571C286.121%20148.571%20300.691%20163.157%20300.691%20181.143C300.691%20199.129%20286.121%20213.714%20268.155%20213.714C250.184%20213.714%20235.618%20199.129%20235.618%20181.143C235.65%20163.172%20250.194%20148.603%20268.155%20148.571ZM268.155%20255.086C220.662%20255.086%20183.441%20293.6%20183.441%20342.857C183.46%20349.161%20188.561%20354.267%20194.858%20354.286H341.448C347.744%20354.267%20352.846%20349.161%20352.864%20342.857C352.864%20293.6%20315.643%20255.086%20268.155%20255.086ZM207.187%20331.429C212.1%20300.229%20236.645%20277.943%20268.155%20277.943C299.66%20277.943%20324.323%20300.229%20329.118%20331.429H207.187Z'%20fill='url(%23paint1_linear_5001_3307)'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_5001_3307'%20x1='120'%20y1='45'%20x2='390'%20y2='435'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint1_linear_5001_3307'%20x1='120'%20y1='45'%20x2='390'%20y2='435'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M404.269%20317.166C393.787%20306.251%20381.144%20300.416%20367.744%20300.416C354.453%20300.416%20341.702%20306.143%20330.787%20317.058L296.64%20351.097C293.831%20349.584%20291.021%20348.179%20288.319%20346.774C284.429%20344.829%20280.755%20342.992%20277.621%20341.047C245.635%20320.732%20216.567%20294.257%20188.687%20260.001C175.179%20242.928%20166.102%20228.556%20159.511%20213.967C168.372%20205.863%20176.584%20197.434%20184.581%20189.329C187.607%20186.304%20190.632%20183.17%20193.658%20180.144C216.351%20157.451%20216.351%20128.059%20193.658%20105.366L164.157%2075.8652C160.807%2072.5153%20157.349%2069.0573%20154.108%2065.5994C147.624%2058.8996%20140.816%2051.9837%20133.792%2045.5C123.31%2035.1261%20110.775%2029.615%2097.5916%2029.615C84.4081%2029.615%2071.6569%2035.1261%2060.8508%2045.5L60.6347%2045.7161L23.8939%2082.7811C10.0621%2096.6129%202.17363%20113.47%200.444656%20133.03C-2.14881%20164.583%207.14444%20193.976%2014.2765%20213.211C31.7824%20260.434%2057.9332%20304.198%2096.9432%20351.097C144.274%20407.613%20201.222%20452.242%20266.275%20483.688C291.129%20495.466%20324.304%20509.406%20361.369%20511.784C363.638%20511.892%20366.015%20512%20368.177%20512C393.139%20512%20414.103%20503.031%20430.528%20485.201C430.636%20484.985%20430.852%20484.876%20430.96%20484.66C436.579%20477.853%20443.063%20471.693%20449.871%20465.101C454.517%20460.671%20459.272%20456.024%20463.919%20451.161C474.617%20440.031%20480.236%20427.064%20480.236%20413.772C480.236%20400.373%20474.509%20387.513%20463.595%20376.707L404.269%20317.166ZM442.955%20430.954C442.847%20430.954%20442.847%20431.062%20442.955%20430.954C438.741%20435.493%20434.418%20439.599%20429.771%20444.137C422.747%20450.837%20415.615%20457.861%20408.916%20465.75C398.001%20477.42%20385.142%20482.931%20368.285%20482.931C366.664%20482.931%20364.935%20482.931%20363.314%20482.823C331.22%20480.77%20301.395%20468.235%20279.026%20457.537C217.864%20427.928%20164.157%20385.893%20119.528%20332.618C82.6792%20288.205%2058.0412%20247.142%2041.724%20203.053C31.6743%20176.146%2028.0002%20155.182%2029.6212%20135.407C30.7018%20122.764%2035.5645%20112.282%2044.5336%20103.313L81.3824%2066.4639C86.6774%2061.4931%2092.2966%2058.7915%2097.8077%2058.7915C104.616%2058.7915%20110.127%2062.8979%20113.585%2066.3558L113.909%2066.68C120.501%2072.8395%20126.768%2079.2151%20133.36%2086.0229C136.71%2089.4809%20140.168%2092.9388%20143.626%2096.5049L173.126%20126.006C184.581%20137.46%20184.581%20148.05%20173.126%20159.504C169.993%20162.638%20166.967%20165.772%20163.833%20168.798C154.756%20178.091%20146.111%20186.736%20136.71%20195.165C136.494%20195.381%20136.277%20195.489%20136.169%20195.705C126.876%20204.998%20128.605%20214.075%20130.55%20220.235L130.874%20221.207C138.547%20239.794%20149.353%20257.3%20165.778%20278.156L165.886%20278.264C195.711%20315.004%20227.157%20343.641%20261.844%20365.577C266.275%20368.387%20270.814%20370.656%20275.136%20372.817C279.026%20374.762%20282.7%20376.599%20285.834%20378.544C286.266%20378.76%20286.699%20379.085%20287.131%20379.301C290.805%20381.138%20294.263%20382.002%20297.829%20382.002C306.798%20382.002%20312.417%20376.383%20314.254%20374.546L351.211%20337.589C354.885%20333.915%20360.72%20329.485%20367.528%20329.485C374.228%20329.485%20379.739%20333.699%20383.089%20337.373L442.847%20397.131C453.977%20408.153%20453.977%20419.5%20442.955%20430.954ZM276.325%20121.791C304.637%20126.546%20330.355%20139.945%20350.887%20160.477C371.418%20181.009%20384.71%20206.727%20389.573%20235.039C390.761%20242.171%20396.921%20247.142%20403.945%20247.142C404.809%20247.142%20405.566%20247.034%20406.43%20246.926C414.427%20245.629%20419.722%20238.065%20418.425%20230.068C412.59%20195.813%20396.381%20164.583%20371.635%20139.837C346.889%20115.091%20315.659%2098.8822%20281.404%2093.0469C273.407%2091.7502%20265.951%2097.0452%20264.546%20104.934C263.141%20112.822%20268.328%20120.494%20276.325%20121.791ZM511.033%20225.854C501.416%20169.446%20474.833%20118.117%20433.986%2077.27C393.139%2036.4229%20341.81%209.83984%20285.402%200.222406C277.513%20-1.18239%20270.057%204.22067%20268.652%2012.1091C267.356%2020.1057%20272.651%2027.5619%20280.647%2028.9667C331.004%2037.5035%20376.93%2061.385%20413.454%2097.8016C449.979%20134.326%20473.752%20180.252%20482.289%20230.609C483.478%20237.741%20489.637%20242.712%20496.661%20242.712C497.526%20242.712%20498.282%20242.603%20499.147%20242.495C507.035%20241.307%20512.438%20233.742%20511.033%20225.854Z'%20fill='url(%23paint0_linear_5006_84)'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_5006_84'%20x1='127.814'%20y1='48'%20x2='415.961'%20y2='463.608'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/website-form-BSSNX21l.svg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/leads-CCd60GhV.svg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/pipeline-BtQnhK7g.svg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Vector'%20d='M12.6%2010.2L9%206.6L5.4%2010.2M17%209C17%204.5816%2013.4184%201%209%201C4.5816%201%201%204.5816%201%209C1%2013.4184%204.5816%2017%209%2017C13.4184%2017%2017%2013.4184%2017%209Z'%20stroke='url(%23paint0_linear_867_4125)'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_867_4125'%20x1='2.5'%20y1='13'%20x2='15.5'%20y2='4'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='11'%20height='16'%20viewBox='0%200%2011%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Vector'%3e%3cpath%20d='M5.21372%2013.8564C5.29234%2013.9271%205.39426%2013.9662%205.4999%2013.9662C5.60555%2013.9662%205.70746%2013.9271%205.78609%2013.8564C5.99874%2013.6644%2011%209.1139%2011%205.51295C10.9998%202.47295%208.53243%200%205.4999%200C2.46737%200%200%202.47295%200%205.51276C0%209.1139%205.00107%2013.6644%205.21372%2013.8564ZM5.4999%200.857143C8.06096%200.857143%2010.1447%202.94552%2010.1447%205.51276C10.1447%208.27524%206.55211%2011.937%205.4999%2012.9497C4.44713%2011.9371%200.855144%208.2779%200.855144%205.51276C0.855144%202.94552%202.93884%200.857143%205.4999%200.857143Z'%20fill='url(%23paint0_linear_1456_7164)'/%3e%3cpath%20d='M7.63776%205.51276C7.63776%204.33105%206.67848%203.3699%205.4999%203.3699C4.32133%203.3699%203.36205%204.33105%203.36205%205.51276C3.36205%206.69448%204.32133%207.65562%205.4999%207.65562C6.67848%207.65562%207.63776%206.69448%207.63776%205.51276ZM4.21719%205.51276C4.21719%204.80381%204.7928%204.22705%205.4999%204.22705C6.20701%204.22705%206.78262%204.80381%206.78262%205.51276C6.78262%206.22171%206.20701%206.79848%205.4999%206.79848C4.7928%206.79848%204.21719%206.2219%204.21719%205.51276ZM9.04457%2011.625C8.51172%2011.4339%208.22401%2012.2389%208.75401%2012.4312C9.61201%2012.7421%2010.1447%2013.1659%2010.1447%2013.5375C10.1447%2014.2078%208.37756%2015.1427%205.4999%2015.1427C2.62225%2015.1427%200.855144%2014.2076%200.855144%2013.5375C0.855144%2013.1659%201.38799%2012.7421%202.2458%2012.4312C2.77466%2012.2392%202.48961%2011.4345%201.95524%2011.625C0.694187%2012.0819%200%2012.7611%200%2013.5377C0%2015.137%202.83376%2016%205.4999%2016C8.16605%2016%2010.9998%2015.137%2010.9998%2013.5377C10.9998%2012.7611%2010.3056%2012.0821%209.04457%2011.625Z'%20fill='url(%23paint1_linear_1456_7164)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_1456_7164'%20x1='2.75'%20y1='1.5'%20x2='12.3652'%20y2='11.0484'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint1_linear_1456_7164'%20x1='2.75'%20y1='1.5'%20x2='12.3652'%20y2='11.0484'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/analytics-CtSTj53i.svg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/heatmap-bSEy2Tcr.svg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='6'%20height='10'%20viewBox='0%200%206%2010'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20id='Vector'%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M0.259558%200.230446C0.412466%200.082884%200.619739%200%200.835848%200C1.05196%200%201.25923%200.082884%201.41214%200.230446L5.7615%204.43299C5.91422%204.58074%206%204.78101%206%204.98983C6%205.19864%205.91422%205.39892%205.7615%205.54666L1.41214%209.74921C1.33748%209.82662%201.24745%209.88872%201.14741%209.93179C1.04738%209.97485%200.93939%209.99801%200.829892%209.99988C0.720394%2010.0017%200.611628%209.98228%200.510083%209.94265C0.408539%209.90302%200.316296%209.84403%200.238857%209.76921C0.161418%209.69438%200.100369%209.60525%200.0593534%209.50714C0.0183378%209.40902%20-0.00180506%209.30393%200.000126914%209.19812C0.00205888%209.09232%200.0260261%208.98798%200.0705983%208.89132C0.115171%208.79466%200.179435%208.70767%200.259558%208.63553L4.03263%204.98983L0.259558%201.34412C0.10684%201.19637%200.0210602%200.996098%200.0210602%200.787283C0.0210602%200.578469%200.10684%200.378192%200.259558%200.230446Z'%20fill='url(%23paint0_linear_462_4037)'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_462_4037'%20x1='1.5'%20y1='0.9375'%20x2='7.4486'%20y2='6.09296'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/citations-D-oyRHzT.svg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Vector'%3e%3cpath%20d='M1%2014.5V1.50001C1%201.22385%201.22384%201.00001%201.5%201.00001H9V3.00001C9%203.55229%209.44772%204.00001%2010%204.00001H12V5.50001H13V3.50001C13.0004%203.4342%2012.9878%203.36897%2012.9629%203.30805C12.938%203.24713%2012.9013%203.19172%2012.855%203.14501L9.855%200.145008C9.80828%200.0986689%209.75287%200.0620072%209.69195%200.037125C9.63103%200.0122429%209.5658%20-0.000370455%209.5%208.28281e-06H1.5C0.671562%208.28281e-06%200%200.671602%200%201.50001V14.5C0%2015.3284%200.671562%2016%201.5%2016H5V15H1.5C1.22388%2015%201%2014.7762%201%2014.5ZM15%2010H14V11H15V12H13V9H16C16%208.44772%2015.5523%208%2015%208H13C12.4477%208%2012%208.44772%2012%209V12C12%2012.5523%2012.4477%2013%2013%2013H15C15.5523%2013%2016%2012.5523%2016%2012V11C16%2010.4477%2015.5523%2010%2015%2010Z'%20fill='url(%23paint0_linear_1456_7123)'/%3e%3cpath%20d='M9.5%208C8.39544%208%207.5%208.89544%207.5%2010V11C7.5%2012.1046%208.39544%2013%209.5%2013C10.6046%2013%2011.5%2012.1046%2011.5%2011V10C11.5%208.89544%2010.6046%208%209.5%208ZM10.5%2011C10.5%2011.5523%2010.0523%2012%209.5%2012C8.94772%2012%208.5%2011.5523%208.5%2011V10C8.5%209.44772%208.94772%209%209.5%209C10.0523%209%2010.5%209.44772%2010.5%2010V11ZM5%208H4V12.5C4%2012.7762%204.22384%2013%204.5%2013H7V12H5V8Z'%20fill='url(%23paint1_linear_1456_7123)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_1456_7123'%20x1='4'%20y1='1.5'%20x2='13'%20y2='14.5'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint1_linear_1456_7123'%20x1='4'%20y1='1.5'%20x2='13'%20y2='14.5'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Vector'%3e%3cpath%20d='M14.5938%200H1.40625C0.630844%200%200%200.630844%200%201.40625V14.5938C0%2015.3692%200.630844%2016%201.40625%2016H14.5938C15.3692%2016%2016%2015.3692%2016%2014.5938V1.40625C16%200.630844%2015.3692%200%2014.5938%200ZM0.9375%201.40625C0.9375%201.14778%201.14778%200.9375%201.40625%200.9375H14.5938C14.8522%200.9375%2015.0625%201.14778%2015.0625%201.40625V2.03125H0.9375V1.40625ZM15.0625%2014.5938C15.0625%2014.8522%2014.8522%2015.0625%2014.5938%2015.0625H1.40625C1.14778%2015.0625%200.9375%2014.8522%200.9375%2014.5938V2.96875H15.0625V14.5938Z'%20fill='url(%23paint0_linear_1456_7100)'/%3e%3cpath%20d='M3.25%2011.9688H12.75C13.0089%2011.9688%2013.2188%2011.7589%2013.2188%2011.5V4.5C13.2188%204.24113%2013.0089%204.03125%2012.75%204.03125H3.25C2.99113%204.03125%202.78125%204.24113%202.78125%204.5V11.5C2.78125%2011.7589%202.99113%2011.9688%203.25%2011.9688ZM3.71875%2011.0312V10.2074L6.00597%208.12806L7.69134%209.60275C7.87703%209.76522%208.15694%209.75591%208.33147%209.58141L10.7299%207.18294L12.2812%208.92822V11.0312H3.71875ZM12.2812%204.96875V7.51709L11.1003%206.18856C10.9236%205.98972%2010.6117%205.97528%2010.4186%206.16853L7.97866%208.60844L6.30869%207.14719C6.12941%206.99028%205.86097%206.99288%205.68472%207.15309L3.71875%208.94038V4.96875H12.2812ZM7.25%2013.0312H6.25C5.99113%2013.0312%205.78125%2013.2411%205.78125%2013.5C5.78125%2013.7589%205.99113%2013.9688%206.25%2013.9688H7.25C7.50888%2013.9688%207.71875%2013.7589%207.71875%2013.5C7.71875%2013.2411%207.50888%2013.0312%207.25%2013.0312ZM10.25%2013.0312H9.25C8.99113%2013.0312%208.78125%2013.2411%208.78125%2013.5C8.78125%2013.7589%208.99113%2013.9688%209.25%2013.9688H10.25C10.5089%2013.9688%2010.7188%2013.7589%2010.7188%2013.5C10.7188%2013.2411%2010.5089%2013.0312%2010.25%2013.0312ZM3.91856%2012.9186L3.75%2013.0871L3.58144%2012.9185C3.39841%2012.7355%203.10159%2012.7355%202.91853%2012.9185C2.73547%2013.1016%202.73547%2013.3984%202.91853%2013.5814L3.41853%2014.0814C3.60159%2014.2645%203.89838%2014.2645%204.08144%2014.0814L4.58144%2013.5814C4.7645%2013.3984%204.7645%2013.1016%204.58144%2012.9185C4.39841%2012.7355%204.10159%2012.7355%203.91856%2012.9186Z'%20fill='url(%23paint1_linear_1456_7100)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_1456_7100'%20x1='4'%20y1='1.5'%20x2='13'%20y2='14.5'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint1_linear_1456_7100'%20x1='4'%20y1='1.5'%20x2='13'%20y2='14.5'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/reviews-Cv32odWP.svg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='Vector'%3e%3cpath%20d='M7.99953%201.8744C7.74066%201.8744%207.53078%202.08429%207.53078%202.34317C7.53078%202.60206%207.74066%202.81194%207.99953%202.81194C9.55059%202.81194%2010.8125%204.07369%2010.8125%205.62457C10.8125%205.88346%2011.0224%206.09334%2011.2812%206.09334C11.5401%206.09334%2011.75%205.88346%2011.75%205.62457C11.75%203.55673%2010.0676%201.8744%207.99953%201.8744Z'%20fill='url(%23paint0_linear_1456_7127)'/%3e%3cpath%20d='M6.79172%200.125574C4.67391%200.568125%202.95672%202.26895%202.50487%204.40001C2.12334%206.19953%202.5935%208.00618%203.79478%209.3567C4.382%2010.0168%204.71875%2010.8882%204.71875%2011.7498V12.6874C4.71875%2013.3112%205.12709%2013.8411%205.69041%2014.0246C5.87566%2015.1192%206.82566%2016%208%2016C9.17403%2016%2010.1243%2015.1195%2010.3096%2014.0246C10.8729%2013.8411%2011.2812%2013.3112%2011.2812%2012.6874V11.7498C11.2812%2010.8865%2011.6191%2010.0256%2012.2326%209.32567C13.1303%208.30175%2013.6252%206.98635%2013.625%205.62457C13.625%202.0755%2010.3766%20-0.623397%206.79172%200.125574ZM8%2015.0625C7.39744%2015.0625%206.86912%2014.6478%206.67403%2014.0906H9.32594C9.13087%2014.6478%208.60256%2015.0625%208%2015.0625ZM10.3438%2012.6874C10.3438%2012.9459%2010.1335%2013.1562%209.875%2013.1562H6.125C5.86653%2013.1562%205.65625%2012.9459%205.65625%2012.6874V12.2186H10.3438V12.6874ZM11.5276%208.70774C10.8738%209.45362%2010.4716%2010.353%2010.3695%2011.2811H5.63056C5.52863%2010.3525%205.12744%209.44427%204.49531%208.73358C3.49413%207.60803%203.10291%206.09937%203.422%204.59449C3.79447%202.83773%205.22572%201.41063%206.9835%201.04333C9.98425%200.416212%2012.6875%202.66981%2012.6875%205.62457C12.6876%206.75898%2012.2754%207.85476%2011.5276%208.70774ZM1.40625%205.62457H0.46875C0.209875%205.62457%200%205.83445%200%206.09334C0%206.35223%200.209875%206.56211%200.46875%206.56211H1.40625C1.66513%206.56211%201.875%206.35223%201.875%206.09334C1.875%205.83445%201.66513%205.62457%201.40625%205.62457ZM1.60041%203.28071L0.9375%202.61778C0.754469%202.43471%200.457656%202.43471%200.274594%202.61778C0.0915312%202.80085%200.0915312%203.09764%200.274594%203.28071L0.9375%203.94365C1.12053%204.12672%201.41734%204.12675%201.60041%203.94365C1.78347%203.76058%201.78347%203.46378%201.60041%203.28071ZM1.60041%208.24303C1.41734%208.05996%201.12053%208.05996%200.9375%208.24303L0.274594%208.90596C0.0915312%209.08904%200.0915312%209.38583%200.274594%209.5689C0.457625%209.75197%200.754438%209.752%200.9375%209.5689L1.60041%208.90596C1.78347%208.72289%201.78347%208.4261%201.60041%208.24303ZM15.5312%205.62457H14.5938C14.3349%205.62457%2014.125%205.83445%2014.125%206.09334C14.125%206.35223%2014.3349%206.56211%2014.5938%206.56211H15.5312C15.7901%206.56211%2016%206.35223%2016%206.09334C16%205.83445%2015.7901%205.62457%2015.5312%205.62457ZM15.7254%202.61778C15.5424%202.43471%2015.2456%202.43471%2015.0625%202.61778L14.3996%203.28071C14.2165%203.46378%2014.2165%203.76058%2014.3996%203.94365C14.5826%204.12669%2014.8794%204.12672%2015.0625%203.94365L15.7254%203.28071C15.9085%203.09764%2015.9085%202.80085%2015.7254%202.61778ZM15.7254%208.90596L15.0625%208.24303C14.8795%208.05996%2014.5827%208.05996%2014.3996%208.24303C14.2165%208.4261%2014.2165%208.72289%2014.3996%208.90596L15.0625%209.5689C15.2455%209.75194%2015.5423%209.75197%2015.7254%209.5689C15.9085%209.38583%2015.9085%209.08904%2015.7254%208.90596Z'%20fill='url(%23paint1_linear_1456_7127)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_1456_7127'%20x1='4'%20y1='1.5'%20x2='13'%20y2='14.5'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint1_linear_1456_7127'%20x1='4'%20y1='1.5'%20x2='13'%20y2='14.5'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/setting-icon-Dl91-2C3.svg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M508.373%20306.23L473.048%20265.017C498.255%20236.579%20511.984%20201.892%20511.984%20165.995C511.984%2072.99%20421.752%200%20315.991%200C208.472%200%20120.997%2074.465%20120.997%20165.995C120.997%20168.294%20121.073%20170.599%20121.186%20172.902C49.6341%20201.334%200.0010645%20262.623%200.0010645%20333.491C0.0010645%20373.209%2015.1731%20411.319%2043.0091%20442.198L3.71206%20487.108C1.81415%20489.277%200.581164%20491.946%200.160593%20494.797C-0.259978%20497.648%200.149677%20500.56%201.34055%20503.184C2.53143%20505.808%204.4531%20508.034%206.87569%20509.595C9.29829%20511.156%2012.1192%20511.985%2015.0011%20511.985H225.994C227.663%20511.985%20232.92%20511.032%20233.994%20510.933C283.476%20506.368%20329.343%20486.943%20363.806%20455.825C400.194%20422.969%20421.726%20378.976%20420.952%20330.991H496.985C509.773%20330.991%20516.697%20315.941%20508.373%20306.23ZM228.994%20481.256C227.683%20481.363%20223.149%20481.754%20222.245%20481.986H48.0571L74.7031%20451.533C80.0031%20445.476%2079.5781%20436.317%2073.7401%20430.777C45.5341%20404.007%2030.0001%20369.457%2030.0001%20333.491C30.0001%20252.179%20111.185%20185.996%20210.994%20185.996C310.243%20185.996%20390.988%20252.162%20390.988%20333.491C390.988%20409.529%20320.152%20473.808%20228.994%20481.256ZM417.497%20300.993C399.398%20217.545%20312.846%20155.997%20210.994%20155.997C190.172%20155.997%20170.051%20158.56%20151.038%20163.309C152.782%2089.556%20226.103%2030.001%20315.991%2030.001C407.521%2030.001%20481.985%2091.008%20481.985%20165.996C481.985%20198.072%20467.936%20229.185%20442.425%20253.604C436.671%20259.111%20436.225%20268.154%20441.408%20274.201L464.372%20300.993H417.497Z'%20fill='url(%23paint0_linear_5007_110)'/%3e%3cpath%20d='M120.997%20300.992C104.456%20300.992%2090.9981%20314.45%2090.9981%20330.991C90.9981%20347.532%20104.456%20360.99%20120.997%20360.99C137.538%20360.99%20150.996%20347.532%20150.996%20330.991C150.996%20314.45%20137.539%20300.992%20120.997%20300.992ZM210.994%20300.992C194.453%20300.992%20180.995%20314.45%20180.995%20330.991C180.995%20347.532%20194.453%20360.99%20210.994%20360.99C227.535%20360.99%20240.993%20347.532%20240.993%20330.991C240.993%20314.45%20227.536%20300.992%20210.994%20300.992ZM300.991%20300.992C284.45%20300.992%20270.992%20314.45%20270.992%20330.991C270.992%20347.532%20284.45%20360.99%20300.991%20360.99C317.532%20360.99%20330.99%20347.532%20330.99%20330.991C330.99%20314.45%20317.533%20300.992%20300.991%20300.992Z'%20fill='url(%23paint1_linear_5007_110)'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_5007_110'%20x1='128'%20y1='47.9986'%20x2='415.989'%20y2='463.995'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint1_linear_5007_110'%20x1='128'%20y1='47.9986'%20x2='415.989'%20y2='463.995'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='402'%20height='512'%20viewBox='0%200%20402%20512'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M354.706%20512C380.789%20512%20402%20493.629%20402%20471.04V40.96C402%2018.3706%20380.789%200%20354.706%200H47.2941C21.2114%200%200%2018.3706%200%2040.96V471.04C0%20493.629%2021.2114%20512%2047.2941%20512H354.706ZM23.6471%2093.44H378.353V400.005H23.6471V93.44ZM47.2941%2020.48H354.706C367.747%2020.48%20378.353%2029.6653%20378.353%2040.96V72.96H23.6471V40.96C23.6471%2029.6653%2034.2528%2020.48%2047.2941%2020.48ZM23.6471%20471.04V420.475H378.353V471.04C378.353%20482.335%20367.747%20491.52%20354.706%20491.52H47.2941C34.2528%20491.52%2023.6471%20482.335%2023.6471%20471.04Z'%20fill='url(%23paint0_linear_5007_117)'/%3e%3cpath%20d='M180.277%20465.904H221.749C224.465%20465.904%20227.069%20464.825%20228.99%20462.905C230.91%20460.984%20231.989%20458.38%20231.989%20455.664C231.989%20452.948%20230.91%20450.344%20228.99%20448.423C227.069%20446.503%20224.465%20445.424%20221.749%20445.424H180.277C177.561%20445.424%20174.956%20446.503%20173.036%20448.423C171.116%20450.344%20170.037%20452.948%20170.037%20455.664C170.037%20458.38%20171.116%20460.984%20173.036%20462.905C174.956%20464.825%20177.561%20465.904%20180.277%20465.904ZM201.013%20121.932C132.395%20121.932%2076.5661%20177.771%2076.5661%20246.389C76.5661%20314.997%20132.395%20370.826%20201.013%20370.826C269.631%20370.826%20325.46%20314.997%20325.46%20246.389C325.46%20177.771%20269.621%20121.932%20201.013%20121.932ZM255.326%20276.013C256.36%20266.224%20256.933%20256.261%20256.933%20246.389C256.933%20236.508%20256.36%20226.544%20255.326%20216.765C286.609%20224.025%20304.98%20236.671%20304.98%20246.389C304.98%20256.107%20286.619%20268.753%20255.326%20276.013ZM201.013%20350.356C191.295%20350.356%20178.649%20331.975%20171.389%20300.692C181.178%20301.726%20191.131%20302.31%20201.013%20302.31C210.894%20302.31%20220.858%20301.726%20230.637%20300.692C223.377%20331.975%20210.731%20350.356%20201.013%20350.356ZM201.013%20281.83C189.032%20281.83%20177.87%20281.072%20167.63%20279.761C166.24%20268.689%20165.556%20257.539%20165.582%20246.379C165.582%20234.398%20166.33%20223.237%20167.63%20212.997C178.703%20211.606%20189.853%20210.922%20201.013%20210.949C212.994%20210.949%20224.155%20211.696%20234.395%20213.007C235.706%20223.247%20236.453%20234.408%20236.453%20246.389C236.453%20258.37%20235.706%20269.532%20234.395%20279.761C224.155%20281.072%20212.994%20281.83%20201.013%20281.83ZM97.0461%20246.389C97.0461%20236.661%20115.417%20224.025%20146.71%20216.755C145.651%20226.598%20145.11%20236.489%20145.092%20246.389C145.092%20256.261%20145.676%20266.224%20146.71%20276.013C115.417%20268.743%2097.0461%20256.107%2097.0461%20246.389ZM201.013%20142.412C210.731%20142.412%20223.377%20160.783%20230.637%20192.076C220.798%20191.014%20210.909%20190.47%20201.013%20190.448C191.131%20190.448%20181.168%20191.032%20171.389%20192.066C178.659%20160.783%20191.295%20142.402%20201.013%20142.402V142.412ZM298.6%20210.877C285.964%20203.914%20269.836%20198.671%20252.131%20195.261C248.711%20177.546%20243.478%20161.428%20236.515%20148.792C250.754%20154.006%20263.685%20162.262%20274.408%20172.984C285.13%20183.707%20293.386%20196.638%20298.6%20210.877ZM165.511%20148.792C158.548%20161.418%20153.325%20177.556%20149.905%20195.261C132.19%20198.671%20116.062%20203.903%20103.426%20210.877C108.64%20196.638%20116.896%20183.707%20127.618%20172.984C138.34%20162.262%20151.272%20154.006%20165.511%20148.792ZM103.426%20281.881C116.062%20288.844%20132.2%20294.067%20149.895%20297.487C153.315%20315.202%20158.548%20331.33%20165.511%20343.966C151.272%20338.752%20138.34%20330.496%20127.618%20319.774C116.896%20309.051%20108.64%20296.12%20103.426%20281.881ZM236.515%20343.956C243.478%20331.33%20248.711%20315.192%20252.131%20297.487C269.846%20294.067%20285.964%20288.844%20298.6%20281.881C293.385%20296.118%20285.128%20309.047%20274.406%20319.768C263.684%20330.489%20250.753%20338.743%20236.515%20343.956Z'%20fill='url(%23paint1_linear_5007_117)'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_5007_117'%20x1='100.5'%20y1='48'%20x2='405.772'%20y2='394.213'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint1_linear_5007_117'%20x1='100.5'%20y1='48'%20x2='405.772'%20y2='394.213'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='439'%20height='512'%20viewBox='0%200%20439%20512'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M378.028%200H97.5556C63.9355%200%2036.5833%2027.3432%2036.5833%2060.9524V73.1429C16.4137%2073.1429%200%2089.5512%200%20109.714C0%20129.877%2016.4137%20146.286%2036.5833%20146.286V219.429C16.4137%20219.429%200%20235.837%200%20256C0%20276.163%2016.4137%20292.571%2036.5833%20292.571V365.714C16.4137%20365.714%200%20382.123%200%20402.286C0%20422.449%2016.4137%20438.857%2036.5833%20438.857V451.048C36.5833%20484.657%2063.9355%20512%2097.5556%20512H378.028C411.648%20512%20439%20484.657%20439%20451.048V60.9524C439%2027.3432%20411.648%200%20378.028%200ZM24.3889%20109.714C24.3889%20102.997%2029.8642%2097.5238%2036.5833%2097.5238H60.9722C67.6914%2097.5238%2073.1667%20102.997%2073.1667%20109.714C73.1667%20116.431%2067.6914%20121.905%2060.9722%20121.905H36.5833C29.8642%20121.905%2024.3889%20116.431%2024.3889%20109.714ZM24.3889%20256C24.3889%20249.283%2029.8642%20243.81%2036.5833%20243.81H60.9722C67.6914%20243.81%2073.1667%20249.283%2073.1667%20256C73.1667%20262.717%2067.6914%20268.19%2060.9722%20268.19H36.5833C29.8642%20268.19%2024.3889%20262.717%2024.3889%20256ZM24.3889%20402.286C24.3889%20395.569%2029.8642%20390.095%2036.5833%20390.095H60.9722C67.6914%20390.095%2073.1667%20395.569%2073.1667%20402.286C73.1667%20409.003%2067.6914%20414.476%2060.9722%20414.476H36.5833C29.8642%20414.476%2024.3889%20409.003%2024.3889%20402.286ZM414.611%20451.048C414.611%20471.211%20398.197%20487.619%20378.028%20487.619H97.5556C77.3859%20487.619%2060.9722%20471.211%2060.9722%20451.048V438.857C81.1418%20438.857%2097.5556%20422.449%2097.5556%20402.286C97.5556%20382.123%2081.1418%20365.714%2060.9722%20365.714V292.571C81.1418%20292.571%2097.5556%20276.163%2097.5556%20256C97.5556%20235.837%2081.1418%20219.429%2060.9722%20219.429V146.286C81.1418%20146.286%2097.5556%20129.877%2097.5556%20109.714C97.5556%2089.5512%2081.1418%2073.1429%2060.9722%2073.1429V60.9524C60.9722%2040.7893%2077.3859%2024.381%2097.5556%2024.381H378.028C398.197%2024.381%20414.611%2040.7893%20414.611%2060.9524V451.048Z'%20fill='url(%23paint0_linear_5007_123)'/%3e%3cpath%20d='M363.87%20302.299L320.933%20281.429C316.039%20279.074%20310.516%20278.356%20305.182%20279.382C299.848%20280.407%20294.985%20283.121%20291.313%20287.122L277.326%20302.519C270.534%20300.873%20255.278%20294.851%20233.194%20272.786C210.939%20250.539%20205.001%20235.215%20203.391%20228.73L218.854%20214.686C222.857%20211.019%20225.573%20206.16%20226.598%20200.829C227.624%20195.498%20226.905%20189.979%20224.548%20185.088L203.659%20142.165C201.251%20137.25%20197.309%20133.25%20192.428%20130.77C187.547%20128.289%20181.992%20127.463%20176.6%20128.414C151.296%20132.913%20133.468%20145.725%20126.395%20164.474C113.384%20198.936%20126.847%20260.303%20186.27%20319.695C232.219%20365.629%20279.326%20384.098%20314.275%20384.098C324.519%20384.098%20333.725%20382.513%20341.542%20379.55C360.309%20372.48%20373.113%20354.658%20377.613%20329.35C378.558%20323.962%20377.728%20318.413%20375.248%20313.537C372.767%20308.661%20368.77%20304.722%20363.858%20302.312L363.87%20302.299ZM332.945%20356.73C311.032%20365.007%20258.473%20357.376%20203.525%20302.446C148.577%20247.528%20140.943%20194.987%20149.223%20173.068C154.516%20159.049%20171.332%20154.1%20181.734%20152.82L202.452%20196.632L182.478%20214.772C180.306%20216.749%20178.917%20219.44%20178.563%20222.354C178.027%20226.877%20177.295%20251.38%20215.951%20290.011C254.608%20328.643%20279.131%20327.936%20283.631%20327.387C286.545%20327.034%20289.24%20325.644%20291.216%20323.474L310.251%20303.348L353.615%20325.071C351.907%20334.629%20346.969%20351.439%20332.933%20356.73H332.945Z'%20fill='url(%23paint1_linear_5007_123)'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_5007_123'%20x1='109.75'%20y1='48'%20x2='410.535'%20y2='420.522'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3clinearGradient%20id='paint1_linear_5007_123'%20x1='109.75'%20y1='48'%20x2='410.535'%20y2='420.522'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/regulatory-DsUNfopO.svg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M437.02%2074.98C388.668%2026.63%20324.379%200%20256%200C187.621%200%20123.332%2026.629%2074.98%2074.98C26.63%20123.332%200%20187.621%200%20256C0%20324.379%2026.629%20388.668%2074.98%20437.02C123.332%20485.37%20187.621%20512%20256%20512C324.379%20512%20388.668%20485.371%20437.02%20437.02C485.37%20388.668%20512%20324.379%20512%20256C512%20187.621%20485.371%20123.332%20437.02%2074.98ZM111.105%20429.297C119.559%20356.562%20182.094%20300.407%20256%20300.407C294.96%20300.407%20331.598%20315.586%20359.156%20343.141C382.437%20366.426%20397.121%20396.828%20400.898%20429.293C361.641%20462.172%20311.094%20482%20256%20482C200.906%20482%20150.363%20462.176%20111.105%20429.297ZM256%20269.507C213.129%20269.507%20178.246%20234.625%20178.246%20191.754C178.246%20148.879%20213.13%20114%20256%20114C298.87%20114%20333.754%20148.879%20333.754%20191.754C333.754%20234.625%20298.871%20269.508%20256%20269.508V269.507ZM426.719%20403.934C419.011%20372.894%20402.986%20344.542%20380.367%20321.93C361.93%20303.492%20340.117%20289.66%20316.328%20280.992C344.926%20261.598%20363.754%20228.832%20363.754%20191.754C363.754%20132.34%20315.414%2084%20256%2084C196.586%2084%20148.246%20132.34%20148.246%20191.754C148.246%20228.852%20167.09%20261.629%20195.711%20281.02C173.824%20288.996%20153.571%20301.328%20136.145%20317.562C110.91%20341.062%2093.387%20371.027%2085.262%20403.91C50.852%20364.242%2030%20312.512%2030%20256C30%20131.383%20131.383%2030%20256%2030C380.617%2030%20482%20131.383%20482%20256C482%20312.523%20461.14%20364.266%20426.719%20403.934Z'%20fill='url(%23paint0_linear_5010_177)'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_5010_177'%20x1='128'%20y1='48'%20x2='416'%20y2='464'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='512'%20height='517'%20viewBox='0%200%20512%20517'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M478.609%2088.9524H378.435V55.5952C378.417%2040.8559%20372.548%2026.7253%20362.115%2016.303C351.682%205.88066%20337.537%200.0176555%20322.783%200H189.217C174.463%200.0176555%20160.318%205.88066%20149.885%2016.303C139.452%2026.7253%20133.583%2040.8559%20133.565%2055.5952V88.9524H33.3913C24.5381%2088.9612%2016.05%2092.4785%209.78985%2098.7322C3.52968%20104.986%200.00883996%20113.465%200%20122.31V211.262C0.012549%20215.927%201.01042%20220.537%202.92839%20224.791C4.84637%20229.044%207.64127%20232.845%2011.1304%20235.946V483.643C11.1393%20492.487%2014.6601%20500.966%2020.9203%20507.22C27.1805%20513.474%2035.6685%20516.991%2044.5217%20517H467.478C476.331%20516.991%20484.82%20513.474%20491.08%20507.22C497.34%20500.966%20500.861%20492.487%20500.87%20483.643V235.946C504.359%20232.845%20507.154%20229.044%20509.072%20224.791C510.99%20220.537%20511.987%20215.927%20512%20211.262V122.31C511.991%20113.465%20508.47%20104.986%20502.21%2098.7322C495.95%2092.4785%20487.462%2088.9612%20478.609%2088.9524ZM155.826%2055.5952C155.835%2046.7511%20159.356%2038.2717%20165.616%2032.0179C171.876%2025.7642%20180.364%2022.2469%20189.217%2022.2381H322.783C331.636%2022.2469%20340.124%2025.7642%20346.384%2032.0179C352.644%2038.2717%20356.165%2046.7511%20356.174%2055.5952V88.9524H333.913V55.5952C333.913%2052.6463%20332.74%2049.8181%20330.653%2047.7329C328.566%2045.6477%20325.735%2044.4762%20322.783%2044.4762H189.217C186.265%2044.4762%20183.434%2045.6477%20181.347%2047.7329C179.26%2049.8181%20178.087%2052.6463%20178.087%2055.5952V88.9524H155.826V55.5952ZM200.348%2088.9524V66.7143H311.652V88.9524H200.348ZM22.2609%20122.31C22.2638%20119.361%2023.4374%20116.535%2025.5242%20114.45C27.6109%20112.366%2030.4402%20111.193%2033.3913%20111.19H478.609C481.56%20111.193%20484.389%20112.366%20486.476%20114.45C488.563%20116.535%20489.736%20119.361%20489.739%20122.31V211.262C489.736%20214.21%20488.563%20217.036%20486.476%20219.121C484.389%20221.206%20481.56%20222.378%20478.609%20222.381H445.217V211.262C445.212%20205.366%20442.864%20199.713%20438.691%20195.544C434.517%20191.375%20428.859%20189.03%20422.957%20189.024H400.696C394.794%20189.03%20389.135%20191.375%20384.961%20195.544C380.788%20199.713%20378.441%20205.366%20378.435%20211.262V222.381H133.565V211.262C133.559%20205.366%20131.212%20199.713%20127.039%20195.544C122.865%20191.375%20117.206%20189.03%20111.304%20189.024H89.0435C83.1413%20189.03%2077.4826%20191.375%2073.3092%20195.544C69.1357%20199.713%2066.7885%20205.366%2066.7826%20211.262V222.381H33.3913C30.4402%20222.378%2027.6109%20221.206%2025.5242%20219.121C23.4374%20217.036%2022.2638%20214.21%2022.2609%20211.262V122.31ZM422.979%20255.738H400.696V211.262H422.957V233.544L422.979%20255.738ZM111.327%20255.738H89.0435V211.262H111.304V233.544L111.327%20255.738ZM478.609%20483.643C478.606%20486.591%20477.432%20489.417%20475.345%20491.502C473.259%20493.587%20470.429%20494.759%20467.478%20494.762H44.5217C41.5707%20494.759%2038.7413%20493.587%2036.6546%20491.502C34.5679%20489.417%2033.3943%20486.591%2033.3913%20483.643V244.619H66.7826V255.738C66.7885%20261.634%2069.1357%20267.287%2073.3092%20271.456C77.4826%20275.625%2083.1413%20277.97%2089.0435%20277.976H111.304C117.206%20277.97%20122.865%20275.625%20127.039%20271.456C131.212%20267.287%20133.559%20261.634%20133.565%20255.738V244.619H378.435V255.738C378.441%20261.634%20380.788%20267.287%20384.961%20271.456C389.135%20275.625%20394.794%20277.97%20400.696%20277.976H422.957C428.859%20277.97%20434.517%20275.625%20438.691%20271.456C442.864%20267.287%20445.212%20261.634%20445.217%20255.738V244.619H478.609V483.643Z'%20fill='url(%23paint0_linear_5010_183)'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_5010_183'%20x1='128'%20y1='48.4688'%20x2='419.797'%20y2='465.877'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/integration-D6QrxQ-p.svg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='512'%20height='464'%20viewBox='0%200%20512%20464'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M464%200H48.0003C21.5313%200%200%2021.5313%200%2048.0003V416C0%20442.469%2021.5313%20464.001%2048.0003%20464.001H464C490.469%20464.001%20512%20442.469%20512%20416V48.0003C512%2021.5313%20490.469%200%20464%200ZM464%2031.9999C466.174%2031.9999%20468.242%2032.4509%20470.132%2033.2386L256%20218.828L41.8667%2033.2386C43.8089%2032.4243%2045.8933%2032.0032%2047.9993%2031.9999H464ZM464%20432H48.0003C39.1723%20432%2031.9999%20424.828%2031.9999%20415.999V67.0468L245.515%20252.094C248.531%20254.703%20252.266%20256%20256%20256C259.734%20256%20263.469%20254.704%20266.485%20252.094L480%2067.0468V416C479.999%20424.828%20472.828%20432%20464%20432Z'%20fill='url(%23paint0_linear_5011_198)'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_5011_198'%20x1='128'%20y1='43.5001'%20x2='379.069'%20y2='443.671'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2397C72F'/%3e%3cstop%20offset='1'%20stop-color='%231CA2CC'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/appBundle/img/white-label-BDpH8nrj.svg",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='10'%20height='6'%20viewBox='0%200%2010%206'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8.97322%200.169642C9.08631%200.282738%209.14286%200.416666%209.14286%200.571428C9.14286%200.72619%209.08631%200.860119%208.97322%200.973214L4.97321%204.97321C4.86012%205.08631%204.72619%205.14286%204.57143%205.14286C4.41667%205.14286%204.28274%205.08631%204.16964%204.97321L0.169643%200.973214C0.0565476%200.860119%200%200.72619%200%200.571428C0%200.416666%200.0565476%200.282738%200.169643%200.169642C0.282738%200.0565475%200.416667%200%200.571429%200H8.57143C8.72619%200%208.86012%200.0565475%208.97322%200.169642Z'%20fill='%232A3F54'/%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='info'%3e%3cpath%20id='Vector'%20d='M7.7%204.9H6.3V3.5H7.7V4.9ZM7.7%206.3H6.3V10.5H7.7V6.3ZM7%201.4C3.9123%201.4%201.4%203.9123%201.4%207C1.4%2010.0877%203.9123%2012.6%207%2012.6C10.0877%2012.6%2012.6%2010.0877%2012.6%207C12.6%203.9123%2010.0877%201.4%207%201.4ZM7%200C10.8661%200%2014%203.1339%2014%207C14%2010.8661%2010.8661%2014%207%2014C3.1339%2014%200%2010.8661%200%207C0%203.1339%203.1339%200%207%200Z'%20fill='%23AAABAC'/%3e%3c/g%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAO1QTFRFAAAAjMIkhsAsf742d7xCb7pPZbddW7RsUbF7jcIhiMEpgb8zer0+XrVnVLJ2TLCDRK2OjsMgisEnhMAwa7lUYbZjRq6LP6yWOKqgi8IkhsAtZLdeWrRtOqqdM6ioh8Eqgb80NamlLqeug78xVrNzTbCAKqa1fr44ULF9SK6IJaW7eLxAcLpNSq+FQq2QJ6W5IqPBcrtJabhXRa6NPauYI6S/HqLGbLlTYrZhWLNwQKyUOKqfJaS8IKPEG6LLW7RsUbF7Sa+GQq2RLaewJ6W6IaPCHKLJTLCDRK2OPauZNamkL6euKKW3I6S/HqLHy8GfGQAAAE90Uk5TACCf7///758gMO+vMDCv7zAg72D//2DvIJ+v//+vn+8wMO///////////+8w//8w75+v//+vnyDvYP//YO8gMO+vMDCv7zAgn+///++fIMTsnA4AAAB4SURBVHicLctDEgQADAXRHtu2bdvm/Y8zSdX8xetFKoDBaDJbrDY7MofT5QaP1+eHQDAE4QhEY3ESSbmm0kImSy7Pf4UiJW25olapaeoNtUmrLel0hV6fwVA6GguTKbP5ApYrWG+2sNsfjnA6X676d7s/nq/35ws/VrAMCnvPN1UAAAAASUVORK5CYII=",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAABRJJREFUeJydl3lbE2cUxfMR8nfdxqqoKBrcquAybiiColattUqDe9Xq1A0XxFEQ1Gpj99rWWrOwhWQSIEFI4E2s1Vb7PPMR8hHyEU7PmKGi1ZmR++eQd+77nDvndy4ul4O6KuZJl4cXKQ3D5eL80Ir82fQanExV4sRgDY4ObMOh/l35fUmv+DRxUPmk75jk5J2W1ZIp8TRlSjVVLMSl4SW4MLQc9enVOJVaD2VwI44NbMXhhzuxv78W3uR+7O47gp29Crb1nBVb4hc9Y2w6y9ecmYsrYj4ahxfj4tDS3Ln0SvV0qkL+YrDKPfK7g/273XuTe+XaxGF1V9/x3Pae09gSv4BNscuo0pp8jhveyE53t2aL9WuZOaDEoMSiYahcdnr+w55zck38kqiOXUWl1oKK6Jf66ojPbXno5qMi9/XsTDYtQZMoBSVWHN/4tdqgXVPWRW9iTeQrrOz+Vl/e/ePbm9/IztBbMrPRnPHkr4gF8libjtTa6G15VeTr/IruH7A0/LP+lqbTfa3ZWTDmSoltm+5L1im1iUO2isjd38nLwndR1nUPH3Q9eHXmN7NFnuvZYhgSXxWljuT1Jg7wKz4KJ78tD/+qLO76HQs7g5jX0fHya+dchSFxU8Yj7F5yoH+PVJfcp+5JfIaPe09ge88ZldaR7M4t6gyI+Z3t8HSEtRcPOFdpRGJaR7Y6TOv49ibrQImxq+9z7Og9ha3x86iJNaI61qRanV3Q2SaXdnRhTnsUs9t6JBeto5jWyVkdJJ28pBNIJ5BO+ke9J1VaR90cv6RXx64Y1rFVa257JFfSHkNxW59i0EmQToZ1LG9MOgmTTtrrf6N1vOuiN2xJVdKuqbPaejEj1C9clDhv0km2OkQ6CdKJEh/32jV4W1FieWZbEtNDA3mXSSeQTpZ0ocQ+SgxKnKfECukkvWvj4raEe0boIaaF0nAVAqDM1haU2M0A0Lf11GNzvAEbOVdKDNIpRzqppJM1Fs0qCqUwNTgMVyEAljnyI63jpnVUBkCuSmvG+uh1kE4gnUA66aSTbfOpwSG8H8zARYlxPi3jTHqtoxuProroLWl15I5COuVNOlmm0bRg2j0lKDA58AiuC2awn0pVyu/aeKQYAF7SCaSTpaWmBIflyYEsJgUe51316VXidGodg71atWuwKaZ6KLH39eeUWFvSdR8GnazOU2JVCjzGRP8T4TqTqlAY7Dg+sNkSIEaRTmK91sq53tJXRe6oK7q/V5eG7+qFAPCDdPrfpUaXFPgjNzHwBBP8fyku7k7SqN1JtjpIOqkMdjDYwbliWfgnlBUkZgCELOfLucqTAn8aTTHO/0x68ZC7k2buTrbYo3WklZFvVM4V5eFf2PS+Soklu3OUWEz0P8V4/7OX5DvycIeHAQDSiQFw2FEscq5Y0vWbIxtSYsWQeLz/b4x78PxVtDIAfGYAGHSS7V5WFr6nMNhtL/mqxM/fPA7SSS+sp/V50sm2uX3TrGxYZ0JB4jevPkYx2N2kk046metp85iXPVpHocSGdQyJ9fce/GMNKAa7uybeqBfW01aup7cE6SQ7bUg6yaSTMOhkSqxTYudU3KC1+Arrqc9YT8GvOEc6qbSOzN3pvxcx2N0MdpkZqzIAcqQTTDqx6VPnC/3oWhO97aF1NHM9hUknmLsT1xgNRrAbGVsUGsRIANA6GiUe278wo4t0kkgnfsV+QTrlR+1ObJp4EeyUWFBiY66Sk3f+CwZgHgQxt+c5AAAAAElFTkSuQmCC",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3crect%20width='16'%20height='16'%20fill='url(%23pattern0_2_11981)'/%3e%3cdefs%3e%3cpattern%20id='pattern0_2_11981'%20patternContentUnits='objectBoundingBox'%20width='1'%20height='1'%3e%3cuse%20xlink:href='%23image0_2_11981'%20transform='scale(0.0625)'/%3e%3c/pattern%3e%3cimage%20id='image0_2_11981'%20width='16'%20height='16'%20xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsSAAALEgHS3X78AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAOxJREFUeNpi+P///7//EPAbiOUZyAVAzc+AeD2p+liQ2AuBuALkFCD9gVgDGNFc8Q9IzQPiK0ToFQdZSLY3gOragfg9uuAcIP5GpAHngPgAuqA8NEbkiTDgG8gVjNhiA0htY2RkTEESK4Ay7YFYEIj1gZgHiFWwmTwHmiZ+/0cAEPs9NIwOgMIJpyuhCm4j2Up0OoABUMiaoTkdHTwHenElRjqABSSQ2gPEIngs/g40QAqb8+Wh/juAzY9Icjb4/P8NGljPsGiGyb3Hm6FAfocma2S529DEYwPNLziTJwysR5MrQMr652DiAAEGAC6xDtFSzTU2AAAAAElFTkSuQmCC'/%3e%3c/defs%3e%3c/svg%3e",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/heatmaps/places?include=google_location&sort=name&page=1",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/heatmaps?sort=-created_at&page=1",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/locations?filter[activated]=true&filter[location_state]=verified&sort=location_name&page=1",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://app.leadsnap.com/api/v1/users/settings?filter[name]=create_new_heatmap",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://maps.gstatic.com/mapfiles/openhand_8_8.cur",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps-api-v3/api/js/64/14a/log.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/api/mapsjs/mapConfigs:batchGet?language=en-US&region=US&alt=protojson&major_version=64&minor_version=14a&map_ids=create-heatmap-map&map_type=1",
+    "method": "GET",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo",
+    "method": "POST",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo",
+    "method": "OPTIONS",
+    "resourceType": "other"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps-api-v3/api/js/64/14a/onion.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps-api-v3/api/js/64/14a/overlay.js",
+    "method": "GET",
+    "resourceType": "script"
+  },
+  {
+    "url": "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo",
+    "method": "POST",
+    "resourceType": "xhr"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i3!3i6!4i256!2m3!1e0!2sm!3i804570158!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=115177",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i2!3i6!4i256!2m3!1e0!2sm!3i804570158!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=48503",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i2!3i5!4i256!2m3!1e0!2sm!3i804570158!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=51156",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i3!3i5!4i256!2m3!1e0!2sm!3i804570158!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=117830",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i4!3i5!4i256!2m3!1e0!2sm!3i804570104!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=55067",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i4!3i6!4i256!2m3!1e0!2sm!3i804570104!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=52414",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i4!3i7!4i256!2m3!1e0!2sm!3i804570158!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=48127",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i3!3i7!4i256!2m3!1e0!2sm!3i804570158!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=112524",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i2!3i7!4i256!2m3!1e0!2sm!3i804570104!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=47484",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i1!3i7!4i256!2m3!1e0!2sm!3i804570104!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=111881",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i1!3i6!4i256!2m3!1e0!2sm!3i804570158!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=112900",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i1!3i5!4i256!2m3!1e0!2sm!3i804570158!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=115553",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i1!3i4!4i256!2m3!1e0!2sm!3i804570158!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=118206",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i2!3i4!4i256!2m3!1e0!2sm!3i804570158!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=53809",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i3!3i4!4i256!2m3!1e0!2sm!3i804570158!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=120483",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i4!3i4!4i256!2m3!1e0!2sm!3i804570104!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=57720",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i5!3i4!4i256!2m3!1e0!2sm!3i804570104!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=124394",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i5!3i5!4i256!2m3!1e0!2sm!3i804570104!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=121741",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i5!3i6!4i256!2m3!1e0!2sm!3i804570104!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=119088",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i5!3i7!4i256!2m3!1e0!2sm!3i804570158!3m13!2sen-US!3sUS!5e18!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i46991212!23i47054750&key=AIzaSyBoq1_Y6hC8yfnGoclvndrnX1l5CfbUjgE&token=114801",
+    "method": "GET",
+    "resourceType": "image"
+  },
+  {
+    "url": "https://analytics.google.com/g/collect?v=2&tid=G-RDHJTXY6BM&gtm=45je6bh1v9133278120za20gzb9186895657zd9186895657xf1&_p=1795079950377&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAGQ&ae=a&cid=240374538.1795079945&frm=0&pscdl=noapi&rcb=8&sr=800x600&uaa=x86&uab=64&uafvl=Not%253FA_Brand%3B24.0.0.0%7CChromium%3B152.0.7977.54&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-us&gaf=2&_s=2&tag_exp=115938466~115938468~118012009~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&uid=14103&sid=1795079951&sct=1&seg=0&dl=https%3A%2F%2Fapp.leadsnap.com%2Frank-tracking%2Fnew-heatmap&dr=https%3A%2F%2Fapp.leadsnap.com%2F&dt=&en=scroll&epn.percent_scrolled=90&_et=11&tfd=8624",
+    "method": "POST",
+    "resourceType": "fetch"
+  }
+]

@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, type FC } from "react";
 import { ScanResultsMap } from "../components/ScanResultsMap";
 import { CompetitorLeaderboard } from "../components/CompetitorLeaderboard";
+import { LeadSnapMetricsBar } from "../components/LeadSnapMetricsBar";
 import { ExportBar } from "../components/ExportBar";
 import {
   IconArrowLeft,
@@ -11,7 +12,7 @@ import {
   IconAlertTriangle,
 } from "../components/Icons";
 import { useAuth } from "../context/AuthContext";
-import type { ScanResponse } from "../types";
+import type { ScanResponse, CompetitorStat } from "../types";
 
 interface Props {
   scanId: number;
@@ -42,6 +43,7 @@ function statusBadge(s: string) {
 export const ScanDetailPage: FC<Props> = ({ scanId, onBack }) => {
   const { authFetch } = useAuth();
   const [scan, setScan] = useState<ScanResponse | null>(null);
+  const [activeCompetitor, setActiveCompetitor] = useState<CompetitorStat | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -131,7 +133,7 @@ export const ScanDetailPage: FC<Props> = ({ scanId, onBack }) => {
   });
 
   return (
-    <div className="card-stack">
+    <div className="scan-detail-wrapper" style={{ display: "flex", flexDirection: "column", gap: 16 }}>
       {/* Navigation Top Bar */}
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
         <button
@@ -143,55 +145,48 @@ export const ScanDetailPage: FC<Props> = ({ scanId, onBack }) => {
           <span>Back to Scan History</span>
         </button>
 
-        <button
-          onClick={() => void loadScan()}
-          className="btn-secondary"
-          style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, padding: "8px 12px" }}
-          title="Refresh scan data"
-        >
-          <IconRefresh size={14} />
-          <span>Refresh</span>
-        </button>
-      </div>
-
-      {/* Scan Detail Summary Card */}
-      <div className="card">
-        <div className="card-header" style={{ alignItems: "flex-start", gap: 16, flexWrap: "wrap" }}>
-          <div>
-            <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", marginBottom: 6 }}>
-              <h2 style={{ fontSize: 18, color: "var(--ink)", margin: 0 }}>
-                {scan.business?.name || "Target Business"}
-              </h2>
-              {statusBadge(scan.status)}
-            </div>
-
-            <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", fontSize: 12, color: "var(--ink-muted)" }}>
-              <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}>
-                <IconMapPin size={13} style={{ color: "var(--gold-deep)" }} />
-                <span>Keyword: <strong style={{ color: "var(--ink)" }}>"{scan.keyword}"</strong></span>
-              </span>
-
-              <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}>
-                <IconCalendar size={13} />
-                <span>{dateFormatted}</span>
-              </span>
-
-              <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}>
-                <IconClock size={13} />
-                <span style={{ fontFamily: "var(--font-mono)" }}>
-                  {scan.gridConfig.gridSize}×{scan.gridConfig.gridSize} ({scan.gridConfig.shape}) · {scan.gridConfig.spacingKm}km spacing
-                </span>
-              </span>
-            </div>
-          </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+          {statusBadge(scan.status)}
+          <button
+            onClick={() => void loadScan()}
+            className="btn-secondary"
+            style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, padding: "8px 12px" }}
+            title="Refresh scan data"
+          >
+            <IconRefresh size={14} />
+            <span>Refresh</span>
+          </button>
         </div>
       </div>
 
-      {/* Interactive Map & Competitor Breakdown */}
-      <ScanResultsMap result={scan} />
+      {/* LeadSnap Parity Metrics Header Bar */}
+      <LeadSnapMetricsBar
+        scan={scan}
+        activeCompetitor={activeCompetitor}
+        onResetCompetitor={() => setActiveCompetitor(null)}
+      />
 
-      <CompetitorLeaderboard scanId={scan.id} trackedBusinessName={scan.business?.name || ""} />
+      {/* LeadSnap 60/40 Split: Map Viewport (Left) vs Competitor Intelligence (Right) */}
+      <div className="leadsnap-split-layout">
+        <div className="leadsnap-map-column">
+          <ScanResultsMap
+            result={scan}
+            activeCompetitor={activeCompetitor}
+            onResetCompetitor={() => setActiveCompetitor(null)}
+          />
+        </div>
 
+        <div className="leadsnap-leaderboard-column">
+          <CompetitorLeaderboard
+            scanId={scan.id}
+            trackedBusinessName={scan.business?.name || ""}
+            activeCompetitor={activeCompetitor}
+            onSelectCompetitor={setActiveCompetitor}
+          />
+        </div>
+      </div>
+
+      {/* Export Bar */}
       <div className="card" style={{ overflow: "hidden" }}>
         <ExportBar scanId={scan.id} />
       </div>

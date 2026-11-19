@@ -67,17 +67,23 @@ interface DfsTasksReadyResponse {
 }
 
 export interface DfsMapsItem {
+  [key: string]: unknown;
   type: string;
   rank_group?: number;
   rank_absolute?: number;
   title?: string;
   place_id?: string;
+  cid?: string;
   address?: string;
   phone?: string;
   url?: string;
+  category?: string;
+  additional_categories?: string[];
   rating?: { value?: number; votes_count?: number };
   rating_count?: number;
   main_image?: string;
+  latitude?: number;
+  longitude?: number;
 }
 
 interface DfsTaskGetResponse {
@@ -98,6 +104,13 @@ export interface TopResult {
   rating: number | null;
   reviews: number | null;
   placeId: string | null;
+  cid?: string | null;
+  address?: string | null;
+  phone?: string | null;
+  url?: string | null;
+  category?: string | null;
+  additionalCategories?: string[] | null;
+  mainImage?: string | null;
 }
 
 export interface MapsRankResult {
@@ -313,6 +326,15 @@ export function extractRankFromItems(
     rating: i.rating?.value ?? null,
     reviews: i.rating?.votes_count ?? i.rating_count ?? null,
     placeId: i.place_id ?? null,
+    cid: i.cid ? String(i.cid) : null,
+    address: i.address ?? null,
+    phone: i.phone ?? null,
+    url: i.url ?? null,
+    category: i.category ? String(i.category) : null,
+    additionalCategories: Array.isArray(i.additional_categories)
+      ? (i.additional_categories as string[])
+      : null,
+    mainImage: i.main_image ?? null,
   }));
 
   let matched: TopResult | undefined;

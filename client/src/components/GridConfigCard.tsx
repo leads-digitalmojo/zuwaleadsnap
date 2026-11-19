@@ -53,9 +53,13 @@ export function GridConfigCard({ config, onChange, onRun, isRunning, validationE
               value={gridSize}
               onChange={(e) => setField("gridSize", parseInt(e.target.value) as GridSize)}
             >
+              <option value={3}>3 × 3 (9 pts)</option>
               <option value={5}>5 × 5 (25 pts)</option>
               <option value={7}>7 × 7 (49 pts)</option>
+              <option value={9}>9 × 9 (81 pts)</option>
+              <option value={11}>11 × 11 (121 pts)</option>
               <option value={13}>13 × 13 (169 pts)</option>
+              <option value={15}>15 × 15 (225 pts)</option>
             </select>
           </div>
 

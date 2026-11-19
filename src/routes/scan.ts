@@ -34,7 +34,7 @@ export async function postScanHandler(req: Request, res: Response): Promise<void
   if (!validCoord(b.centerLng, -180, 180))
     errors.push("centerLng: required number between -180 and 180");
   if (!isValidGridSize(b.gridSize))
-    errors.push("gridSize: must be 5, 7, or 13");
+    errors.push("gridSize: must be 3, 5, 7, 9, 11, 13, or 15");
   if (!isValidShape(b.shape))
     errors.push("shape: must be 'square' or 'circle'");
   if (typeof b.spacingKm !== "number" || b.spacingKm <= 0 || b.spacingKm > 50)
@@ -49,7 +49,7 @@ export async function postScanHandler(req: Request, res: Response): Promise<void
   const keyword = (b.keyword as string).trim();
   const centerLat = b.centerLat as number;
   const centerLng = b.centerLng as number;
-  const gridSize = b.gridSize as 5 | 7 | 13;
+  const gridSize = b.gridSize as 3 | 5 | 7 | 9 | 11 | 13 | 15;
   const shape = b.shape as "square" | "circle";
   const spacingKm = b.spacingKm as number;
 
@@ -154,6 +154,35 @@ export function getScanHandler(req: Request, res: Response): void {
   const completedPoints = points.filter((p) => p.rank !== null || p.topResults.length > 0);
   const cacheHits = rawPoints.filter((p) => p.cache_hit === 1).length;
 
+  // LeadSnap-identical metric calculations
+  const totalGridPoints = scan.total_points || 1;
+  const rankedPoints = points.filter((p) => typeof p.rank === "number" && p.rank > 0);
+  const rankedSum = rankedPoints.reduce((acc, p) => acc + (p.rank ?? 0), 0);
+  const unrankedCount = Math.max(0, totalGridPoints - rankedPoints.length);
+
+  const agr = rankedPoints.length > 0 ? parseFloat((rankedSum / rankedPoints.length).toFixed(2)) : null;
+  const atgr = parseFloat(((rankedSum + unrankedCount * 21) / totalGridPoints).toFixed(2));
+
+  const top3Count = points.filter((p) => typeof p.rank === "number" && p.rank >= 1 && p.rank <= 3).length;
+  const top10Count = points.filter((p) => typeof p.rank === "number" && p.rank >= 1 && p.rank <= 10).length;
+  const top3Pct = parseFloat(((top3Count / totalGridPoints) * 100).toFixed(1));
+  const top10Pct = parseFloat(((top10Count / totalGridPoints) * 100).toFixed(1));
+
+  const avgOfPoints = (pts: typeof points): number | null => {
+    const valid = pts.filter((p) => typeof p.rank === "number" && p.rank > 0);
+    return valid.length > 0
+      ? parseFloat((valid.reduce((acc, p) => acc + (p.rank ?? 0), 0) / valid.length).toFixed(2))
+      : null;
+  };
+
+  const northWest = avgOfPoints(points.filter((p) => p.lat >= scan.center_lat && p.lng <= scan.center_lng));
+  const northEast = avgOfPoints(points.filter((p) => p.lat >= scan.center_lat && p.lng > scan.center_lng));
+  const southWest = avgOfPoints(points.filter((p) => p.lat < scan.center_lat && p.lng <= scan.center_lng));
+  const southEast = avgOfPoints(points.filter((p) => p.lat < scan.center_lat && p.lng > scan.center_lng));
+
+  const sideLengthKm = (scan.grid_size - 1) * scan.spacing_km;
+  const areaKm2 = parseFloat((sideLengthKm * sideLengthKm).toFixed(2));
+
   res.json({
     id: scan.id,
     status: scan.status,
@@ -186,6 +215,22 @@ export function getScanHandler(req: Request, res: Response): void {
         rawPoints.length > 0
           ? parseFloat((cacheHits / rawPoints.length).toFixed(3))
           : 0,
+      // LeadSnap Parity Metrics
+      agr,
+      atgr,
+      top3Points: top3Count,
+      top3Pct,
+      top10Points: top10Count,
+      top10Pct,
+      marketShare: parseFloat(Math.min(100, (top3Count * 3 + (top10Count - top3Count)) / (totalGridPoints * 0.03)).toFixed(1)),
+      areaKm2,
+      betweenPointsMeters: Math.round(scan.spacing_km * 1000),
+      quadrants: {
+        northWest,
+        northEast,
+        southWest,
+        southEast,
+      },
     },
   });
 }

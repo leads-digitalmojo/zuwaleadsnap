@@ -4,10 +4,10 @@ export interface GridPoint {
   lng: number;
 }
 
-export type GridSize = 5 | 7 | 13;
+export type GridSize = 3 | 5 | 7 | 9 | 11 | 13 | 15;
 export type GridShape = "square" | "circle";
 
-const VALID_GRID_SIZES: GridSize[] = [5, 7, 13];
+const VALID_GRID_SIZES: GridSize[] = [3, 5, 7, 9, 11, 13, 15];
 
 export function isValidGridSize(n: unknown): n is GridSize {
   return VALID_GRID_SIZES.includes(n as GridSize);

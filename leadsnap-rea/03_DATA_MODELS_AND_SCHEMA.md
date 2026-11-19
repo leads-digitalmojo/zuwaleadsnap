@@ -211,3 +211,89 @@ CREATE TABLE IF NOT EXISTS balance_alerts (
   created_at      INTEGER NOT NULL DEFAULT (unixepoch())
 );
 ```
+
+---
+
+## 3. Verified LeadSnap API Payload Contracts (From Live Capture #1581314)
+
+### 3.1 Heatmap Public & Share Endpoint: `GET /api/v1/share/heatmaps/{id}/token/{token}`
+Response Object:
+```json
+{
+  "public_heatmap_data": {
+    "id": 1581314,
+    "business_name": "Digital Mojo - Branding and Digital Marketing Agency in Hyderabad",
+    "business_place_id": "ChIJVVVxfUyXyzsRsQsvF2ScAWU",
+    "grid_center_lat": 17.4176740495,
+    "grid_center_lng": 78.3942513715,
+    "grid_size": 13,
+    "grid_point_distance": "2501",
+    "grid_point_distance_row": 2501,
+    "grid_distance_measure": "m",
+    "average": "2.06",
+    "keyword": "digital marketing agency in hyderabad",
+    "status": "Complete",
+    "status_code": 2,
+    "total_points": 169,
+    "top_3_points": 153,
+    "top_3_percentage": 90.53,
+    "average_position": 1,
+    "top_3_position": 1,
+    "market_share": "100.00",
+    "market_share_position": 1,
+    "points": [
+      {
+        "id": 198697892,
+        "index": 0,
+        "lat": "17.2461935736540000",
+        "lng": "78.6479708067310000",
+        "rank": 1,
+        "is_processed": true
+      }
+    ]
+  },
+  "heatmap_settings": {
+    "heatmap_grid_point_style": "original"
+  }
+}
+```
+
+### 3.2 Competitors Public & Share Endpoint: `GET /api/v1/share/heatmaps-competitors/{id}/token/{token}`
+Response Array:
+```json
+[
+  {
+    "id": 190991298,
+    "total_points": 169,
+    "top_20_points": 158,
+    "top_3_points": 0,
+    "market_share": "0.00",
+    "market_share_position": 15,
+    "top_3_percentage": null,
+    "average_position": 11,
+    "top_3_position": 15,
+    "average": 13.47,
+    "north_west": 13.9,
+    "north_east": 13.14,
+    "south_west": 12.79,
+    "south_east": 14.37,
+    "place": {
+      "id": 1628310,
+      "google_place_id": "ChIJeSagy9iWyzsRZFyXrbVn6SE",
+      "google_place_serial": "2443598302824324196",
+      "latitude": "17.4421727000000000",
+      "longitude": "78.3991145000000000",
+      "name": "8 Views Branding and Digital Marketing Agency in Hyderabad",
+      "address": "4th Floor, ABR Elite, Kakatiya Hills...",
+      "phone": "+918099708888",
+      "website_url": "https://8views.com/",
+      "review_count": 191,
+      "ave_review_rating": 4.4,
+      "main_category": "Internet marketing service",
+      "related_categories": ["Branding agency", "Marketing agency"]
+    },
+    "photos_count": 37
+  }
+]
+```
+

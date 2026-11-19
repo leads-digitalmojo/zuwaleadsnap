@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { loadGoogleMapsLibraries } from "../lib/googleMaps";
 import { Pagination } from "./Pagination";
-import { IconAlertTriangle, IconX, IconStar } from "./Icons";
-import type { ScanResponse, ScanPoint } from "../types";
+import { IconAlertTriangle, IconX, IconStar, IconRefresh } from "./Icons";
+import type { ScanResponse, ScanPoint, CompetitorStat } from "../types";
 
 interface Props {
   result: ScanResponse;
   isLive?: boolean;
+  activeCompetitor?: CompetitorStat | null;
+  onResetCompetitor?: () => void;
 }
 
 type ViewMode = "pins" | "heat";
@@ -24,13 +26,13 @@ function rankLabel(rank: number | null): string {
   return String(rank);
 }
 
-function makePinEl(point: ScanPoint, mode: ViewMode): HTMLElement {
-  const color = rankColor(point.rank);
+function makePinEl(rank: number | null, mode: ViewMode): HTMLElement {
+  const color = rankColor(rank);
   const el = document.createElement("div");
   if (mode === "pins") {
-    const label = rankLabel(point.rank);
+    const label = rankLabel(rank);
     const fontSize = label === "20+" ? "9px" : "11px";
-    const textColor = point.rank != null && point.rank > 3 && point.rank <= 10 ? "#111013" : "#ffffff";
+    const textColor = rank != null && rank > 3 && rank <= 10 ? "#111013" : "#ffffff";
     el.style.cssText = [
       `width:28px;height:28px;border-radius:50%`,
       `background:${color};border:2.5px solid #ffffff`,
@@ -39,6 +41,7 @@ function makePinEl(point: ScanPoint, mode: ViewMode): HTMLElement {
       `box-shadow:0 2px 6px rgba(17,16,19,0.3);cursor:pointer`,
       `font-family:"Plus Jakarta Sans", system-ui, sans-serif`,
       `box-sizing:border-box;line-height:1`,
+      `transition:transform 0.15s ease`,
     ].join(";");
     el.textContent = label;
   } else {
@@ -54,7 +57,12 @@ function makePinEl(point: ScanPoint, mode: ViewMode): HTMLElement {
 
 type AdvancedMarkerClass = typeof google.maps.marker.AdvancedMarkerElement;
 
-export function ScanResultsMap({ result, isLive = false }: Props) {
+export function ScanResultsMap({
+  result,
+  isLive = false,
+  activeCompetitor,
+  onResetCompetitor,
+}: Props) {
   const mapDivRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<google.maps.Map | null>(null);
   const markersRef = useRef<google.maps.marker.AdvancedMarkerElement[]>([]);
@@ -92,7 +100,7 @@ export function ScanResultsMap({ result, isLive = false }: Props) {
     return () => { cancelled = true; };
   }, [result.gridConfig.centerLat, result.gridConfig.centerLng]);
 
-  // Re-render markers when map is ready, viewMode changes, or new points arrive
+  // Re-render markers when map is ready, viewMode changes, points arrive, or competitor flip changes
   useEffect(() => {
     const map = mapRef.current;
     const AME = AMERef.current;
@@ -103,23 +111,43 @@ export function ScanResultsMap({ result, isLive = false }: Props) {
     markersRef.current = [];
 
     for (const point of result.points) {
-      const el = makePinEl(point, viewMode);
+      // Derive effective rank based on whether competitor flip is active
+      const effectiveRank = activeCompetitor
+        ? activeCompetitor.pointRanks[point.index] ?? null
+        : point.rank;
+
+      const el = makePinEl(effectiveRank, viewMode);
       const marker = new AME({
         map,
         position: { lat: point.lat, lng: point.lng },
         content: el,
-        zIndex: point.rank != null ? (21 - point.rank) : 0,
+        zIndex: effectiveRank != null ? (21 - effectiveRank) : 0,
       });
-      marker.addListener("click", () => setSelectedPoint(point));
+
+      marker.addListener("click", () => {
+        setSelectedPoint(point);
+      });
       markersRef.current.push(marker);
     }
-  }, [mapReady, viewMode, result.points]);
+  }, [mapReady, viewMode, result.points, activeCompetitor]);
 
   const points = result?.points || [];
-  const ranked = points.filter((p) => p.rank !== null);
-  const avgRank = ranked.length > 0
-    ? (ranked.reduce((s, p) => s + (p.rank ?? 0), 0) / ranked.length).toFixed(1)
-    : "–";
+  const targetBusinessName = activeCompetitor ? activeCompetitor.name : result.business.name;
+
+  // Calculate live or flipped average rank
+  let effectiveAvgRank = "–";
+  let effectiveRankedCount = 0;
+
+  if (activeCompetitor) {
+    effectiveAvgRank = activeCompetitor.avgRank.toFixed(1);
+    effectiveRankedCount = activeCompetitor.totalPoints;
+  } else {
+    const ranked = points.filter((p) => p.rank !== null);
+    effectiveRankedCount = ranked.length;
+    effectiveAvgRank = ranked.length > 0
+      ? (ranked.reduce((s, p) => s + (p.rank ?? 0), 0) / ranked.length).toFixed(1)
+      : "–";
+  }
 
   if (mapsError) {
     return <FallbackGrid result={result} />;
@@ -127,6 +155,65 @@ export function ScanResultsMap({ result, isLive = false }: Props) {
 
   return (
     <div className="results-section">
+      {/* Flip The Grid Active Banner */}
+      {activeCompetitor && (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "10px 16px",
+            background: "linear-gradient(90deg, #fffbeb 0%, #fef3c7 100%)",
+            border: "1px solid #fde68a",
+            borderRadius: "var(--radius)",
+            marginBottom: 12,
+            gap: 12,
+            flexWrap: "wrap",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <span
+              style={{
+                background: "#f59e0b",
+                color: "#ffffff",
+                fontSize: 10,
+                fontWeight: 800,
+                padding: "2px 6px",
+                borderRadius: 4,
+                letterSpacing: "0.05em",
+                textTransform: "uppercase",
+              }}
+            >
+              Flip Active
+            </span>
+            <span style={{ fontSize: 13, color: "#92400e", fontWeight: 600 }}>
+              Viewing Grid as: <strong>{activeCompetitor.name}</strong> (AGR: {activeCompetitor.avgRank}, ATGR: {activeCompetitor.atgr})
+            </span>
+          </div>
+
+          {onResetCompetitor && (
+            <button
+              onClick={onResetCompetitor}
+              className="btn-secondary"
+              style={{
+                fontSize: 11,
+                padding: "4px 10px",
+                background: "#ffffff",
+                borderColor: "#f59e0b",
+                color: "#b45309",
+                fontWeight: 700,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+              }}
+            >
+              <IconRefresh size={12} />
+              <span>Reset to Tracked Business</span>
+            </button>
+          )}
+        </div>
+      )}
+
       <div className="results-header">
         <h2>
           Rank Map — {result.keyword}
@@ -135,12 +222,12 @@ export function ScanResultsMap({ result, isLive = false }: Props) {
         <div className="results-meta">
           <span className="map-legend">
             <span className="legend-good">● 1–3</span>
-            <span style={{color:"#f97316"}}> ● 4–10</span>
+            <span style={{ color: "#f97316" }}> ● 4–10</span>
             <span className="legend-poor"> ● 11–20</span>
-            <span style={{color:"#b91c1c"}}> ● 20+</span>
+            <span style={{ color: "#b91c1c" }}> ● 20+</span>
           </span>
-          <span>Avg rank: <strong>{avgRank}</strong></span>
-          <span>{ranked.length}/{points.length} ranked</span>
+          <span>Avg rank: <strong>{effectiveAvgRank}</strong></span>
+          <span>{effectiveRankedCount}/{points.length} ranked</span>
           <div className="view-toggle">
             <button className={viewMode === "pins" ? "active" : ""} onClick={() => setViewMode("pins")}>Pins</button>
             <button className={viewMode === "heat" ? "active" : ""} onClick={() => setViewMode("heat")}>Heat</button>
@@ -148,7 +235,7 @@ export function ScanResultsMap({ result, isLive = false }: Props) {
         </div>
       </div>
 
-      <div className="map-container">
+      <div className="map-container" style={{ position: "relative" }}>
         {mapsError ? (
           <div className="map-no-key">
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginBottom: 12 }}>
@@ -162,62 +249,113 @@ export function ScanResultsMap({ result, isLive = false }: Props) {
         )}
 
         {selectedPoint && (
-          <PointPanel point={selectedPoint} onClose={() => setSelectedPoint(null)} />
+          <PointPanel
+            point={selectedPoint}
+            activeCompetitor={activeCompetitor}
+            trackedBusinessName={result.business.name}
+            onClose={() => setSelectedPoint(null)}
+          />
         )}
       </div>
     </div>
   );
 }
 
-function PointPanel({ point, onClose }: { point: ScanPoint; onClose: () => void }) {
-  const color = rankColor(point.rank);
+function PointPanel({
+  point,
+  activeCompetitor,
+  trackedBusinessName,
+  onClose,
+}: {
+  point: ScanPoint;
+  activeCompetitor?: CompetitorStat | null;
+  trackedBusinessName: string;
+  onClose: () => void;
+}) {
+  const currentRank = activeCompetitor
+    ? activeCompetitor.pointRanks[point.index] ?? null
+    : point.rank;
+
+  const color = rankColor(currentRank);
+  const targetName = activeCompetitor ? activeCompetitor.name : trackedBusinessName;
 
   return (
-    <div className="point-panel">
+    <div className="point-panel" style={{ zIndex: 100 }}>
       <div className="point-panel-header">
-        <h3>Grid Point {point.index + 1}</h3>
+        <div>
+          <h3 style={{ margin: 0, fontSize: 14 }}>Grid Point #{point.index + 1}</h3>
+          <div style={{ fontSize: 11, color: "var(--ink-muted)", fontFamily: "var(--font-mono)", marginTop: 2 }}>
+            {point.lat.toFixed(5)}, {point.lng.toFixed(5)}
+          </div>
+        </div>
         <button className="btn-close-panel" onClick={onClose} style={{ display: "inline-flex", alignItems: "center" }}>
           <IconX size={15} />
         </button>
       </div>
+
       <div className="point-panel-body">
         <div className="rank-display">
-          {point.rank != null ? (
+          {currentRank != null ? (
             <>
               <div className="rank-number" style={{ color }}>
-                {point.rank > 20 ? "20+" : `#${point.rank}`}
+                {currentRank > 20 ? "20+" : `#${currentRank}`}
               </div>
               <div className="rank-label">
-                {point.rank > 20 ? `not in top 20 (actual: #${point.rank})` : "rank in Google Local Pack"}
+                Rank for <strong>{targetName}</strong>
               </div>
             </>
           ) : (
             <>
               <div className="rank-number" style={{ color }}>—</div>
-              <div className="rank-label">not found</div>
+              <div className="rank-label">Not in Top 20</div>
             </>
           )}
         </div>
 
-        <div className="competitors-label">Top Competitors</div>
+        <div className="competitors-label" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <span>Top Local Pack Results ({point.topResults.length})</span>
+        </div>
+
         {point.topResults.length === 0 ? (
-          <p style={{ fontSize: 12, color: "var(--color-text-muted)" }}>No data</p>
+          <p style={{ fontSize: 12, color: "var(--color-text-muted)" }}>No SERP items found at this point</p>
         ) : (
           <ul className="competitor-list">
-            {point.topResults.slice(0, 5).map((r, i) => (
-              <li key={i} className="competitor-item">
-                <span className="comp-rank">{r.rank}</span>
-                <div className="comp-info">
-                  <div className="comp-name">{r.name}</div>
-                  {r.rating != null && (
-                    <div className="comp-rating" style={{ display: "flex", alignItems: "center", gap: 4 }}>
-                      <IconStar size={11} style={{ color: "var(--gold)" }} />
-                      <span>{r.rating}{r.reviews != null ? ` · ${r.reviews} reviews` : ""}</span>
+            {point.topResults.slice(0, 10).map((r, i) => {
+              const isTarget = r.name.toLowerCase().includes(targetName.toLowerCase());
+              return (
+                <li
+                  key={i}
+                  className="competitor-item"
+                  style={{
+                    background: isTarget ? "var(--gold-tint)" : undefined,
+                    border: isTarget ? "1px solid #ebd48f" : undefined,
+                    padding: "6px 8px",
+                    borderRadius: 6,
+                    marginBottom: 4,
+                  }}
+                >
+                  <span className="comp-rank" style={{ minWidth: 22, height: 22, fontSize: 11 }}>
+                    {r.rank}
+                  </span>
+                  <div className="comp-info">
+                    <div className="comp-name" style={{ fontWeight: isTarget ? 700 : 500, fontSize: 12 }}>
+                      {r.name}
                     </div>
-                  )}
-                </div>
-              </li>
-            ))}
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 11, color: "var(--ink-muted)" }}>
+                      {r.rating != null && (
+                        <span style={{ display: "inline-flex", alignItems: "center", gap: 3 }}>
+                          <IconStar size={10} style={{ color: "var(--gold-deep)" }} />
+                          <span>{r.rating} ({r.reviews ?? 0})</span>
+                        </span>
+                      )}
+                      {r.category && (
+                        <span style={{ opacity: 0.85 }}>&middot; {r.category}</span>
+                      )}
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         )}
       </div>

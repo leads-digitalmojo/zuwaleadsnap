@@ -10,6 +10,7 @@ import { SchedulesPage } from "./pages/SchedulesPage";
 import { ScanDetailPage } from "./pages/ScanDetailPage";
 import { ReportPage } from "./pages/ReportPage";
 import { CompetitorLeaderboard } from "./components/CompetitorLeaderboard";
+import { LeadSnapMetricsBar } from "./components/LeadSnapMetricsBar";
 import { ExportBar } from "./components/ExportBar";
 import { LoginScreen } from "./components/LoginScreen";
 import { TwoFactorScreen } from "./components/TwoFactorScreen";
@@ -21,8 +22,9 @@ import {
   IconX,
   IconShield,
   IconChevronRight,
+  IconAlertTriangle,
 } from "./components/Icons";
-import type { AppPage, Business, GridConfig, ScanCreateResponse, ScanResponse } from "./types";
+import type { AppPage, Business, GridConfig, ScanCreateResponse, ScanResponse, CompetitorStat } from "./types";
 
 const DEFAULT_GRID: GridConfig = {
   gridSize: 7,
@@ -59,8 +61,22 @@ export default function App() {
     phase: "idle", scanId: null, message: "", progressFraction: 0,
   });
   const [scanResult, setScanResult] = useState<ScanResponse | null>(null);
+  const [activeCompetitor, setActiveCompetitor] = useState<CompetitorStat | null>(null);
   const [historyScanId, setHistoryScanId] = useState<number | null>(null);
+  const [dfsBalance, setDfsBalance] = useState<{ balance: number; isLow: boolean; threshold: number } | null>(null);
   const pollTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  // Fetch live DataForSEO balance
+  useEffect(() => {
+    fetch("/api/balance")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (d && typeof d.balance === "number") {
+          setDfsBalance({ balance: d.balance, isLow: d.isLow, threshold: d.threshold });
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   // Validation
   const validationErrors: string[] = [];
@@ -296,6 +312,44 @@ export default function App() {
           </div>
 
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            {dfsBalance && (
+              <a
+                href="https://app.dataforseo.com/financial/balance"
+                target="_blank"
+                rel="noreferrer"
+                className="user-header-pill"
+                title={`DataForSEO API Balance: $${dfsBalance.balance.toFixed(2)} USD (Threshold: $${dfsBalance.threshold.toFixed(2)} USD)\nMonitored for srishti@digitalmojo.in\nClick to open payment recharge.`}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  padding: "4px 10px",
+                  background: dfsBalance.isLow ? "var(--rank-poor-tint)" : "var(--surface-hover)",
+                  border: dfsBalance.isLow ? "1px solid #fecaca" : "1px solid var(--hairline)",
+                  borderRadius: "100px",
+                  fontSize: 12,
+                  textDecoration: "none",
+                  color: dfsBalance.isLow ? "var(--color-rank-poor)" : "var(--ink)",
+                  fontWeight: 600,
+                }}
+              >
+                <span
+                  style={{
+                    width: 7,
+                    height: 7,
+                    borderRadius: "50%",
+                    background: dfsBalance.isLow ? "var(--color-rank-poor)" : "var(--color-rank-good)",
+                  }}
+                />
+                <span>DFS: ${dfsBalance.balance.toFixed(2)}</span>
+                {dfsBalance.isLow && (
+                  <span style={{ fontSize: 10, color: "var(--color-rank-poor)", fontWeight: 800 }}>
+                    LOW
+                  </span>
+                )}
+              </a>
+            )}
+
             <div
               className="user-header-pill"
               style={{
@@ -370,14 +424,39 @@ export default function App() {
 
             {scanStatus.phase !== "idle" && <ScanStatusBar status={scanStatus} />}
 
-            {scanResult && <ScanResultsMap result={scanResult} isLive={isRunning} />}
-
-            {scanResult && !isRunning && scanStatus.phase === "complete" && (
+            {scanResult && (
               <>
-                <CompetitorLeaderboard scanId={scanResult.id} trackedBusinessName={scanResult.business.name} />
-                <div className="card" style={{ overflow: "hidden" }}>
-                  <ExportBar scanId={scanResult.id} />
+                <LeadSnapMetricsBar
+                  scan={scanResult}
+                  activeCompetitor={activeCompetitor}
+                  onResetCompetitor={() => setActiveCompetitor(null)}
+                />
+
+                <div className="leadsnap-split-layout">
+                  <div className="leadsnap-map-column">
+                    <ScanResultsMap
+                      result={scanResult}
+                      isLive={isRunning}
+                      activeCompetitor={activeCompetitor}
+                      onResetCompetitor={() => setActiveCompetitor(null)}
+                    />
+                  </div>
+
+                  <div className="leadsnap-leaderboard-column">
+                    <CompetitorLeaderboard
+                      scanId={scanResult.id}
+                      trackedBusinessName={scanResult.business.name}
+                      activeCompetitor={activeCompetitor}
+                      onSelectCompetitor={setActiveCompetitor}
+                    />
+                  </div>
                 </div>
+
+                {!isRunning && (
+                  <div className="card" style={{ overflow: "hidden" }}>
+                    <ExportBar scanId={scanResult.id} />
+                  </div>
+                )}
               </>
             )}
           </div>

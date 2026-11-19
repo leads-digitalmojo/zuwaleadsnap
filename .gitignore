@@ -11,6 +11,10 @@ dist/
 graphify-out/
 graphify-output/
 
+# Session & Credentials
+leadsnap-rea/captures/cookies.json
+
+
 
 mojo_map_gcp_secret.json
 *secret*.json

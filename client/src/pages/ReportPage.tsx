@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { IconLock } from "../components/Icons";
-import type { ScanResponse } from "../types";
-import type { CompetitorStat } from "../components/CompetitorLeaderboard";
+import type { ScanResponse, CompetitorStat } from "../types";
 
 interface ReportData {
   scan: Record<string, unknown>;

@@ -1602,3 +1602,78 @@
   }
 }
 
+/* ─── LeadSnap Parity: 60/40 Split Layout & Metrics Hierarchy ──────────── */
+
+.leadsnap-split-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.leadsnap-map-column {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.leadsnap-leaderboard-column {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-pill-card {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  text-align: left;
+  box-shadow: 0 1px 2px rgba(17, 16, 19, 0.03);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.metric-pill-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(17, 16, 19, 0.06);
+}
+
+.metric-pill-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.metric-pill-val {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 2px 0;
+  font-family: var(--font-display);
+}
+
+.metric-pill-sub {
+  font-size: 10px;
+  color: var(--ink-faint);
+  margin-top: 1px;
+}
+
+.quadrant-badge {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 1150px) {
+  .leadsnap-split-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+

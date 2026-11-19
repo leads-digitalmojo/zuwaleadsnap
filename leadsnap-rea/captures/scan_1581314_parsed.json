@@ -1,0 +1,1933 @@
+{
+  "scan": {
+    "id": 1581314,
+    "business_name": "Digital Mojo - Branding and Digital Marketing Agency in Hyderabad",
+    "business_place_id": "ChIJVVVxfUyXyzsRsQsvF2ScAWU",
+    "grid_center_lat": 17.4176740495,
+    "grid_center_lng": 78.3942513715,
+    "grid_size": 13,
+    "grid_point_distance": "2501",
+    "grid_point_distance_row": 2501,
+    "grid_distance_measure": "m",
+    "average": "2.06",
+    "keyword": "digital marketing agency in hyderabad",
+    "status": "Complete",
+    "status_code": 2,
+    "created_at": "2026-11-19T05:49:54.000000Z",
+    "updated_at": "2026-11-19T05:52:27.000000Z",
+    "place": {
+      "id": 3927080,
+      "google_place_id": "ChIJVVVxfUyXyzsRsQsvF2ScAWU",
+      "google_place_serial": "7278270426507054001",
+      "latitude": "17.4120377000000000",
+      "longitude": "78.4200255000000000",
+      "place_url": "https://www.google.com/maps/preview/place/Phase+2,+Digital+Mojo+-+Branding+and+Digital+Marketing+Agency+in+Hyderabad,+Midas+Square+Plot,+B2,+34A,+Road+No.+12,+near+Lotus+Pond+Road,+MLA+Colony,+Banjara+Hills,+Hyderabad,+Telangana+500096,+India/@17.4120377,78.4200255,3807a,13.1y/data=!4m2!3m1!1s0x3bcb974c7d715555:0x65019c64172f0bb1",
+      "map_url": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x3bcb974c7d715555:0x65019c64172f0bb1",
+      "name": "Digital Mojo - Branding and Digital Marketing Agency in Hyderabad",
+      "address": "Phase 2, Midas Square Plot, B2, 34A, Road No. 12, near Lotus Pond Road, MLA Colony, Banjara Hills, Hyderabad, Telangana 500096, India",
+      "phone": "+919908398763",
+      "website_url": "https://digitalmojo.in/",
+      "thumbnail_url": "https://lh3.googleusercontent.com/grass-cs/AABkmLf1B3LWSwCDU4I8uxeDI6ZoC-2AmDeFKTJ2vfWTJgkXC4yCRhNmZ9iRybsh0Zcj-QAc4DvcURMLjFCjdTloFQXhqwbGZU9VOzHZdJcL2d4zIEV1b1GzRFdYvBBEvFhYJ8RDa3GLsp-BQjy-=w408-h272-k-no",
+      "feature_id": "0x3bcb974c7d715555:0x65019c64172f0bb1",
+      "review_count": 246,
+      "ave_review_rating": 4.7,
+      "ranking": null,
+      "main_category": "Internet marketing service",
+      "related_categories": [
+        "Advertising agency",
+        "Branding agency",
+        "Design agency",
+        "Graphic designer",
+        "Marketing agency",
+        "Marketing consultant",
+        "Media company",
+        "Media consultant",
+        "Website designer"
+      ]
+    },
+    "total_points": 169,
+    "top_3_points": 153,
+    "top_3_percentage": 90.53,
+    "average_position": 1,
+    "top_3_position": 1,
+    "review_count": 246,
+    "ave_review_rating": 4.7,
+    "points": [
+      {
+        "id": 198697892,
+        "index": 0,
+        "lat": "17.2461935736540000",
+        "lng": "78.6479708067310000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697893,
+        "index": 1,
+        "lat": "17.2461935736540000",
+        "lng": "78.6056842341920000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697894,
+        "index": 2,
+        "lat": "17.2461935736540000",
+        "lng": "78.5633976616540000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697895,
+        "index": 3,
+        "lat": "17.2461935736540000",
+        "lng": "78.5211110891150000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697896,
+        "index": 4,
+        "lat": "17.2461935736540000",
+        "lng": "78.4788245165770000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697897,
+        "index": 5,
+        "lat": "17.2461935736540000",
+        "lng": "78.4365379440380000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697898,
+        "index": 6,
+        "lat": "17.2461935736540000",
+        "lng": "78.3942513715000000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697899,
+        "index": 7,
+        "lat": "17.2461935736540000",
+        "lng": "78.3519647989620000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697900,
+        "index": 8,
+        "lat": "17.2461935736540000",
+        "lng": "78.3096782264230000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697901,
+        "index": 9,
+        "lat": "17.2461935736540000",
+        "lng": "78.2673916538850000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697902,
+        "index": 10,
+        "lat": "17.2461935736540000",
+        "lng": "78.2251050813460000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697903,
+        "index": 11,
+        "lat": "17.2461935736540000",
+        "lng": "78.1828185088080000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697904,
+        "index": 12,
+        "lat": "17.2461935736540000",
+        "lng": "78.1405319362690000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697905,
+        "index": 13,
+        "lat": "17.2747736529620000",
+        "lng": "78.6479708067310000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697906,
+        "index": 14,
+        "lat": "17.2747736529620000",
+        "lng": "78.6056842341920000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697907,
+        "index": 15,
+        "lat": "17.2747736529620000",
+        "lng": "78.5633976616540000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697908,
+        "index": 16,
+        "lat": "17.2747736529620000",
+        "lng": "78.5211110891150000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697909,
+        "index": 17,
+        "lat": "17.2747736529620000",
+        "lng": "78.4788245165770000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697910,
+        "index": 18,
+        "lat": "17.2747736529620000",
+        "lng": "78.4365379440380000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697911,
+        "index": 19,
+        "lat": "17.2747736529620000",
+        "lng": "78.3942513715000000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697912,
+        "index": 20,
+        "lat": "17.2747736529620000",
+        "lng": "78.3519647989620000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697913,
+        "index": 21,
+        "lat": "17.2747736529620000",
+        "lng": "78.3096782264230000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697914,
+        "index": 22,
+        "lat": "17.2747736529620000",
+        "lng": "78.2673916538850000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697915,
+        "index": 23,
+        "lat": "17.2747736529620000",
+        "lng": "78.2251050813460000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697916,
+        "index": 24,
+        "lat": "17.2747736529620000",
+        "lng": "78.1828185088080000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697917,
+        "index": 25,
+        "lat": "17.2747736529620000",
+        "lng": "78.1405319362690000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697918,
+        "index": 26,
+        "lat": "17.3033537322690000",
+        "lng": "78.6479708067310000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697919,
+        "index": 27,
+        "lat": "17.3033537322690000",
+        "lng": "78.6056842341920000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697920,
+        "index": 28,
+        "lat": "17.3033537322690000",
+        "lng": "78.5633976616540000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697921,
+        "index": 29,
+        "lat": "17.3033537322690000",
+        "lng": "78.5211110891150000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697922,
+        "index": 30,
+        "lat": "17.3033537322690000",
+        "lng": "78.4788245165770000",
+        "rank": 20,
+        "is_processed": true
+      },
+      {
+        "id": 198697923,
+        "index": 31,
+        "lat": "17.3033537322690000",
+        "lng": "78.4365379440380000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697924,
+        "index": 32,
+        "lat": "17.3033537322690000",
+        "lng": "78.3942513715000000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697925,
+        "index": 33,
+        "lat": "17.3033537322690000",
+        "lng": "78.3519647989620000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697926,
+        "index": 34,
+        "lat": "17.3033537322690000",
+        "lng": "78.3096782264230000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697927,
+        "index": 35,
+        "lat": "17.3033537322690000",
+        "lng": "78.2673916538850000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697928,
+        "index": 36,
+        "lat": "17.3033537322690000",
+        "lng": "78.2251050813460000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697929,
+        "index": 37,
+        "lat": "17.3033537322690000",
+        "lng": "78.1828185088080000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697930,
+        "index": 38,
+        "lat": "17.3033537322690000",
+        "lng": "78.1405319362690000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697931,
+        "index": 39,
+        "lat": "17.3319338115770000",
+        "lng": "78.6479708067310000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697932,
+        "index": 40,
+        "lat": "17.3319338115770000",
+        "lng": "78.6056842341920000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697933,
+        "index": 41,
+        "lat": "17.3319338115770000",
+        "lng": "78.5633976616540000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697934,
+        "index": 42,
+        "lat": "17.3319338115770000",
+        "lng": "78.5211110891150000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697935,
+        "index": 43,
+        "lat": "17.3319338115770000",
+        "lng": "78.4788245165770000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697936,
+        "index": 44,
+        "lat": "17.3319338115770000",
+        "lng": "78.4365379440380000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697937,
+        "index": 45,
+        "lat": "17.3319338115770000",
+        "lng": "78.3942513715000000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697938,
+        "index": 46,
+        "lat": "17.3319338115770000",
+        "lng": "78.3519647989620000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697939,
+        "index": 47,
+        "lat": "17.3319338115770000",
+        "lng": "78.3096782264230000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697940,
+        "index": 48,
+        "lat": "17.3319338115770000",
+        "lng": "78.2673916538850000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697941,
+        "index": 49,
+        "lat": "17.3319338115770000",
+        "lng": "78.2251050813460000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697942,
+        "index": 50,
+        "lat": "17.3319338115770000",
+        "lng": "78.1828185088080000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697943,
+        "index": 51,
+        "lat": "17.3319338115770000",
+        "lng": "78.1405319362690000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697944,
+        "index": 52,
+        "lat": "17.3605138908850000",
+        "lng": "78.6479708067310000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697945,
+        "index": 53,
+        "lat": "17.3605138908850000",
+        "lng": "78.6056842341920000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697946,
+        "index": 54,
+        "lat": "17.3605138908850000",
+        "lng": "78.5633976616540000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697947,
+        "index": 55,
+        "lat": "17.3605138908850000",
+        "lng": "78.5211110891150000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697948,
+        "index": 56,
+        "lat": "17.3605138908850000",
+        "lng": "78.4788245165770000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697949,
+        "index": 57,
+        "lat": "17.3605138908850000",
+        "lng": "78.4365379440380000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697950,
+        "index": 58,
+        "lat": "17.3605138908850000",
+        "lng": "78.3942513715000000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697951,
+        "index": 59,
+        "lat": "17.3605138908850000",
+        "lng": "78.3519647989620000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697952,
+        "index": 60,
+        "lat": "17.3605138908850000",
+        "lng": "78.3096782264230000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697953,
+        "index": 61,
+        "lat": "17.3605138908850000",
+        "lng": "78.2673916538850000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697954,
+        "index": 62,
+        "lat": "17.3605138908850000",
+        "lng": "78.2251050813460000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697955,
+        "index": 63,
+        "lat": "17.3605138908850000",
+        "lng": "78.1828185088080000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697956,
+        "index": 64,
+        "lat": "17.3605138908850000",
+        "lng": "78.1405319362690000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697957,
+        "index": 65,
+        "lat": "17.3890939701920000",
+        "lng": "78.6479708067310000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697958,
+        "index": 66,
+        "lat": "17.3890939701920000",
+        "lng": "78.6056842341920000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697959,
+        "index": 67,
+        "lat": "17.3890939701920000",
+        "lng": "78.5633976616540000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697960,
+        "index": 68,
+        "lat": "17.3890939701920000",
+        "lng": "78.5211110891150000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697961,
+        "index": 69,
+        "lat": "17.3890939701920000",
+        "lng": "78.4788245165770000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697962,
+        "index": 70,
+        "lat": "17.3890939701920000",
+        "lng": "78.4365379440380000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697963,
+        "index": 71,
+        "lat": "17.3890939701920000",
+        "lng": "78.3942513715000000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697964,
+        "index": 72,
+        "lat": "17.3890939701920000",
+        "lng": "78.3519647989620000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697965,
+        "index": 73,
+        "lat": "17.3890939701920000",
+        "lng": "78.3096782264230000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697966,
+        "index": 74,
+        "lat": "17.3890939701920000",
+        "lng": "78.2673916538850000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697967,
+        "index": 75,
+        "lat": "17.3890939701920000",
+        "lng": "78.2251050813460000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697968,
+        "index": 76,
+        "lat": "17.3890939701920000",
+        "lng": "78.1828185088080000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697969,
+        "index": 77,
+        "lat": "17.3890939701920000",
+        "lng": "78.1405319362690000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697970,
+        "index": 78,
+        "lat": "17.4176740495000000",
+        "lng": "78.6479708067310000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697971,
+        "index": 79,
+        "lat": "17.4176740495000000",
+        "lng": "78.6056842341920000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697972,
+        "index": 80,
+        "lat": "17.4176740495000000",
+        "lng": "78.5633976616540000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697973,
+        "index": 81,
+        "lat": "17.4176740495000000",
+        "lng": "78.5211110891150000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697974,
+        "index": 82,
+        "lat": "17.4176740495000000",
+        "lng": "78.4788245165770000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697975,
+        "index": 83,
+        "lat": "17.4176740495000000",
+        "lng": "78.4365379440380000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697976,
+        "index": 84,
+        "lat": "17.4176740495000000",
+        "lng": "78.3942513715000000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697977,
+        "index": 85,
+        "lat": "17.4176740495000000",
+        "lng": "78.3519647989620000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697978,
+        "index": 86,
+        "lat": "17.4176740495000000",
+        "lng": "78.3096782264230000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697979,
+        "index": 87,
+        "lat": "17.4176740495000000",
+        "lng": "78.2673916538850000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697980,
+        "index": 88,
+        "lat": "17.4176740495000000",
+        "lng": "78.2251050813460000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697981,
+        "index": 89,
+        "lat": "17.4176740495000000",
+        "lng": "78.1828185088080000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697982,
+        "index": 90,
+        "lat": "17.4176740495000000",
+        "lng": "78.1405319362690000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697983,
+        "index": 91,
+        "lat": "17.4462541288080000",
+        "lng": "78.6479708067310000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697984,
+        "index": 92,
+        "lat": "17.4462541288080000",
+        "lng": "78.6056842341920000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198697985,
+        "index": 93,
+        "lat": "17.4462541288080000",
+        "lng": "78.5633976616540000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697986,
+        "index": 94,
+        "lat": "17.4462541288080000",
+        "lng": "78.5211110891150000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697987,
+        "index": 95,
+        "lat": "17.4462541288080000",
+        "lng": "78.4788245165770000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697988,
+        "index": 96,
+        "lat": "17.4462541288080000",
+        "lng": "78.4365379440380000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697989,
+        "index": 97,
+        "lat": "17.4462541288080000",
+        "lng": "78.3942513715000000",
+        "rank": 5,
+        "is_processed": true
+      },
+      {
+        "id": 198697990,
+        "index": 98,
+        "lat": "17.4462541288080000",
+        "lng": "78.3519647989620000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697991,
+        "index": 99,
+        "lat": "17.4462541288080000",
+        "lng": "78.3096782264230000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697992,
+        "index": 100,
+        "lat": "17.4462541288080000",
+        "lng": "78.2673916538850000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697993,
+        "index": 101,
+        "lat": "17.4462541288080000",
+        "lng": "78.2251050813460000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697994,
+        "index": 102,
+        "lat": "17.4462541288080000",
+        "lng": "78.1828185088080000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697995,
+        "index": 103,
+        "lat": "17.4462541288080000",
+        "lng": "78.1405319362690000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697996,
+        "index": 104,
+        "lat": "17.4748342081150000",
+        "lng": "78.6479708067310000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697997,
+        "index": 105,
+        "lat": "17.4748342081150000",
+        "lng": "78.6056842341920000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198697998,
+        "index": 106,
+        "lat": "17.4748342081150000",
+        "lng": "78.5633976616540000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198697999,
+        "index": 107,
+        "lat": "17.4748342081150000",
+        "lng": "78.5211110891150000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698000,
+        "index": 108,
+        "lat": "17.4748342081150000",
+        "lng": "78.4788245165770000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698001,
+        "index": 109,
+        "lat": "17.4748342081150000",
+        "lng": "78.4365379440380000",
+        "rank": 6,
+        "is_processed": true
+      },
+      {
+        "id": 198698002,
+        "index": 110,
+        "lat": "17.4748342081150000",
+        "lng": "78.3942513715000000",
+        "rank": 6,
+        "is_processed": true
+      },
+      {
+        "id": 198698003,
+        "index": 111,
+        "lat": "17.4748342081150000",
+        "lng": "78.3519647989620000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198698004,
+        "index": 112,
+        "lat": "17.4748342081150000",
+        "lng": "78.3096782264230000",
+        "rank": 4,
+        "is_processed": true
+      },
+      {
+        "id": 198698005,
+        "index": 113,
+        "lat": "17.4748342081150000",
+        "lng": "78.2673916538850000",
+        "rank": 4,
+        "is_processed": true
+      },
+      {
+        "id": 198698006,
+        "index": 114,
+        "lat": "17.4748342081150000",
+        "lng": "78.2251050813460000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698007,
+        "index": 115,
+        "lat": "17.4748342081150000",
+        "lng": "78.1828185088080000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698008,
+        "index": 116,
+        "lat": "17.4748342081150000",
+        "lng": "78.1405319362690000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198698009,
+        "index": 117,
+        "lat": "17.5034142874230000",
+        "lng": "78.6479708067310000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198698010,
+        "index": 118,
+        "lat": "17.5034142874230000",
+        "lng": "78.6056842341920000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198698011,
+        "index": 119,
+        "lat": "17.5034142874230000",
+        "lng": "78.5633976616540000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198698012,
+        "index": 120,
+        "lat": "17.5034142874230000",
+        "lng": "78.5211110891150000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698013,
+        "index": 121,
+        "lat": "17.5034142874230000",
+        "lng": "78.4788245165770000",
+        "rank": 4,
+        "is_processed": true
+      },
+      {
+        "id": 198698014,
+        "index": 122,
+        "lat": "17.5034142874230000",
+        "lng": "78.4365379440380000",
+        "rank": 5,
+        "is_processed": true
+      },
+      {
+        "id": 198698015,
+        "index": 123,
+        "lat": "17.5034142874230000",
+        "lng": "78.3942513715000000",
+        "rank": 5,
+        "is_processed": true
+      },
+      {
+        "id": 198698016,
+        "index": 124,
+        "lat": "17.5034142874230000",
+        "lng": "78.3519647989620000",
+        "rank": 6,
+        "is_processed": true
+      },
+      {
+        "id": 198698017,
+        "index": 125,
+        "lat": "17.5034142874230000",
+        "lng": "78.3096782264230000",
+        "rank": 4,
+        "is_processed": true
+      },
+      {
+        "id": 198698018,
+        "index": 126,
+        "lat": "17.5034142874230000",
+        "lng": "78.2673916538850000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198698019,
+        "index": 127,
+        "lat": "17.5034142874230000",
+        "lng": "78.2251050813460000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198698020,
+        "index": 128,
+        "lat": "17.5034142874230000",
+        "lng": "78.1828185088080000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698021,
+        "index": 129,
+        "lat": "17.5034142874230000",
+        "lng": "78.1405319362690000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198698022,
+        "index": 130,
+        "lat": "17.5319943667310000",
+        "lng": "78.6479708067310000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698023,
+        "index": 131,
+        "lat": "17.5319943667310000",
+        "lng": "78.6056842341920000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198698024,
+        "index": 132,
+        "lat": "17.5319943667310000",
+        "lng": "78.5633976616540000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198698025,
+        "index": 133,
+        "lat": "17.5319943667310000",
+        "lng": "78.5211110891150000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698026,
+        "index": 134,
+        "lat": "17.5319943667310000",
+        "lng": "78.4788245165770000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698027,
+        "index": 135,
+        "lat": "17.5319943667310000",
+        "lng": "78.4365379440380000",
+        "rank": 4,
+        "is_processed": true
+      },
+      {
+        "id": 198698028,
+        "index": 136,
+        "lat": "17.5319943667310000",
+        "lng": "78.3942513715000000",
+        "rank": 4,
+        "is_processed": true
+      },
+      {
+        "id": 198698029,
+        "index": 137,
+        "lat": "17.5319943667310000",
+        "lng": "78.3519647989620000",
+        "rank": 6,
+        "is_processed": true
+      },
+      {
+        "id": 198698030,
+        "index": 138,
+        "lat": "17.5319943667310000",
+        "lng": "78.3096782264230000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198698031,
+        "index": 139,
+        "lat": "17.5319943667310000",
+        "lng": "78.2673916538850000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198698032,
+        "index": 140,
+        "lat": "17.5319943667310000",
+        "lng": "78.2251050813460000",
+        "rank": 6,
+        "is_processed": true
+      },
+      {
+        "id": 198698033,
+        "index": 141,
+        "lat": "17.5319943667310000",
+        "lng": "78.1828185088080000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698034,
+        "index": 142,
+        "lat": "17.5319943667310000",
+        "lng": "78.1405319362690000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198698035,
+        "index": 143,
+        "lat": "17.5605744460380000",
+        "lng": "78.6479708067310000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198698036,
+        "index": 144,
+        "lat": "17.5605744460380000",
+        "lng": "78.6056842341920000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198698037,
+        "index": 145,
+        "lat": "17.5605744460380000",
+        "lng": "78.5633976616540000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198698038,
+        "index": 146,
+        "lat": "17.5605744460380000",
+        "lng": "78.5211110891150000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698039,
+        "index": 147,
+        "lat": "17.5605744460380000",
+        "lng": "78.4788245165770000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698040,
+        "index": 148,
+        "lat": "17.5605744460380000",
+        "lng": "78.4365379440380000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698041,
+        "index": 149,
+        "lat": "17.5605744460380000",
+        "lng": "78.3942513715000000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198698042,
+        "index": 150,
+        "lat": "17.5605744460380000",
+        "lng": "78.3519647989620000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198698043,
+        "index": 151,
+        "lat": "17.5605744460380000",
+        "lng": "78.3096782264230000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198698044,
+        "index": 152,
+        "lat": "17.5605744460380000",
+        "lng": "78.2673916538850000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198698045,
+        "index": 153,
+        "lat": "17.5605744460380000",
+        "lng": "78.2251050813460000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198698046,
+        "index": 154,
+        "lat": "17.5605744460380000",
+        "lng": "78.1828185088080000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698047,
+        "index": 155,
+        "lat": "17.5605744460380000",
+        "lng": "78.1405319362690000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198698048,
+        "index": 156,
+        "lat": "17.5891545253460000",
+        "lng": "78.6479708067310000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198698049,
+        "index": 157,
+        "lat": "17.5891545253460000",
+        "lng": "78.6056842341920000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198698050,
+        "index": 158,
+        "lat": "17.5891545253460000",
+        "lng": "78.5633976616540000",
+        "rank": 1,
+        "is_processed": true
+      },
+      {
+        "id": 198698051,
+        "index": 159,
+        "lat": "17.5891545253460000",
+        "lng": "78.5211110891150000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698052,
+        "index": 160,
+        "lat": "17.5891545253460000",
+        "lng": "78.4788245165770000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698053,
+        "index": 161,
+        "lat": "17.5891545253460000",
+        "lng": "78.4365379440380000",
+        "rank": 4,
+        "is_processed": true
+      },
+      {
+        "id": 198698054,
+        "index": 162,
+        "lat": "17.5891545253460000",
+        "lng": "78.3942513715000000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698055,
+        "index": 163,
+        "lat": "17.5891545253460000",
+        "lng": "78.3519647989620000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198698056,
+        "index": 164,
+        "lat": "17.5891545253460000",
+        "lng": "78.3096782264230000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198698057,
+        "index": 165,
+        "lat": "17.5891545253460000",
+        "lng": "78.2673916538850000",
+        "rank": 3,
+        "is_processed": true
+      },
+      {
+        "id": 198698058,
+        "index": 166,
+        "lat": "17.5891545253460000",
+        "lng": "78.2251050813460000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698059,
+        "index": 167,
+        "lat": "17.5891545253460000",
+        "lng": "78.1828185088080000",
+        "rank": 2,
+        "is_processed": true
+      },
+      {
+        "id": 198698060,
+        "index": 168,
+        "lat": "17.5891545253460000",
+        "lng": "78.1405319362690000",
+        "rank": 1,
+        "is_processed": true
+      }
+    ],
+    "market_share": "100.00",
+    "market_share_position": 1,
+    "location": {
+      "id": 61970,
+      "name": "Digital Mojo - Branding and Digital Marketing Agency in Hyderabad",
+      "image": "https://lh3.googleusercontent.com/p/AF1QipPsQzDvQhXQyTvQl6ZcXgbsO4wEELZ2Wtr7sonQ=w408-h272-k-no",
+      "primary_phone": "099083 98763",
+      "address": "B2, Midas Square, Plot No 34A, Lane Number 12, near Lotus Pond Road, Phase 2, MLA Colony, Banjara Hills",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "zip_code": "500034",
+      "country": "IN",
+      "currency": "INR",
+      "email": null,
+      "map_url": "https://maps.google.com/maps?cid=7278270426507054001",
+      "review_count": 1,
+      "review_link": "https://search.google.com/local/writereview?placeid=ChIJVVVxfUyXyzsRsQsvF2ScAWU",
+      "ave_review_rating": 1,
+      "website_url": "https://digitalmojo.in/",
+      "status": "verified",
+      "google_account": {
+        "id": 6226,
+        "account_name": "Dhiraj Merani",
+        "name": "Dhiraj Merani",
+        "email": "dhiraj@digitalmojo.in",
+        "image": "https://lh3.googleusercontent.com/a/ACg8ocJXbjy5AP4nJHp1WLM1GWGwwEmsRFZ3VzfZXvNo5rdeS1Mt4Q=s96-c",
+        "role": null,
+        "type": "PERSONAL",
+        "is_connected": 1,
+        "needs_gcp_reauth": true,
+        "pubsub_enabled": 1,
+        "locations_count": 4,
+        "subscribed_citations_count": 0,
+        "created_at": "2025-10-12T04:38:59.000000Z",
+        "updated_at": "2026-11-17T01:53:24.000000Z"
+      },
+      "company": null
+    },
+    "ranking_change": null,
+    "ranking_change_percentage": null,
+    "previous_ranking": null,
+    "total": 169,
+    "top_n": 168,
+    "place_id": 3927080,
+    "location_id": 61970,
+    "area": "2053115421",
+    "keyword_seo_data": {
+      "id": 104904,
+      "account_id": 11602,
+      "heatmap_keyword_list_id": 0,
+      "keyword": "digital marketing agency in hyderabad",
+      "created_at": "2025-10-11T15:13:16.000000Z",
+      "updated_at": "2025-10-11T15:13:16.000000Z",
+      "search_volume": {
+        "id": 89782,
+        "keyword": "digital marketing agency in hyderabad",
+        "language_code": "en",
+        "location_code": "us",
+        "competition": "LOW",
+        "competition_index": 25,
+        "search_volume": 140,
+        "low_top_of_page_bid": "3.71",
+        "high_top_of_page_bid": "13.67",
+        "cpc": "6.65",
+        "created_at": "2025-10-11T15:12:15.000000Z",
+        "updated_at": "2025-10-11T15:12:15.000000Z"
+      },
+      "keyword_difficulty": {
+        "id": 89810,
+        "keyword": "digital marketing agency in hyderabad",
+        "language_code": "en",
+        "location_code": "us",
+        "difficulty": 71,
+        "created_at": "2025-10-11T15:12:15.000000Z",
+        "updated_at": "2025-10-11T15:12:15.000000Z"
+      },
+      "keyword_search_intents": [
+        {
+          "id": 161154,
+          "keyword": "digital marketing agency in hyderabad",
+          "language_code": "en",
+          "label": "commercial",
+          "probability": 0.81,
+          "created_at": "2025-10-11T15:12:15.000000Z",
+          "updated_at": "2025-10-11T15:12:15.000000Z"
+        },
+        {
+          "id": 161155,
+          "keyword": "digital marketing agency in hyderabad",
+          "language_code": "en",
+          "label": "navigational",
+          "probability": 0.38,
+          "created_at": "2025-10-11T15:12:15.000000Z",
+          "updated_at": "2025-10-11T15:12:15.000000Z"
+        }
+      ]
+    },
+    "tags": [],
+    "search_type": "Local pack",
+    "lead_source_id": null,
+    "batch_id": "8f4b941b-8d0d-46f9-8e98-79b90b06ba0c",
+    "siblings": [],
+    "share_link_details": {
+      "id": 490701,
+      "token": "11ceab50-a4ba-4de6-9c69-e50b80a7e669",
+      "expires_at": null,
+      "url": "https://app.leadsnap.com/rank-tracking/share/1581314/11ceab50-a4ba-4de6-9c69-e50b80a7e669"
+    }
+  },
+  "competitors_summary": [
+    {
+      "id": 190991298,
+      "total_points": 169,
+      "top_20_points": 158,
+      "top_3_points": 0,
+      "market_share": "0.00",
+      "market_share_position": 15,
+      "top_3_percentage": null,
+      "average_position": 11,
+      "top_3_position": 15,
+      "average": 13.47,
+      "north_west": 13.9,
+      "north_east": 13.14,
+      "south_west": 12.79,
+      "south_east": 14.37,
+      "place": {
+        "id": 1628310,
+        "google_place_id": "ChIJeSagy9iWyzsRZFyXrbVn6SE",
+        "google_place_serial": "2443598302824324196",
+        "latitude": "17.4421727000000000",
+        "longitude": "78.3991145000000000",
+        "place_url": "https://www.google.com/maps/preview/place/4th+Floor,+8+Views+Branding+and+Digital+Marketing+Agency+in+Hyderabad,+ABR+Elite,+Kakatiya+Hills,+Guttala_Begumpet,+Kavuri+Hills,+Madhapur,+Hyderabad,+Telangana+500033,+India/@17.4421727,78.3991145,3806a,13.1y/data=!4m2!3m1!1s0x3bcb96d8cba02679:0x21e967b5ad975c64",
+        "map_url": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x3bcb96d8cba02679:0x21e967b5ad975c64",
+        "name": "8 Views Branding and Digital Marketing Agency in Hyderabad",
+        "address": "4th Floor, ABR Elite, Kakatiya Hills, Guttala_Begumpet, Kavuri Hills, Madhapur, Hyderabad, Telangana 500033, India",
+        "phone": "+918099708888",
+        "website_url": "https://8views.com/%3Futm_source%3Dgmb%26utm_medium%3Dorganic",
+        "thumbnail_url": "https://lh3.googleusercontent.com/grass-cs/AABkmLewTYxOrQxLwoXwImhjBgW-bvcbMHcRE2Dv9dWXjK4bUxJIbSUln3IwuJKp7ktXjvLCp594VLE89fPtxjcUgafeUxdp3t90X-Rn4_odhm0OaDi84Izd5zYIXuyPbXiUzPv9BJjV=w408-h272-k-no",
+        "feature_id": "0x3bcb96d8cba02679:0x21e967b5ad975c64",
+        "review_count": 191,
+        "ave_review_rating": 4.4,
+        "ranking": null,
+        "main_category": "Internet marketing service",
+        "related_categories": [
+          "Branding agency",
+          "Marketing agency"
+        ]
+      },
+      "photos_count": 37
+    },
+    {
+      "id": 190991376,
+      "total_points": 169,
+      "top_20_points": 3,
+      "top_3_points": 0,
+      "market_share": "0.00",
+      "market_share_position": 15,
+      "top_3_percentage": null,
+      "average_position": 52,
+      "top_3_position": 15,
+      "average": 19.97,
+      "north_west": 20,
+      "north_east": 19.9,
+      "south_west": 20,
+      "south_east": 19.96,
+      "place": {
+        "id": 2333886,
+        "google_place_id": "ChIJX3uYv4mRyzsRV_rhfoCBR5E",
+        "google_place_serial": "10468478247730543191",
+        "latitude": "17.4417331000000000",
+        "longitude": "78.3825641000000000",
+        "place_url": "https://www.google.com/maps/preview/place/Second+Floor,+We+Are+Very,+Serinity+Square,+Vittal+Rao+Nagar,+Madhapur,+Hyderabad,+Telangana+500081,+India/@17.4417331,78.3825641,3806a,13.1y/data=!4m2!3m1!1s0x3bcb9189bf987b5f:0x914781807ee1fa57",
+        "map_url": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x3bcb9189bf987b5f:0x914781807ee1fa57",
+        "name": "We Are Very",
+        "address": "Second Floor, Serinity Square, Vittal Rao Nagar, Madhapur, Hyderabad, Telangana 500081, India",
+        "phone": "+919459557999",
+        "website_url": "http://www.wearevery.in/",
+        "thumbnail_url": "https://lh3.googleusercontent.com/grass-cs/AABkmLfyTqYf8YBh8kbg5Aoy0S2VEAvxN23HuOftBT9R-ma5VQ8H97zlKbnUKbcPHKrNCW5ueS1VVwK0CY4x1SDHJtjBAPMR2hUoMnotVpZZs5Sg_v2be23CwISSVdVrR9iSU3CFWcsd=w408-h271-k-no",
+        "feature_id": "0x3bcb9189bf987b5f:0x914781807ee1fa57",
+        "review_count": 90,
+        "ave_review_rating": 4.9,
+        "ranking": null,
+        "main_category": "Marketing agency",
+        "related_categories": [
+          "Advertising agency",
+          "Graphic designer",
+          "Video production service",
+          "Website designer"
+        ]
+      },
+      "photos_count": 117
+    },
+    {
+      "id": 190991299,
+      "total_points": 169,
+      "top_20_points": 168,
+      "top_3_points": 153,
+      "market_share": "100.00",
+      "market_share_position": 1,
+      "top_3_percentage": null,
+      "average_position": 1,
+      "top_3_position": 1,
+      "average": 2.06,
+      "north_west": 2.67,
+      "north_east": 2.29,
+      "south_west": 1.43,
+      "south_east": 1.76,
+      "place": {
+        "id": 3927080,
+        "google_place_id": "ChIJVVVxfUyXyzsRsQsvF2ScAWU",
+        "google_place_serial": "7278270426507054001",
+        "latitude": "17.4120377000000000",
+        "longitude": "78.4200255000000000",
+        "place_url": "https://www.google.com/maps/preview/place/Phase+2,+Digital+Mojo+-+Branding+and+Digital+Marketing+Agency+in+Hyderabad,+Midas+Square+Plot,+B2,+34A,+Road+No.+12,+near+Lotus+Pond+Road,+MLA+Colony,+Banjara+Hills,+Hyderabad,+Telangana+500096,+India/@17.4120377,78.4200255,3807a,13.1y/data=!4m2!3m1!1s0x3bcb974c7d715555:0x65019c64172f0bb1",
+        "map_url": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x3bcb974c7d715555:0x65019c64172f0bb1",
+        "name": "Digital Mojo - Branding and Digital Marketing Agency in Hyderabad",
+        "address": "Phase 2, Midas Square Plot, B2, 34A, Road No. 12, near Lotus Pond Road, MLA Colony, Banjara Hills, Hyderabad, Telangana 500096, India",
+        "phone": "+919908398763",
+        "website_url": "https://digitalmojo.in/",
+        "thumbnail_url": "https://lh3.googleusercontent.com/grass-cs/AABkmLf1B3LWSwCDU4I8uxeDI6ZoC-2AmDeFKTJ2vfWTJgkXC4yCRhNmZ9iRybsh0Zcj-QAc4DvcURMLjFCjdTloFQXhqwbGZU9VOzHZdJcL2d4zIEV1b1GzRFdYvBBEvFhYJ8RDa3GLsp-BQjy-=w408-h272-k-no",
+        "feature_id": "0x3bcb974c7d715555:0x65019c64172f0bb1",
+        "review_count": 246,
+        "ave_review_rating": 4.7,
+        "ranking": null,
+        "main_category": "Internet marketing service",
+        "related_categories": [
+          "Advertising agency",
+          "Branding agency",
+          "Design agency",
+          "Graphic designer",
+          "Marketing agency",
+          "Marketing consultant",
+          "Media company",
+          "Media consultant",
+          "Website designer"
+        ]
+      },
+      "photos_count": 381
+    },
+    {
+      "id": 190991300,
+      "total_points": 169,
+      "top_20_points": 168,
+      "top_3_points": 45,
+      "market_share": "29.42",
+      "market_share_position": 5,
+      "top_3_percentage": null,
+      "average_position": 3,
+      "top_3_position": 5,
+      "average": 4.92,
+      "north_west": 4.02,
+      "north_east": 6.02,
+      "south_west": 3.07,
+      "south_east": 6.08,
+      "place": {
+        "id": 3927081,
+        "google_place_id": "ChIJLc7ZzCWTyzsRsNF6sBm5lZY",
+        "google_place_serial": "10850782397205238192",
+        "latitude": "17.4366470000000000",
+        "longitude": "78.3670168000000000",
+        "place_url": "https://www.google.com/maps/preview/place/2nd+Floor,+Digital+i360,+SS+Plaza,+Plot+No.+12A,+Greenland+Colony,+Madhava+Reddy+Colony,+Gachibowli,+Hyderabad,+Telangana+500032,+India/@17.436647,78.3670168,3806a,13.1y/data=!4m2!3m1!1s0x3bcb9325ccd9ce2d:0x9695b919b07ad1b0",
+        "map_url": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x3bcb9325ccd9ce2d:0x9695b919b07ad1b0",
+        "name": "Digital i360",
+        "address": "2nd Floor, SS Plaza, Plot No. 12A, Greenland Colony, Madhava Reddy Colony, Gachibowli, Hyderabad, Telangana 500032, India",
+        "phone": "+918599002222",
+        "website_url": "https://digitali360.com/",
+        "thumbnail_url": "https://lh3.googleusercontent.com/grass-cs/AABkmLels4r_SqEs5-b2A3yJ9GCvSA4TQA5seZTGocnHDOKes18b1VpbTtrd503UTDNmXpURrupk1N58V169xSMtH6bSp4i2bEFtqpdYmV8VADGJHC0qskbw3jG-0mJLY8JC3hBVlLg=w408-h306-k-no",
+        "feature_id": "0x3bcb9325ccd9ce2d:0x9695b919b07ad1b0",
+        "review_count": 299,
+        "ave_review_rating": 4.9,
+        "ranking": null,
+        "main_category": "Internet marketing service",
+        "related_categories": [
+          "Marketing agency"
+        ]
+      },
+      "photos_count": 20
+    },
+    {
+      "id": 190991301,
+      "total_points": 169,
+      "top_20_points": 168,
+      "top_3_points": 106,
+      "market_share": "69.28",
+      "market_share_position": 2,
+      "top_3_percentage": null,
+      "average_position": 2,
+      "top_3_position": 2,
+      "average": 3.33,
+      "north_west": 4.19,
+      "north_east": 3.43,
+      "south_west": 2.67,
+      "south_east": 2.98,
+      "place": {
+        "id": 3927082,
+        "google_place_id": "ChIJf_m9rEmRyzsRILCDAz0MMy0",
+        "google_place_serial": "3256960411710500896",
+        "latitude": "17.4255489000000000",
+        "longitude": "78.4202727000000000",
+        "place_url": "https://www.google.com/maps/preview/place/G+07,+Ground+Floor,+Brandingnuts+-+Digital+Marketing+Agency+in+Hyderabad,+Shangrilla+plaza,+Road+No.+2,+Park+View+Enclave,+Banjara+Hills,+Hyderabad,+Telangana+500034,+India/@17.4255489,78.4202727,3807a,13.1y/data=!4m2!3m1!1s0x3bcb9149acbdf97f:0x2d330c3d0383b020",
+        "map_url": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x3bcb9149acbdf97f:0x2d330c3d0383b020",
+        "name": "Brandingnuts - Digital Marketing Agency in Hyderabad",
+        "address": "G 07, Ground Floor, Shangrilla plaza, Road No. 2, Park View Enclave, Banjara Hills, Hyderabad, Telangana 500034, India",
+        "phone": "+918341392803",
+        "website_url": "https://www.brandingnuts.com/",
+        "thumbnail_url": "https://lh3.googleusercontent.com/grass-cs/AABkmLeNby_ADScgR8CMbUAEgtCaIHxl_c5zfzfe3s7Rd_kBGw8QCNOnR8WYkQkQEZeAvkVNx0OIjumDp1QOIxdCs-_GtYURR_EerjLgQNsts4rss7laypFBi0jEAWaut-fMzjXvnvmN=w408-h510-k-no",
+        "feature_id": "0x3bcb9149acbdf97f:0x2d330c3d0383b020",
+        "review_count": 80,
+        "ave_review_rating": 4.9,
+        "ranking": null,
+        "main_category": "Internet marketing service",
+        "related_categories": [
+          "Marketing agency",
+          "Website designer"
+        ]
+      },
+      "photos_count": 45
+    },
+    {
+      "id": 190991302,
+      "total_points": 169,
+      "top_20_points": 168,
+      "top_3_points": 6,
+      "market_share": "3.92",
+      "market_share_position": 9,
+      "top_3_percentage": null,
+      "average_position": 6,
+      "top_3_position": 9,
+      "average": 7.28,
+      "north_west": 8.1,
+      "north_east": 7.78,
+      "south_west": 6.12,
+      "south_east": 7.2,
+      "place": {
+        "id": 3927083,
+        "google_place_id": "ChIJoyMwkUORyzsRTkmn8sJOmFI",
+        "google_place_serial": "5951593506771781966",
+        "latitude": "17.4427623000000000",
+        "longitude": "78.3973315000000000",
+        "place_url": "https://www.google.com/maps/preview/place/2nd+Floor,+Geekschip,+S.S+Arcade,+Plot+No+97+and+98,+Kakatiya+Hills,+Guttala_Begumpet,+Kavuri+Hills,+Madhapur,+Hyderabad,+Telangana+500081,+India/@17.4427623,78.3973315,3806a,13.1y/data=!4m2!3m1!1s0x3bcb9143913023a3:0x52984ec2f2a7494e",
+        "map_url": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x3bcb9143913023a3:0x52984ec2f2a7494e",
+        "name": "Geekschip",
+        "address": "2nd Floor, S.S Arcade, Plot No 97 and 98, Kakatiya Hills, Guttala_Begumpet, Kavuri Hills, Madhapur, Hyderabad, Telangana 500081, India",
+        "phone": "+919100068885",
+        "website_url": "https://www.geekschip.com/",
+        "thumbnail_url": "https://lh3.googleusercontent.com/grass-cs/AABkmLfIYRAdZXRjrS6XLAgeT57ongO8LHpMFpIXh0ZyjJcS2ztq3OZkI7qYYVWXNVbj-2jN-t7cr4WQoJvIHSiB8mKIrZEbGv2vJT7JAfNwFmwql_xm395xTXf1od3C5SL3-91c0pbvCQ=w408-h544-k-no",
+        "feature_id": "0x3bcb9143913023a3:0x52984ec2f2a7494e",
+        "review_count": 130,
+        "ave_review_rating": 4.6,
+        "ranking": null,
+        "main_category": "Marketing agency",
+        "related_categories": [
+          "Advertising agency",
+          "Business development service",
+          "Internet marketing service",
+          "Marketing consultant"
+        ]
+      },
+      "photos_count": 51
+    },
+    {
+      "id": 190991329,
+      "total_points": 169,
+      "top_20_points": 11,
+      "top_3_points": 0,
+      "market_share": "0.00",
+      "market_share_position": 15,
+      "top_3_percentage": null,
+      "average_position": 41,
+      "top_3_position": 15,
+      "average": 19.86,
+      "north_west": 20,
+      "north_east": 19.8,
+      "south_west": 19.98,
+      "south_east": 19.67,
+      "place": {
+        "id": 3927084,
+        "google_place_id": "ChIJ_5PYhzGRyzsRzeQ4w0hlAFE",
+        "google_place_serial": "5836776480259499213",
+        "latitude": "17.4268341000000000",
+        "longitude": "78.4500122000000000",
+        "place_url": "https://www.google.com/maps/preview/place/DigitalZap,+Plot+No:+32+Road+No+1,+Nagarjuna+Hills+Rd,+Banjara+Hills,+Hyderabad,+Telangana+500082,+India/@17.4268341,78.4500122,3807a,13.1y/data=!4m2!3m1!1s0x3bcb913187d893ff:0x51006548c338e4cd",
+        "map_url": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x3bcb913187d893ff:0x51006548c338e4cd",
+        "name": "DigitalZap",
+        "address": "Plot No: 32 Road No 1, Nagarjuna Hills Rd, Banjara Hills, Hyderabad, Telangana 500082, India",
+        "phone": "+917331122663",
+        "website_url": "https://digitalzap.in/",
+        "thumbnail_url": "https://lh3.googleusercontent.com/grass-cs/AABkmLcjWnFsbyisB6KZ2XnNVeCnXVKROWNwivBXhGHpz9wtd2P_WoLTqTkYbECuBJ_c1Dz_XDgqB0fII2gW3vqLQsnStM9Zwx7rnOeooW88EgICoLGiB5rxp5Qs8QoxjnMIgXOW2-NrJg=w408-h306-k-no",
+        "feature_id": "0x3bcb913187d893ff:0x51006548c338e4cd",
+        "review_count": 31,
+        "ave_review_rating": 4.8,
+        "ranking": null,
+        "main_category": "Internet marketing service",
+        "related_categories": [
+          "Advertising agency",
+          "Branding agency",
+          "Business development service",
+          "E commerce agency",
+          "Marketing agency",
+          "Marketing consultant",
+          "Media consultant",
+          "Website designer"
+        ]
+      },
+      "photos_count": 87
+    },
+    {
+      "id": 190991330,
+      "total_points": 169,
+      "top_20_points": 6,
+      "top_3_points": 0,
+      "market_share": "0.00",
+      "market_share_position": 15,
+      "top_3_percentage": null,
+      "average_position": 45,
+      "top_3_position": 15,
+      "average": 19.9,
+      "north_west": 20,
+      "north_east": 19.78,
+      "south_west": 20,
+      "south_east": 19.71,
+      "place": {
+        "id": 3927085,
+        "google_place_id": "ChIJ228_JKyXyzsREsmrSOIEXuI",
+        "google_place_serial": "16311480270310852882",
+        "latitude": "17.4239950000000000",
+        "longitude": "78.4527964000000000",
+        "place_url": "https://www.google.com/maps/preview/place/Flat+no+301,3rd+Floor,+KL+ADS+INDIA+PVT+LTD,+MGR+Estate,+Dwarakapuri,+Punjagutta,+Hyderabad,+Telangana+500082,+India/@17.423995,78.4527964,3807a,13.1y/data=!4m2!3m1!1s0x3bcb97ac243f6fdb:0xe25e04e248abc912",
+        "map_url": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x3bcb97ac243f6fdb:0xe25e04e248abc912",
+        "name": "KL ADS INDIA PVT LTD",
+        "address": "Flat no 301,3rd Floor, MGR Estate, Dwarakapuri, Punjagutta, Hyderabad, Telangana 500082, India",
+        "phone": "+919849515862",
+        "website_url": "https://klads.co.in/",
+        "thumbnail_url": "https://lh3.googleusercontent.com/grass-cs/AABkmLeHAl0i0aM8nD1qlqQd47YKYq55wdnHitxFj8Cc45Pn_VLZLqlaVQUzxlxAxp924At5IJnAwrNkEpD5a29iIcwrNnTOsLjLcPlPToPNaZtCVaK-dVyqA-jlPPpMW45qNoWwQhuWcEhGL6I=w408-h306-k-no",
+        "feature_id": "0x3bcb97ac243f6fdb:0xe25e04e248abc912",
+        "review_count": 123,
+        "ave_review_rating": 4.8,
+        "ranking": null,
+        "main_category": "Internet marketing service",
+        "related_categories": [
+          "Advertising agency",
+          "Business development service",
+          "Marketing agency",
+          "Marketing consultant"
+        ]
+      },
+      "photos_count": 200
+    },
+    {
+      "id": 190991346,
+      "total_points": 169,
+      "top_20_points": 1,
+      "top_3_points": 0,
+      "market_share": "0.00",
+      "market_share_position": 15,
+      "top_3_percentage": null,
+      "average_position": 51,
+      "top_3_position": 15,
+      "average": 19.96,
+      "north_west": 20,
+      "north_east": 20,
+      "south_west": 19.83,
+      "south_east": 20,
+      "place": {
+        "id": 3927086,
+        "google_place_id": "ChIJLVuDS16RyzsRz7CPxBoPmPQ",
+        "google_place_serial": "17624853749355753679",
+        "latitude": "17.4274303000000000",
+        "longitude": "78.4156303000000000",
+        "place_url": "https://www.google.com/maps/preview/place/Vihaan+Digitals,+Sri+venkateswara+Nilayam,+1st+Floor+Behind+Union+Bank,+near+Jubilee+Check+Post,+Hyderabad,+Telangana+500033,+India/@17.4274303,78.4156303,3807a,13.1y/data=!4m2!3m1!1s0x3bcb915e4b835b2d:0xf4980f1ac48fb0cf",
+        "map_url": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x3bcb915e4b835b2d:0xf4980f1ac48fb0cf",
+        "name": "Vihaan Digitals",
+        "address": "Sri venkateswara Nilayam, 1st Floor Behind Union Bank, near Jubilee Check Post, Hyderabad, Telangana 500033, India",
+        "phone": "+917396033325",
+        "website_url": "https://vihaandigitals.com/",
+        "thumbnail_url": "https://lh3.googleusercontent.com/grass-cs/AABkmLfMwtN6eJaptTOtRvf9Zf69_OzyLfa48ZoazQ4_oWsnvw3W7nSZvAMYxC2f00X8PXjfPDIydJ52G6wbiycUgbBV87FQShyZ86E7M3ayQctHysll975ekoScY03KVCx7LlxFBHe4=w408-h272-k-no",
+        "feature_id": "0x3bcb915e4b835b2d:0xf4980f1ac48fb0cf",
+        "review_count": 34,
+        "ave_review_rating": 4.9,
+        "ranking": null,
+        "main_category": "Internet marketing service",
+        "related_categories": []
+      },
+      "photos_count": 11
+    },
+    {
+      "id": 190991331,
+      "total_points": 169,
+      "top_20_points": 3,
+      "top_3_points": 1,
+      "market_share": "0.65",
+      "market_share_position": 14,
+      "top_3_percentage": null,
+      "average_position": 38,
+      "top_3_position": 14,
+      "average": 19.79,
+      "north_west": 20,
+      "north_east": 20,
+      "south_west": 20,
+      "south_east": 19.27,
+      "place": {
+        "id": 3927088,
+        "google_place_id": "ChIJR2v0QraZyzsREA_Lmy8vq4w",
+        "google_place_serial": "10136247267851177744",
+        "latitude": "17.3640147000000000",
+        "longitude": "78.5464324000000000",
+        "place_url": "https://www.google.com/maps/preview/place/3rd+Floor,+Shashi+Digital+Marketing+Solutions+%26+Services,+Astha+Laxmi+Kaman,+H+No+11-3-1258%2F1,+P+No+65,+2,+Road+No.+5,+near+Victoria+Memorial+Metor+Station,+Margadarshi+Colony,+Kothapet,+Hyderabad,+Telangana+500102,+India/@17.3640147,78.5464324,3808a,13.1y/data=!4m2!3m1!1s0x3bcb99b642f46b47:0x8cab2f2f9bcb0f10",
+        "map_url": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x3bcb99b642f46b47:0x8cab2f2f9bcb0f10",
+        "name": "Shashi Digital Marketing Solutions & Services",
+        "address": "3rd Floor, Astha Laxmi Kaman, H No 11-3-1258/1, P No 65, 2, Road No. 5, near Victoria Memorial Metor Station, Margadarshi Colony, Kothapet, Hyderabad, Telangana 500102, India",
+        "phone": "+917207094474",
+        "website_url": "https://shashidigitalsolutions.com/",
+        "thumbnail_url": "https://lh3.googleusercontent.com/grass-cs/AABkmLckOsv1YKsLubDGnELfnaeHTjtoT1Q3b9WyrvmIkFIHO3ix8KAA2DobNHfs5pxJgrJpf50-DYu6KZuDtGmNxLa5vkwCVzJyj8MxUg5ibeWunE9ux2WYqxYQhx_EzLlnPqBwgGnd=w408-h306-k-no",
+        "feature_id": "0x3bcb99b642f46b47:0x8cab2f2f9bcb0f10",
+        "review_count": 54,
+        "ave_review_rating": 4.9,
+        "ranking": null,
+        "main_category": "Internet marketing service",
+        "related_categories": []
+      },
+      "photos_count": 185
+    }
+  ],
+  "competitors_total": 116
+}
