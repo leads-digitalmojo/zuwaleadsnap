@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import type { GridConfig, GridShape, GridSize } from "../types";
 import { IconAlertTriangle, IconArrowRight } from "./Icons";
 
@@ -26,6 +27,37 @@ interface Props {
 
 export function GridConfigCard({ config, onChange, onRun, isRunning, validationErrors }: Props) {
   const { gridSize, shape, spacingValue, unit } = config;
+
+  const [spacingText, setSpacingText] = useState(String(spacingValue));
+
+  useEffect(() => {
+    // Keep local text in sync when config.spacingValue changes externally
+    if (parseFloat(spacingText) !== spacingValue) {
+      setSpacingText(String(spacingValue));
+    }
+  }, [spacingValue]);
+
+  function handleSpacingChange(val: string) {
+    // Allow digits and a single optional decimal point, or blank while typing
+    if (/^[0-9]*\.?[0-9]*$/.test(val)) {
+      setSpacingText(val);
+      const parsed = parseFloat(val);
+      if (!isNaN(parsed) && parsed > 0) {
+        onChange({ ...config, spacingValue: parsed });
+      }
+    }
+  }
+
+  function handleSpacingBlur() {
+    const parsed = parseFloat(spacingText);
+    if (isNaN(parsed) || parsed <= 0) {
+      const fallback = spacingValue > 0 ? spacingValue : 1;
+      setSpacingText(String(fallback));
+      onChange({ ...config, spacingValue: fallback });
+    } else {
+      setSpacingText(String(parsed));
+    }
+  }
 
   const spacingKm = unit === "mi" ? spacingValue * 1.60934 : spacingValue;
   const pointCount = countPoints(gridSize, shape);
@@ -77,25 +109,28 @@ export function GridConfigCard({ config, onChange, onRun, isRunning, validationE
           </div>
 
           <div className="field-group">
-            <label className="field-label">Point Spacing</label>
+            <label className="field-label" htmlFor="point-spacing">Point Spacing</label>
             <div className="spacing-input-row">
               <input
+                id="point-spacing"
                 className="text-input"
-                type="number"
-                min="0.1"
-                max={unit === "mi" ? "31" : "50"}
-                step="0.1"
-                value={spacingValue}
-                onChange={(e) => setField("spacingValue", parseFloat(e.target.value) || 1)}
+                type="text"
+                inputMode="decimal"
+                placeholder="1"
+                value={spacingText}
+                onChange={(e) => handleSpacingChange(e.target.value)}
+                onBlur={handleSpacingBlur}
               />
               <div className="unit-toggle">
                 <button
+                  type="button"
                   className={unit === "km" ? "active" : ""}
                   onClick={() => setField("unit", "km")}
                 >
                   km
                 </button>
                 <button
+                  type="button"
                   className={unit === "mi" ? "active" : ""}
                   onClick={() => setField("unit", "mi")}
                 >

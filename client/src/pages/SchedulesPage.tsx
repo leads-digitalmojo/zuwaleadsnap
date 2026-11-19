@@ -161,11 +161,11 @@ export function SchedulesPage() {
               <div className="grid-config-row" style={{ gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr", marginBottom: 12 }}>
                 <div className="field-group">
                   <label className="field-label">Center Lat</label>
-                  <input className="text-input" type="number" step="any" placeholder="30.2672" value={form.centerLat} onChange={(e) => setField("centerLat", e.target.value)} />
+                  <input className="text-input" type="text" inputMode="decimal" placeholder="30.2672" value={form.centerLat} onChange={(e) => setField("centerLat", e.target.value)} />
                 </div>
                 <div className="field-group">
                   <label className="field-label">Center Lng</label>
-                  <input className="text-input" type="number" step="any" placeholder="-97.7431" value={form.centerLng} onChange={(e) => setField("centerLng", e.target.value)} />
+                  <input className="text-input" type="text" inputMode="decimal" placeholder="-97.7431" value={form.centerLng} onChange={(e) => setField("centerLng", e.target.value)} />
                 </div>
                 <div className="field-group">
                   <label className="field-label">Grid Size</label>
@@ -177,7 +177,7 @@ export function SchedulesPage() {
                 </div>
                 <div className="field-group">
                   <label className="field-label">Spacing (km)</label>
-                  <input className="text-input" type="number" step="0.1" min="0.1" value={form.spacingKm} onChange={(e) => setField("spacingKm", e.target.value)} />
+                  <input className="text-input" type="text" inputMode="decimal" placeholder="1" value={form.spacingKm} onChange={(e) => setField("spacingKm", e.target.value)} />
                 </div>
                 <div className="field-group">
                   <label className="field-label">Recurrence</label>

@@ -391,6 +391,18 @@
   color: #9e9da3;
 }
 
+/* Remove ugly increment/decrement spinner arrows on all number inputs */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
 .select-input {
   padding: 10px 14px;
   border: 1px solid var(--hairline);
