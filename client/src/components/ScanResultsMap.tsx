@@ -87,6 +87,12 @@ export function ScanResultsMap({
           center,
           zoom: 12,
           mapId: "mojomap-rank-map",
+          gestureHandling: "greedy", // Smooth single-finger pan / effortless wheel zoom
+          streetViewControl: false,
+          mapTypeControl: false,
+          fullscreenControl: false,
+          zoomControl: true,
+          clickableIcons: false,
         });
         mapRef.current = map;
         AMERef.current = AdvancedMarkerElement;
@@ -245,7 +251,43 @@ export function ScanResultsMap({
             <FallbackGrid result={result} />
           </div>
         ) : (
-          <div ref={mapDivRef} className="map-el" />
+          <>
+            <div ref={mapDivRef} className="map-el" />
+            <button
+              type="button"
+              onClick={() => {
+                if (mapRef.current) {
+                  mapRef.current.panTo({
+                    lat: result.gridConfig.centerLat,
+                    lng: result.gridConfig.centerLng,
+                  });
+                  mapRef.current.setZoom(12);
+                }
+              }}
+              title="Recenter Map View"
+              style={{
+                position: "absolute",
+                top: 12,
+                right: 12,
+                background: "#ffffff",
+                border: "1px solid var(--hairline)",
+                borderRadius: 6,
+                padding: "6px 10px",
+                fontSize: 11,
+                fontWeight: 700,
+                color: "var(--ink)",
+                boxShadow: "0 2px 6px rgba(0,0,0,0.12)",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                gap: 5,
+                zIndex: 10,
+              }}
+            >
+              <IconRefresh size={12} />
+              <span>Recenter</span>
+            </button>
+          </>
         )}
 
         {selectedPoint && (

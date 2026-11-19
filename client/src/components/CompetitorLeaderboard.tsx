@@ -191,12 +191,11 @@ export function CompetitorLeaderboard({
             <tr style={{ background: "var(--canvas)" }}>
               <th style={{ padding: "8px 10px", textAlign: "left", width: 32, fontSize: 11, color: "var(--ink-muted)" }}>#</th>
               <th style={{ padding: "8px 10px", textAlign: "left", fontSize: 11, color: "var(--ink-muted)", textTransform: "uppercase" }}>Competitor Business</th>
-              <SortHeader label="AGR" sortKey="avgRank" width={70} />
-              <SortHeader label="ATGR" sortKey="atgr" width={70} />
-              <SortHeader label="Top 3%" sortKey="top3Pct" width={90} />
+              <SortHeader label="AGR" sortKey="avgRank" width={65} />
+              <SortHeader label="ATGR" sortKey="atgr" width={65} />
+              <SortHeader label="Top 3%" sortKey="top3Pct" width={80} />
               <th style={{ padding: "8px 10px", textAlign: "left", fontSize: 11, color: "var(--ink-muted)", textTransform: "uppercase" }}>Found In</th>
-              <th style={{ padding: "8px 10px", textAlign: "left", fontSize: 11, color: "var(--ink-muted)", textTransform: "uppercase" }}>Quadrants (NW·NE·SW·SE)</th>
-              <th style={{ padding: "8px 10px", textAlign: "center", fontSize: 11, color: "var(--ink-muted)", textTransform: "uppercase", width: 90 }}>Flip Grid</th>
+              <th style={{ padding: "8px 10px", textAlign: "center", fontSize: 11, color: "var(--ink-muted)", textTransform: "uppercase", width: 80 }}>Flip Grid</th>
             </tr>
           </thead>
           <tbody>
@@ -207,6 +206,8 @@ export function CompetitorLeaderboard({
 
               const agrColor = c.avgRank <= 3 ? "var(--color-rank-good)" : c.avgRank <= 10 ? "var(--gold-deep)" : "var(--color-rank-poor)";
               const atgrColor = c.atgr <= 5 ? "var(--color-rank-good)" : c.atgr <= 12 ? "var(--gold-deep)" : "var(--ink)";
+
+              const hasQuadrants = c.northWest != null || c.northEast != null || c.southWest != null || c.southEast != null;
 
               return (
                 <tr
@@ -227,7 +228,7 @@ export function CompetitorLeaderboard({
 
                   {/* Business Name & Metadata */}
                   <td style={{ padding: "8px 10px" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
                       {isTracked && (
                         <span
                           style={{
@@ -248,7 +249,7 @@ export function CompetitorLeaderboard({
                       </span>
                     </div>
 
-                    <div style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 11, color: "var(--ink-muted)", marginTop: 2 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 11, color: "var(--ink-muted)", marginTop: 2, flexWrap: "wrap" }}>
                       {c.rating != null && (
                         <span style={{ display: "inline-flex", alignItems: "center", gap: 3 }}>
                           <IconStar size={10} style={{ color: "var(--gold-deep)" }} />
@@ -257,6 +258,35 @@ export function CompetitorLeaderboard({
                       )}
                       {c.category && <span>&middot; {c.category}</span>}
                     </div>
+
+                    {/* Regional Quadrants Sub-Row */}
+                    {hasQuadrants && (
+                      <div
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: 6,
+                          fontSize: 10.5,
+                          color: "var(--ink-muted)",
+                          fontFamily: "var(--font-mono)",
+                          background: "var(--surface)",
+                          border: "1px solid var(--hairline)",
+                          borderRadius: 4,
+                          padding: "2px 6px",
+                          marginTop: 4,
+                        }}
+                        title="Regional Quadrants: Northwest · Northeast · Southwest · Southeast"
+                      >
+                        <span style={{ color: "var(--gold-deep)", fontWeight: 700 }}>Compass:</span>
+                        <span>NW: {c.northWest ?? "–"}</span>
+                        <span>·</span>
+                        <span>NE: {c.northEast ?? "–"}</span>
+                        <span>·</span>
+                        <span>SW: {c.southWest ?? "–"}</span>
+                        <span>·</span>
+                        <span>SE: {c.southEast ?? "–"}</span>
+                      </div>
+                    )}
                   </td>
 
                   {/* AGR */}
@@ -272,7 +302,7 @@ export function CompetitorLeaderboard({
                   {/* Top-3 % */}
                   <td style={{ padding: "8px 10px" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                      <div style={{ width: 44, height: 5, background: "var(--hairline)", borderRadius: 3, overflow: "hidden" }}>
+                      <div style={{ width: 38, height: 5, background: "var(--hairline)", borderRadius: 3, overflow: "hidden" }}>
                         <div style={{ width: `${Math.min(100, c.top3Pct)}%`, height: "100%", background: "var(--color-rank-good)" }} />
                       </div>
                       <span style={{ fontSize: 11, fontWeight: 600, color: "var(--ink-soft)" }}>{c.top3Pct}%</span>
@@ -282,11 +312,6 @@ export function CompetitorLeaderboard({
                   {/* Found In */}
                   <td style={{ padding: "8px 10px", fontSize: 11, color: "var(--ink-muted)", whiteSpace: "nowrap" }}>
                     {c.foundIn || `${c.totalPoints} pts`}
-                  </td>
-
-                  {/* Regional Quadrants */}
-                  <td style={{ padding: "8px 10px", fontSize: 11, fontFamily: "var(--font-mono)", color: "var(--ink-muted)", whiteSpace: "nowrap" }}>
-                    {c.northWest ?? "–"} · {c.northEast ?? "–"} · {c.southWest ?? "–"} · {c.southEast ?? "–"}
                   </td>
 
                   {/* 1-Click Flip Grid Button */}

@@ -279,8 +279,8 @@ export function HistoryPage({ onViewScan }: HistoryPageProps = {}) {
                     <td style={{ padding: "12px 16px", fontWeight: 600, color: "var(--ink)" }}>
                       {s.businessName}
                     </td>
-                    <td style={{ padding: "12px 16px", color: "var(--ink-muted)" }}>
-                      <span className="chip" style={{ fontSize: 11.5, padding: "3px 8px" }}>
+                    <td style={{ padding: "12px 16px" }}>
+                      <span className="keyword-tag">
                         {s.keyword}
                       </span>
                     </td>

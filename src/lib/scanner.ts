@@ -18,6 +18,7 @@
 import { getDb } from "./db.js";
 import { getCached, storeCache } from "./serpCache.js";
 import { resolveBusiness } from "./places.js";
+import { notifyScanComplete } from "./notifications.js";
 import {
   submitMapsTasks,
   pollUntilReady,
@@ -166,6 +167,9 @@ export async function runScan(opts: ScanRunOptions): Promise<void> {
     `).run(scanId);
 
     console.log(`[scan ${scanId}] Complete.`);
+
+    // Trigger report ready email to scan initiator
+    void notifyScanComplete(scanId);
   } catch (err) {
     const message = (err as Error).message;
     console.error(`[scan ${scanId}] Failed:`, message);

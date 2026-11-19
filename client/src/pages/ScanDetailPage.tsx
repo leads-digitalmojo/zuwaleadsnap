@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, type FC } from "react";
 import { ScanResultsMap } from "../components/ScanResultsMap";
 import { CompetitorLeaderboard } from "../components/CompetitorLeaderboard";
-import { LeadSnapMetricsBar } from "../components/LeadSnapMetricsBar";
+import { LeadSnapMetricsBar, type LayoutViewMode } from "../components/LeadSnapMetricsBar";
 import { ExportBar } from "../components/ExportBar";
 import {
   IconArrowLeft,
@@ -44,6 +44,7 @@ export const ScanDetailPage: FC<Props> = ({ scanId, onBack }) => {
   const { authFetch } = useAuth();
   const [scan, setScan] = useState<ScanResponse | null>(null);
   const [activeCompetitor, setActiveCompetitor] = useState<CompetitorStat | null>(null);
+  const [layoutMode, setLayoutMode] = useState<LayoutViewMode>("split");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -159,31 +160,37 @@ export const ScanDetailPage: FC<Props> = ({ scanId, onBack }) => {
         </div>
       </div>
 
-      {/* LeadSnap Parity Metrics Header Bar */}
+      {/* LeadSnap Parity Metrics Header Bar with View Switcher */}
       <LeadSnapMetricsBar
         scan={scan}
         activeCompetitor={activeCompetitor}
         onResetCompetitor={() => setActiveCompetitor(null)}
+        layoutMode={layoutMode}
+        onLayoutModeChange={setLayoutMode}
       />
 
-      {/* LeadSnap 60/40 Split: Map Viewport (Left) vs Competitor Intelligence (Right) */}
-      <div className="leadsnap-split-layout">
-        <div className="leadsnap-map-column">
-          <ScanResultsMap
-            result={scan}
-            activeCompetitor={activeCompetitor}
-            onResetCompetitor={() => setActiveCompetitor(null)}
-          />
-        </div>
+      {/* Dynamic Layout: Split (60/40), Map Focus (100%), or Table Focus (100%) */}
+      <div className={`leadsnap-layout-container ${layoutMode === "split" ? "leadsnap-split-layout" : "leadsnap-full-layout"}`}>
+        {(layoutMode === "split" || layoutMode === "map") && (
+          <div className="leadsnap-map-column">
+            <ScanResultsMap
+              result={scan}
+              activeCompetitor={activeCompetitor}
+              onResetCompetitor={() => setActiveCompetitor(null)}
+            />
+          </div>
+        )}
 
-        <div className="leadsnap-leaderboard-column">
-          <CompetitorLeaderboard
-            scanId={scan.id}
-            trackedBusinessName={scan.business?.name || ""}
-            activeCompetitor={activeCompetitor}
-            onSelectCompetitor={setActiveCompetitor}
-          />
-        </div>
+        {(layoutMode === "split" || layoutMode === "table") && (
+          <div className="leadsnap-leaderboard-column">
+            <CompetitorLeaderboard
+              scanId={scan.id}
+              trackedBusinessName={scan.business?.name || ""}
+              activeCompetitor={activeCompetitor}
+              onSelectCompetitor={setActiveCompetitor}
+            />
+          </div>
+        )}
       </div>
 
       {/* Export Bar */}

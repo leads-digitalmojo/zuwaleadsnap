@@ -1,18 +1,25 @@
-import type { FC } from "react";
+import { useState, type FC } from "react";
 import type { ScanResponse, CompetitorStat } from "../types";
-import { IconMapPin, IconStar, IconLayers, IconCompass } from "./Icons";
+import { IconMapPin, IconLayers, IconCompass } from "./Icons";
+
+export type LayoutViewMode = "split" | "map" | "table";
 
 interface Props {
   scan: ScanResponse;
   activeCompetitor?: CompetitorStat | null;
   onResetCompetitor?: () => void;
+  layoutMode?: LayoutViewMode;
+  onLayoutModeChange?: (mode: LayoutViewMode) => void;
 }
 
 export const LeadSnapMetricsBar: FC<Props> = ({
   scan,
   activeCompetitor,
   onResetCompetitor,
+  layoutMode = "split",
+  onLayoutModeChange,
 }) => {
+  const [showQuadrantModal, setShowQuadrantModal] = useState(false);
   const isFlipped = !!activeCompetitor;
   const targetName = isFlipped ? activeCompetitor.name : scan.business.name;
 
@@ -56,7 +63,7 @@ export const LeadSnapMetricsBar: FC<Props> = ({
 
   return (
     <div className="leadsnap-metrics-container card" style={{ padding: "16px 20px", marginBottom: 16 }}>
-      {/* Top Identity Row */}
+      {/* Top Identity & Layout Viewport Row */}
       <div
         style={{
           display: "flex",
@@ -119,22 +126,98 @@ export const LeadSnapMetricsBar: FC<Props> = ({
           </div>
         </div>
 
-        {isFlipped && onResetCompetitor && (
-          <button
-            onClick={onResetCompetitor}
-            className="btn-secondary"
-            style={{
-              fontSize: 12,
-              padding: "6px 12px",
-              background: "#ffffff",
-              borderColor: "var(--gold)",
-              color: "var(--gold-deep)",
-              fontWeight: 600,
-            }}
-          >
-            Reset to Tracked Business
-          </button>
-        )}
+        {/* Action Buttons & Layout View Switcher */}
+        <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+          {isFlipped && onResetCompetitor && (
+            <button
+              onClick={onResetCompetitor}
+              className="btn-secondary"
+              style={{
+                fontSize: 11,
+                padding: "5px 12px",
+                background: "#ffffff",
+                borderColor: "var(--gold)",
+                color: "var(--gold-deep)",
+                fontWeight: 700,
+              }}
+            >
+              Reset to Tracked Business
+            </button>
+          )}
+
+          {/* User Layout View Controls */}
+          {onLayoutModeChange && (
+            <div
+              className="layout-view-controls"
+              style={{
+                display: "inline-flex",
+                background: "var(--surface-hover)",
+                padding: 3,
+                borderRadius: 8,
+                border: "1px solid var(--hairline)",
+                gap: 2,
+              }}
+            >
+              <button
+                type="button"
+                className={`layout-btn ${layoutMode === "split" ? "active" : ""}`}
+                onClick={() => onLayoutModeChange("split")}
+                title="Split 60/40 View (Map + Table)"
+                style={{
+                  padding: "4px 9px",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  borderRadius: 6,
+                  border: "none",
+                  cursor: "pointer",
+                  background: layoutMode === "split" ? "#ffffff" : "transparent",
+                  color: layoutMode === "split" ? "var(--ink)" : "var(--ink-muted)",
+                  boxShadow: layoutMode === "split" ? "0 1px 2px rgba(0,0,0,0.06)" : "none",
+                }}
+              >
+                Split (60/40)
+              </button>
+              <button
+                type="button"
+                className={`layout-btn ${layoutMode === "map" ? "active" : ""}`}
+                onClick={() => onLayoutModeChange("map")}
+                title="Full Width Map View"
+                style={{
+                  padding: "4px 9px",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  borderRadius: 6,
+                  border: "none",
+                  cursor: "pointer",
+                  background: layoutMode === "map" ? "#ffffff" : "transparent",
+                  color: layoutMode === "map" ? "var(--ink)" : "var(--ink-muted)",
+                  boxShadow: layoutMode === "map" ? "0 1px 2px rgba(0,0,0,0.06)" : "none",
+                }}
+              >
+                Map Focus
+              </button>
+              <button
+                type="button"
+                className={`layout-btn ${layoutMode === "table" ? "active" : ""}`}
+                onClick={() => onLayoutModeChange("table")}
+                title="Full Width Competitor Table"
+                style={{
+                  padding: "4px 9px",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  borderRadius: 6,
+                  border: "none",
+                  cursor: "pointer",
+                  background: layoutMode === "table" ? "#ffffff" : "transparent",
+                  color: layoutMode === "table" ? "var(--ink)" : "var(--ink-muted)",
+                  boxShadow: layoutMode === "table" ? "0 1px 2px rgba(0,0,0,0.06)" : "none",
+                }}
+              >
+                Table Focus
+              </button>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* LeadSnap Parity Metric Badges */}
@@ -220,38 +303,99 @@ export const LeadSnapMetricsBar: FC<Props> = ({
         </div>
       </div>
 
-      {/* Quadrants Row (LeadSnap NW / NE / SW / SE Regional Breakdown) */}
+      {/* Quadrants Row (LeadSnap Regional Matrix Breakdown) */}
       <div
         style={{
           display: "flex",
           alignItems: "center",
+          justifyContent: "space-between",
           gap: 16,
-          marginTop: 12,
-          paddingTop: 10,
+          marginTop: 14,
+          paddingTop: 12,
           borderTop: "1px dashed var(--hairline)",
-          fontSize: 11,
+          fontSize: 12,
           color: "var(--ink-muted)",
           flexWrap: "wrap",
         }}
       >
-        <span style={{ display: "inline-flex", alignItems: "center", gap: 5, fontWeight: 600, color: "var(--ink)" }}>
-          <IconCompass size={13} style={{ color: "var(--gold-deep)" }} />
-          <span>Regional Quadrants:</span>
-        </span>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+          <span style={{ display: "inline-flex", alignItems: "center", gap: 5, fontWeight: 700, color: "var(--ink)" }}>
+            <IconCompass size={14} style={{ color: "var(--gold-deep)" }} />
+            <span>Regional Quadrants:</span>
+          </span>
 
-        <span className="quadrant-badge">
-          NW: <strong>{nw ?? "–"}</strong>
-        </span>
-        <span className="quadrant-badge">
-          NE: <strong>{ne ?? "–"}</strong>
-        </span>
-        <span className="quadrant-badge">
-          SW: <strong>{sw ?? "–"}</strong>
-        </span>
-        <span className="quadrant-badge">
-          SE: <strong>{se ?? "–"}</strong>
-        </span>
+          <span className="quadrant-badge">
+            Northwest (NW): <strong>{nw ?? "–"}</strong>
+          </span>
+          <span className="quadrant-badge">
+            Northeast (NE): <strong>{ne ?? "–"}</strong>
+          </span>
+          <span className="quadrant-badge">
+            Southwest (SW): <strong>{sw ?? "–"}</strong>
+          </span>
+          <span className="quadrant-badge">
+            Southeast (SE): <strong>{se ?? "–"}</strong>
+          </span>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setShowQuadrantModal(!showQuadrantModal)}
+          style={{
+            background: "none",
+            border: "none",
+            fontSize: 11,
+            color: "var(--gold-deep)",
+            fontWeight: 700,
+            cursor: "pointer",
+            textDecoration: "underline",
+          }}
+        >
+          {showQuadrantModal ? "Hide Compass Grid" : "Open 2×2 Compass Grid"}
+        </button>
       </div>
+
+      {/* Interactive 2x2 Regional Compass Visualizer */}
+      {showQuadrantModal && (
+        <div
+          style={{
+            marginTop: 12,
+            padding: 14,
+            background: "var(--surface-hover)",
+            borderRadius: 8,
+            border: "1px solid var(--hairline)",
+          }}
+        >
+          <div style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", color: "var(--ink-muted)", marginBottom: 8 }}>
+            Geographic Regional Compass — {targetName}
+          </div>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 8,
+              maxWidth: 360,
+            }}
+          >
+            <div style={{ background: "#ffffff", padding: "10px 14px", borderRadius: 6, border: "1px solid var(--hairline)" }}>
+              <div style={{ fontSize: 10, color: "var(--ink-muted)", textTransform: "uppercase", fontWeight: 700 }}>NW (Northwest)</div>
+              <div style={{ fontSize: 18, fontWeight: 800, color: nw && nw <= 3 ? "var(--color-rank-good)" : "var(--ink)" }}>{nw ?? "–"}</div>
+            </div>
+            <div style={{ background: "#ffffff", padding: "10px 14px", borderRadius: 6, border: "1px solid var(--hairline)" }}>
+              <div style={{ fontSize: 10, color: "var(--ink-muted)", textTransform: "uppercase", fontWeight: 700 }}>NE (Northeast)</div>
+              <div style={{ fontSize: 18, fontWeight: 800, color: ne && ne <= 3 ? "var(--color-rank-good)" : "var(--ink)" }}>{ne ?? "–"}</div>
+            </div>
+            <div style={{ background: "#ffffff", padding: "10px 14px", borderRadius: 6, border: "1px solid var(--hairline)" }}>
+              <div style={{ fontSize: 10, color: "var(--ink-muted)", textTransform: "uppercase", fontWeight: 700 }}>SW (Southwest)</div>
+              <div style={{ fontSize: 18, fontWeight: 800, color: sw && sw <= 3 ? "var(--color-rank-good)" : "var(--ink)" }}>{sw ?? "–"}</div>
+            </div>
+            <div style={{ background: "#ffffff", padding: "10px 14px", borderRadius: 6, border: "1px solid var(--hairline)" }}>
+              <div style={{ fontSize: 10, color: "var(--ink-muted)", textTransform: "uppercase", fontWeight: 700 }}>SE (Southeast)</div>
+              <div style={{ fontSize: 18, fontWeight: 800, color: se && se <= 3 ? "var(--color-rank-good)" : "var(--ink)" }}>{se ?? "–"}</div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

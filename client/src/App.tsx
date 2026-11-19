@@ -10,7 +10,8 @@ import { SchedulesPage } from "./pages/SchedulesPage";
 import { ScanDetailPage } from "./pages/ScanDetailPage";
 import { ReportPage } from "./pages/ReportPage";
 import { CompetitorLeaderboard } from "./components/CompetitorLeaderboard";
-import { LeadSnapMetricsBar } from "./components/LeadSnapMetricsBar";
+import { LeadSnapMetricsBar, type LayoutViewMode } from "./components/LeadSnapMetricsBar";
+import { TargetAreaMapSelector } from "./components/TargetAreaMapSelector";
 import { ExportBar } from "./components/ExportBar";
 import { LoginScreen } from "./components/LoginScreen";
 import { TwoFactorScreen } from "./components/TwoFactorScreen";
@@ -55,6 +56,7 @@ export default function App() {
 
   // New-scan state
   const [business, setBusiness] = useState<Business | null>(null);
+  const [customCenter, setCustomCenter] = useState<{ lat: number; lng: number } | null>(null);
   const [keywords, setKeywords] = useState<string[]>([]);
   const [gridConfig, setGridConfig] = useState<GridConfig>(DEFAULT_GRID);
   const [scanStatus, setScanStatus] = useState<ScanStatus>({
@@ -62,6 +64,7 @@ export default function App() {
   });
   const [scanResult, setScanResult] = useState<ScanResponse | null>(null);
   const [activeCompetitor, setActiveCompetitor] = useState<CompetitorStat | null>(null);
+  const [layoutMode, setLayoutMode] = useState<LayoutViewMode>("split");
   const [historyScanId, setHistoryScanId] = useState<number | null>(null);
   const [dfsBalance, setDfsBalance] = useState<{ balance: number; isLow: boolean; threshold: number } | null>(null);
   const pollTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -136,8 +139,8 @@ export default function App() {
   async function handleRun() {
     if (!business || keywords.length === 0 || validationErrors.length > 0) return;
     const keyword = keywords[0];
-    const centerLat = business.lat ?? 37.7749;
-    const centerLng = business.lng ?? -122.4194;
+    const centerLat = customCenter?.lat ?? business.lat ?? 17.4120;
+    const centerLng = customCenter?.lng ?? business.lng ?? 78.4200;
 
     setScanStatus({ phase: "running", scanId: null, message: "Submitting scan…", progressFraction: 0 });
     setScanResult(null);
@@ -422,6 +425,16 @@ export default function App() {
               validationErrors={validationErrors}
             />
 
+            {business && (
+              <TargetAreaMapSelector
+                centerLat={customCenter?.lat ?? business.lat ?? 17.4120}
+                centerLng={customCenter?.lng ?? business.lng ?? 78.4200}
+                businessName={business.name}
+                config={gridConfig}
+                onCenterChange={(lat, lng) => setCustomCenter({ lat, lng })}
+              />
+            )}
+
             {scanStatus.phase !== "idle" && <ScanStatusBar status={scanStatus} />}
 
             {scanResult && (
@@ -430,26 +443,32 @@ export default function App() {
                   scan={scanResult}
                   activeCompetitor={activeCompetitor}
                   onResetCompetitor={() => setActiveCompetitor(null)}
+                  layoutMode={layoutMode}
+                  onLayoutModeChange={setLayoutMode}
                 />
 
-                <div className="leadsnap-split-layout">
-                  <div className="leadsnap-map-column">
-                    <ScanResultsMap
-                      result={scanResult}
-                      isLive={isRunning}
-                      activeCompetitor={activeCompetitor}
-                      onResetCompetitor={() => setActiveCompetitor(null)}
-                    />
-                  </div>
+                <div className={`leadsnap-layout-container ${layoutMode === "split" ? "leadsnap-split-layout" : "leadsnap-full-layout"}`}>
+                  {(layoutMode === "split" || layoutMode === "map") && (
+                    <div className="leadsnap-map-column">
+                      <ScanResultsMap
+                        result={scanResult}
+                        isLive={isRunning}
+                        activeCompetitor={activeCompetitor}
+                        onResetCompetitor={() => setActiveCompetitor(null)}
+                      />
+                    </div>
+                  )}
 
-                  <div className="leadsnap-leaderboard-column">
-                    <CompetitorLeaderboard
-                      scanId={scanResult.id}
-                      trackedBusinessName={scanResult.business.name}
-                      activeCompetitor={activeCompetitor}
-                      onSelectCompetitor={setActiveCompetitor}
-                    />
-                  </div>
+                  {(layoutMode === "split" || layoutMode === "table") && (
+                    <div className="leadsnap-leaderboard-column">
+                      <CompetitorLeaderboard
+                        scanId={scanResult.id}
+                        trackedBusinessName={scanResult.business.name}
+                        activeCompetitor={activeCompetitor}
+                        onSelectCompetitor={setActiveCompetitor}
+                      />
+                    </div>
+                  )}
                 </div>
 
                 {!isRunning && (
